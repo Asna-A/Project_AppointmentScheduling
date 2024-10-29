@@ -10,3 +10,15 @@ C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Domain\o
 C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\refint\AppointmentScheduling.Domain.dll
 C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\AppointmentScheduling.Domain.pdb
 C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\ref\AppointmentScheduling.Domain.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\bin\Debug\net8.0\AppointmentScheduling.Domain.deps.json
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\bin\Debug\net8.0\AppointmentScheduling.Domain.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\bin\Debug\net8.0\AppointmentScheduling.Domain.pdb
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\AppointmentScheduling.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\AppointmentScheduling.Domain.AssemblyInfoInputs.cache
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\AppointmentScheduling.Domain.AssemblyInfo.cs
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\AppointmentScheduling.Domain.csproj.CoreCompileInputs.cache
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\AppointmentScheduling.Domain.sourcelink.json
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\AppointmentScheduling.Domain.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\refint\AppointmentScheduling.Domain.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\AppointmentScheduling.Domain.pdb
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Domain\obj\Debug\net8.0\ref\AppointmentScheduling.Domain.dll

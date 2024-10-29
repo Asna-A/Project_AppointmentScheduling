@@ -1613,6 +1613,20 @@
           }
         }
       },
+      "AppointmentScheduling.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AppointmentScheduling.Infrastructure": "1.0.0",
+          "MediatR": "12.4.1"
+        },
+        "compile": {
+          "bin/placeholder/AppointmentScheduling.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppointmentScheduling.Application.dll": {}
+        }
+      },
       "AppointmentScheduling.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -4533,6 +4547,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "AppointmentScheduling.Application/1.0.0": {
+      "type": "project",
+      "path": "../AppointmentScheduling.Application/AppointmentScheduling.Application.csproj",
+      "msbuildProject": "../AppointmentScheduling.Application/AppointmentScheduling.Application.csproj"
+    },
     "AppointmentScheduling.Domain/1.0.0": {
       "type": "project",
       "path": "../AppointmentScheduling.Domain/AppointmentScheduling.Domain.csproj",
@@ -4546,6 +4565,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "AppointmentScheduling.Application >= 1.0.0",
       "AppointmentScheduling.Infrastructure >= 1.0.0",
       "MediatR >= 12.4.1",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
@@ -4555,19 +4575,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mukhil.mp\\.nuget\\packages\\": {}
+    "C:\\Users\\asna.a\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
+      "projectUniqueName": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
       "projectName": "AppointmentScheduling.API",
-      "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
-      "packagesPath": "C:\\Users\\Mukhil.mp\\.nuget\\packages\\",
-      "outputPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\obj\\",
+      "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
+      "packagesPath": "C:\\Users\\asna.a\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mukhil.mp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\asna.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4582,8 +4602,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
-              "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj"
+            "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj": {
+              "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj"
+            },
+            "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj"
             }
           }
         }

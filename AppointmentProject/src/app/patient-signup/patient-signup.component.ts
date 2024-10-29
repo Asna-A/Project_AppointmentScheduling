@@ -44,4 +44,6 @@ export class PatientSignupComponent {
       userName: new FormControl(null,Validators.required),
       Password: new FormControl(null,Validators.required)})}
 
+      
+
 }
