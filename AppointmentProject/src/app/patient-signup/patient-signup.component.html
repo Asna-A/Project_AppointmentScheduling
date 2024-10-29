@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form >
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" formControlName="Name">
+      </div>
+    
+    <!-- <div *ngIf="profileForm.controls.fname.errors?.['required'] && (profileForm.controls.fname.touched||profileForm.controls.fname.dirty)"> -->
+        <!-- First name is required. -->
+    <!-- </div> -->
+    <div class="form-group">
+    <label for="exampleInputEmail1">Age</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Age" formControlName="Age"> 
+      </div>
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email" formControlName="Email">
+    
+      <div class="form-check">
+        <label for="exampleInputEmail1">Gender</label>
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" formControlName="Gender">
+        <label class="form-check-label" for="flexRadioDefault1">
+         Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked formControlName="Gender">
+        <label class="form-check-label" for="flexRadioDefault2">
+         Female
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked formControlName="Gender">
+        <label class="form-check-label" for="flexRadioDefault2">
+         Other
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Phone</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter City" formControlName="Phone">
+          </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">City</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter City" formControlName="City">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">State</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter State" formControlName="State">
+              </div>   
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Pin</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Pin" formControlName="Pin">
+                  </div>
+
+                 
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">UserName</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter PhoneNumber" formControlName="UserName">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Password</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter PhoneNumber" formControlName="Password">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">ConfirmPassword</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter PhoneNumber" formControlName="ConfirmPassword">
+                                  </div>
+
+
+
+<!--    
+    <div *ngIf="profileForm.controls.email.errors?.['required'] && (profileForm.controls.email.touched||profileForm.controls.email.dirty)">
+        Email is required.
+    </div> -->
+    <!-- <div
+        *ngIf="profileForm.controls.email.invalid && (profileForm.controls.email.touched||profileForm.controls.email.dirty) && !profileForm.controls.email.errors?.['required']">Email is invalid</div> -->
+   
+    <!-- <div *ngIf="profileForm.controls.phoneNumber.errors?.['required'] && (profileForm.controls.phoneNumber.touched||profileForm.controls.phoneNumber.dirty)">
+        phoneNumber is required.
+    </div>
+    <div *ngIf="profileForm.controls.phoneNumber.errors?.['maxlength']">
+        phoneNumber must be less than 10 digits
+      </div>
+      <div *ngIf="profileForm.controls.phoneNumber.invalid && (profileForm.controls.phoneNumber.touched||profileForm.controls.phoneNumber.dirty) && !profileForm.controls.email.errors?.['required']">
+        phoneNumber is invalid
+      </div> -->
+    
+    
+  
+    
+    <!--     
+        <option *ngFor="let item of projects">{{item.name| activeProject:item.isActive}}</option>         -->
+        
+    
+    <button type="submit">Submit</button>
+    
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+</body>
+</html>
