@@ -28,25 +28,15 @@
       <input type="email" class="form-control" id="Email"  placeholder="Enter Email" formControlName="Email">
     
       <label for="Gender">Gender</label>
-      <div class="form-check">
-       
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="male" formControlName="Gender">
-        <label class="form-check-label" for="male">
-         Male
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="female" checked formControlName="Gender">
-        <label class="form-check-label" for="female">
-         Female
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="other" checked formControlName="Gender">
-        <label class="form-check-label" for="other">
-         Other
-        </label>
-      </div>
+      <input class="form-check-input" type="radio" id="male" value="Male" formControlName="Gender">
+      <label class="form-check-label" for="male">Male</label>
+      
+      <input class="form-check-input" type="radio" id="female" value="Female" formControlName="Gender">
+      <label class="form-check-label" for="female">Female</label>
+      
+      <input class="form-check-input" type="radio" id="other" value="Other" formControlName="Gender">
+      <label class="form-check-label" for="other">Other</label>
+      
       <div class="form-group">
         <label for="Phone">Phone</label>
             <input type="number" class="form-control" id="Phone"  placeholder="Enter Phone" formControlName="Phone">
@@ -77,8 +67,8 @@
                               </div>
                               <div class="form-group">
                                 <label for="ConfirmPassword">ConfirmPassword</label>
-                                    <input type="password" class="form-control" id="ConfirmPassword"  placeholder="Enter PhoneNumber" formControlName="confirmPassword">
-                                    <div class="error-message" *ngIf="patient_form.errors?.['PasswordNoMatch'] && patient_form.get('confirmPassword')?.touched">
+                                    <input type="password" class="form-control" id="ConfirmPassword"  placeholder="Enter PhoneNumber" formControlName="ConfirmPassword">
+                                    <div class="error-message" *ngIf="patient_form.errors?.['PasswordNoMatch'] && patient_form.get('ConfirmPassword')?.touched">
                                       Password does not match.
                                     </div>
                                   </div>

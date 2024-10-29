@@ -14,9 +14,9 @@ interface patientForm {
   City :FormControl<string|null>;
   State: FormControl<string|null>;
   Pin : FormControl<string|null>;
-  userName:FormControl<string|null>;
+  UserName:FormControl<string|null>;
   Password: FormControl<string|null>;
-  confirmPassword: FormControl<string|null>
+  ConfirmPassword: FormControl<string|null>
   
 }
 
@@ -44,9 +44,9 @@ export class PatientSignupComponent {
       City: new FormControl(null,Validators.required),
       State: new FormControl(null,Validators.required),
       Pin: new FormControl(null,Validators.required),
-      userName: new FormControl(null,Validators.required),
+      UserName: new FormControl(null,Validators.required),
       Password: new FormControl(null,Validators.required),
-      confirmPassword: new FormControl(null,Validators.required),
+      ConfirmPassword: new FormControl(null,Validators.required),
       
     }, { validators: [confirmPasswordValidator]})}
 
