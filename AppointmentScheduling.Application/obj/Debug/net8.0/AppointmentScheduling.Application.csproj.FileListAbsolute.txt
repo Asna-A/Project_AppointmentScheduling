@@ -1,0 +1,12 @@
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Application.deps.json
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Application.dll
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Application.pdb
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.AssemblyInfoInputs.cache
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.AssemblyInfo.cs
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.csproj.CoreCompileInputs.cache
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.sourcelink.json
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.dll
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\refint\AppointmentScheduling.Application.dll
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.pdb
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\ref\AppointmentScheduling.Application.dll
