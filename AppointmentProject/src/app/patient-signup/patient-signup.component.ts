@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { NgSelectComponent, NgSelectModule } from '@ng-select/ng-select';
+import { confirmPasswordValidator } from '../confirm-password.validator';
 
 interface patientForm {
   Name :FormControl<string|null>;
@@ -14,6 +16,7 @@ interface patientForm {
   Pin : FormControl<string|null>;
   userName:FormControl<string|null>;
   Password: FormControl<string|null>;
+  confirmPassword: FormControl<string|null>
   
 }
 
@@ -21,7 +24,7 @@ interface patientForm {
 @Component({
   selector: 'app-patient-signup',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [CommonModule,ReactiveFormsModule,NgSelectModule,NgSelectComponent],
   templateUrl: './patient-signup.component.html',
   styleUrl: './patient-signup.component.scss'
 })
@@ -42,6 +45,9 @@ export class PatientSignupComponent {
       State: new FormControl(null,Validators.required),
       Pin: new FormControl(null,Validators.required),
       userName: new FormControl(null,Validators.required),
-      Password: new FormControl(null,Validators.required)})}
+      Password: new FormControl(null,Validators.required),
+      confirmPassword: new FormControl(null,Validators.required),
+      
+    }, { validators: [confirmPasswordValidator]})}
 
 }
