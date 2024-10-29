@@ -10,3 +10,16 @@ C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Applicat
 C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\refint\AppointmentScheduling.Application.dll
 C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.pdb
 C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\ref\AppointmentScheduling.Application.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Application.deps.json
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Application.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Application.pdb
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.AssemblyInfoInputs.cache
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.AssemblyInfo.cs
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.csproj.CoreCompileInputs.cache
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.sourcelink.json
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\refint\AppointmentScheduling.Application.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.pdb
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\ref\AppointmentScheduling.Application.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.csproj.AssemblyReference.cache
