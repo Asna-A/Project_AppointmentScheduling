@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgSelectComponent, NgSelectModule } from '@ng-select/ng-select';
 import { confirmPasswordValidator } from '../confirm-password.validator';
 
@@ -24,7 +24,7 @@ interface patientForm {
 @Component({
   selector: 'app-patient-signup',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,NgSelectModule,NgSelectComponent],
+  imports: [CommonModule,ReactiveFormsModule,NgSelectModule,NgSelectComponent,RouterOutlet,RouterLink,RouterLinkActive],
   templateUrl: './patient-signup.component.html',
   styleUrl: './patient-signup.component.scss'
 })
