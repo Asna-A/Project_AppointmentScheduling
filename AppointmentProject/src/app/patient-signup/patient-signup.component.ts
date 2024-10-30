@@ -5,7 +5,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgSelectComponent, NgSelectModule } from '@ng-select/ng-select';
 import { confirmPasswordValidator } from '../confirm-password.validator';
 import { AuthenticationServiceService } from '../authentication-service.service';
-import { HttpClient,withFetch } from '@angular/common/http';
+
 
 interface patientForm
  {
@@ -62,7 +62,7 @@ export class PatientSignupComponent {
     ngOnInit() {
       this.AuthenticationServiceService.SignUpStatus$.subscribe((status: Boolean) => {
         if (status) {
-          
+          alert("patient added");
         } else {
           alert("Signup failed");
         }

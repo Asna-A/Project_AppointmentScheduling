@@ -52,6 +52,32 @@
     ]
   },
   {
+    "ContainingType": "AppointmentScheduling.API.Controllers.CountDoctorController",
+    "Method": "CountDoctor",
+    "RelativePath": "api/CountDoctor/{specializationId}/doctor-count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "specializationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AppointmentScheduling.Application.DTO.GetCountDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AppointmentScheduling.API.Controllers.SignUpController",
     "Method": "AddPatient",
     "RelativePath": "api/SignUp",
