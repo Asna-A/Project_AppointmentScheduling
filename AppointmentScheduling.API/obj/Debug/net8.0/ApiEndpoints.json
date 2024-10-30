@@ -1,5 +1,57 @@
 [
   {
+    "ContainingType": "AppointmentScheduling.API.Controllers.CheckDoctorExistController",
+    "Method": "checkUsernamePassword",
+    "RelativePath": "api/CheckDoctorExist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "checkDoctorExist",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CheckDoctorExist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.CheckPatinetExistController",
+    "Method": "checkUsernamePassword",
+    "RelativePath": "api/CheckPatinetExist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "checkPatinetExist",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CheckPatinetExist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AppointmentScheduling.API.Controllers.SignUpController",
     "Method": "AddPatient",
     "RelativePath": "api/SignUp",
