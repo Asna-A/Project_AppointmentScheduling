@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj": {}
+    "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj": {}
   },
   "projects": {
-    "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj": {
+    "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
+        "projectUniqueName": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
         "projectName": "AppointmentScheduling.API",
-        "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
-        "packagesPath": "C:\\Users\\Mukhil.mp\\.nuget\\packages\\",
-        "outputPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\obj\\",
+        "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
+        "packagesPath": "C:\\Users\\asna.a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mukhil.mp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asna.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
-                "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj"
+              "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj": {
+                "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj"
+              },
+              "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj"
               }
             }
           }
@@ -96,17 +99,88 @@
         }
       }
     },
-    "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj": {
+    "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj",
-        "projectName": "AppointmentScheduling.Domain",
-        "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj",
-        "packagesPath": "C:\\Users\\Mukhil.mp\\.nuget\\packages\\",
-        "outputPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\obj\\",
+        "projectUniqueName": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
+        "projectName": "AppointmentScheduling.Application",
+        "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
+        "packagesPath": "C:\\Users\\asna.a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mukhil.mp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asna.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj",
+        "projectName": "AppointmentScheduling.Domain",
+        "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj",
+        "packagesPath": "C:\\Users\\asna.a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\asna.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -157,17 +231,17 @@
         }
       }
     },
-    "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
+    "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
         "projectName": "AppointmentScheduling.Infrastructure",
-        "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Mukhil.mp\\.nuget\\packages\\",
-        "outputPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\asna.a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mukhil.mp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asna.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -182,8 +256,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj": {
-                "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj"
+              "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj": {
+                "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj"
               }
             }
           }
