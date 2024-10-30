@@ -78,6 +78,26 @@
     ]
   },
   {
+    "ContainingType": "AppointmentScheduling.API.Controllers.GetAllDoctorsController",
+    "Method": "Get",
+    "RelativePath": "api/GetAllDoctors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AppointmentScheduling.Application.DTO.GetAllDoctorsDTO, AppointmentScheduling.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AppointmentScheduling.API.Controllers.SignUpController",
     "Method": "AddPatient",
     "RelativePath": "api/SignUp",

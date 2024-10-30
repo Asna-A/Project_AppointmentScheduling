@@ -4,10 +4,15 @@ import { Injectable } from '@angular/core';
 import {  Subject } from 'rxjs';
 
 
-export interface GetCountDTO {
+interface GetCountDTO {
   count: number;
 }
-
+interface IDoctorDetails {
+    
+  id : number;
+  Name : string;
+  Experience : number;  
+}
 @Injectable({
   providedIn: 'root'
 
@@ -19,6 +24,9 @@ export class AuthenticationServiceService {
 
   private DoctorCount=new Subject<number>();
   DoctorCount$=this.DoctorCount.asObservable();
+
+  private Doctordetails = new Subject<Array<IDoctorDetails>>();
+  public Doctordetails$ = this.Doctordetails.asObservable();
 
   constructor(private http:HttpClient) {
 
@@ -47,6 +55,20 @@ export class AuthenticationServiceService {
         this.DoctorCount.next(0);}
  
       }
+    );
+  }
+  getDoctorDetails(): void {
+    this.http.get<Array<IDoctorDetails>>("http://localhost:5218/api/GetAllDoctors").subscribe(
+      {
+        next:(response :Array<IDoctorDetails> ) => {
+          this.Doctordetails.next(response); // Emit the doctor details to the subject
+          console.log(`direct ${response}`)
+        },
+        error:(error) => {
+          console.error("Error fetching doctor details:", error); // Handle errors if needed
+        }
+      }
+      
     );
   }
 
