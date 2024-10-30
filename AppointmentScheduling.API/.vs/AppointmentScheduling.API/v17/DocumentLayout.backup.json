@@ -3,10 +3,10 @@
   "WorkspaceRootPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.application\\request\\commands\\getalldoctorscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.application\\dto\\getalldoctorsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.application\\dto\\getalldoctorsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.application\\request\\commands\\getalldoctorscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.api\\controllers\\getalldoctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -132,7 +132,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
@@ -203,26 +203,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GetAllDoctorsDTO.cs",
               "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs",
               "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs*",
-              "RelativeToolTip": "..\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs",
+              "RelativeToolTip": "..\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T09:55:15.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GetAllDoctorsCommand.cs",
               "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\GetAllDoctorsCommand.cs",
               "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\Request\\Commands\\GetAllDoctorsCommand.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\GetAllDoctorsCommand.cs*",
-              "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\GetAllDoctorsCommand.cs*",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA1wBsAAAAwAAAAAAAAAA==",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\GetAllDoctorsCommand.cs",
+              "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\GetAllDoctorsCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T09:52:59.18Z",
               "EditorCaption": ""

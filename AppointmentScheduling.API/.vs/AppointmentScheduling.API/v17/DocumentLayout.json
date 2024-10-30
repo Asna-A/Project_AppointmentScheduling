@@ -135,32 +135,6 @@
           "SelectedChildIndex": 10,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppointmentScheduling.API.http",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.http",
-              "RelativeDocumentMoniker": "AppointmentScheduling.API.http",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.http",
-              "RelativeToolTip": "AppointmentScheduling.API.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-10-30T10:47:08.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppointmentScheduling.API",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
-              "RelativeDocumentMoniker": "AppointmentScheduling.API.csproj",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
-              "RelativeToolTip": "AppointmentScheduling.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-30T10:47:03.334Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
@@ -190,6 +164,30 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppointmentScheduling.API.http",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.http",
+              "RelativeDocumentMoniker": "AppointmentScheduling.API.http",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.http",
+              "RelativeToolTip": "AppointmentScheduling.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-10-30T10:47:08.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppointmentScheduling.API.csproj",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
+              "RelativeDocumentMoniker": "AppointmentScheduling.API.csproj",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\AppointmentScheduling.API.csproj",
+              "RelativeToolTip": "AppointmentScheduling.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-30T10:47:03.334Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "GetAllDoctorsController.cs",
               "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Controllers\\GetAllDoctorsController.cs",
@@ -198,8 +196,7 @@
               "RelativeToolTip": "Controllers\\GetAllDoctorsController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T10:20:43.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T10:20:43.229Z"
             },
             {
               "$type": "Document",
@@ -209,7 +206,7 @@
               "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs",
               "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs",
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\DTO\\GetAllDoctorsDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T09:55:15.647Z",
               "EditorCaption": ""
@@ -224,8 +221,7 @@
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\GetAllDoctorsCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:52:59.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T09:52:59.18Z"
             },
             {
               "$type": "Document",
@@ -237,8 +233,7 @@
               "RelativeToolTip": "..\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:42:56.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T04:42:56.864Z"
             },
             {
               "$type": "Document",
@@ -250,8 +245,7 @@
               "RelativeToolTip": "Controllers\\AppointmentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T12:27:56.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T12:27:56.391Z"
             },
             {
               "$type": "Document",
@@ -263,8 +257,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:35:07.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T04:35:07.508Z"
             },
             {
               "$type": "Document",
@@ -276,8 +269,7 @@
               "RelativeToolTip": "Controllers\\CheckPatientExistController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T08:33:59.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T08:33:59.409Z"
             },
             {
               "$type": "Document",
@@ -301,8 +293,7 @@
               "RelativeToolTip": "..\\AppointmentScheduling.Infrastructure\\Data\\AppointmentSchedulingContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:29:01.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T04:29:01.508Z"
             },
             {
               "$type": "Document",
@@ -598,8 +589,7 @@
               "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
               "RelativeToolTip": "..\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-29T04:28:26.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T04:28:26.352Z"
             },
             {
               "$type": "Document",
