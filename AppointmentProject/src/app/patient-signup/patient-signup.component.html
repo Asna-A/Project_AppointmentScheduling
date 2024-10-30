@@ -27,7 +27,7 @@
       <label for="Email1">Email</label>
       <input type="email" class="form-control" id="Email"  placeholder="Enter Email" formControlName="Email">
     
-      <label for="Gender">Gender</label>
+      <label for="Gender">Gender</label><br>
       <input class="form-check-input" type="radio" id="male" value="Male" formControlName="Gender">
       <label class="form-check-label" for="male">Male</label>
       
@@ -98,10 +98,12 @@
     <!--     
         <option *ngFor="let item of projects">{{item.name| activeProject:item.isActive}}</option>         -->
         
-    
-    <button type="submit" [disabled]="!patient_form.valid">Submit</button>
+        <!-- [disabled]="!patient_form.valid" -->
+    <button type="submit"  routerLink="/patient-profile" routerLinkActive="active" >Submit</button>
+
     
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
 </body>
+<router-outlet></router-outlet>
 </html>
