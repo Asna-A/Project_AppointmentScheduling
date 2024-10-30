@@ -1,15 +1,37 @@
 [
   {
-    "ContainingType": "AppointmentScheduling.API.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "AppointmentScheduling.API.Controllers.AppointmentController",
+    "Method": "AddPatient",
+    "RelativePath": "api/Appointment",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AppointmentScheduling.Application.DTO.AddpatientDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.CheckDoctorExistController",
+    "Method": "checkUsernamePassword",
+    "RelativePath": "api/CheckDoctorExist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "checkDoctorExist",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CheckDoctorExist",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AppointmentScheduling.API.WeatherForecast, AppointmentScheduling.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -17,7 +39,32 @@
         ],
         "StatusCode": 200
       }
+    ]
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.CheckPatinetExistController",
+    "Method": "checkUsernamePassword",
+    "RelativePath": "api/CheckPatinetExist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "checkPatinetExist",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CheckPatinetExist",
+        "IsRequired": true
+      }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

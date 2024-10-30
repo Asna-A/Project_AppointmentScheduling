@@ -2845,19 +2845,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asna.a\\.nuget\\packages\\": {}
+    "C:\\Users\\Mukhil.mp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
+      "projectUniqueName": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
       "projectName": "AppointmentScheduling.Application",
-      "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
-      "packagesPath": "C:\\Users\\asna.a\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\obj\\",
+      "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
+      "packagesPath": "C:\\Users\\Mukhil.mp\\.nuget\\packages\\",
+      "outputPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\asna.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mukhil.mp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2872,8 +2872,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj"
+            "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj": {
+              "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj"
             }
           }
         }

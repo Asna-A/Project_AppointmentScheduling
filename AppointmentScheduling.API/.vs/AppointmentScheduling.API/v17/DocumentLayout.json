@@ -1,86 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\",
+  "WorkspaceRootPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|c:\\users\\asna.a\\desktop\\project\\project_appointmentscheduling\\appointmentscheduling.api\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241030072738_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|c:\\users\\asna.a\\desktop\\project\\project_appointmentscheduling\\appointmentscheduling.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.application\\dto\\addpatientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994DDC7D-8A7F-498B-8B24-27A6BFD14228}|..\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj|c:\\users\\asna.a\\desktop\\project\\project_appointmentscheduling\\appointmentscheduling.domain\\entity\\patients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{994DDC7D-8A7F-498B-8B24-27A6BFD14228}|..\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.domain\\entity\\patients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\users\\asna.a\\desktop\\project\\project_appointmentscheduling\\appointmentscheduling.application\\dto\\addpatientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.application\\request\\commands\\addpatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\users\\asna.a\\desktop\\project\\project_appointmentscheduling\\appointmentscheduling.application\\request\\commands\\addpatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.api\\controllers\\checkdoctorexistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|solutionrelative:controllers\\checkdoctorexistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\users\\asna.a\\desktop\\project\\project_appointmentscheduling\\appointmentscheduling.application\\appointmentscheduling.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.api\\controllers\\checkpatinetexistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E23DEE15-E70C-4F1C-85A0-ED581D8FAFB7}|AppointmentScheduling.API.csproj|solutionrelative:controllers\\checkpatinetexistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994DDC7D-8A7F-498B-8B24-27A6BFD14228}|..\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj|c:\\users\\asna.a\\desktop\\project\\project_appointmentscheduling\\appointmentscheduling.domain\\entity\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.application\\request\\commands\\checkdoctorexist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029080413_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071533_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071246_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070806_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070738_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070356_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064544_migration2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064158_migration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\SpecializationConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorSpecializationConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Appointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Specialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\DoctorSpecialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\AppointmentSchedulingContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECDE8AED-3EFD-4A48-9354-E6A9F47A0DA9}|..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj|c:\\crud_application\\project_appointmentscheduling\\appointmentscheduling.application\\request\\commands\\checkpatinetexist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,8 +36,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20241030072738_new.cs",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241030072738_new.cs",
+              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Infrastructure\\Migrations\\20241030072738_new.cs",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241030072738_new.cs",
+              "RelativeToolTip": "..\\AppointmentScheduling.Infrastructure\\Migrations\\20241030072738_new.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T07:27:38.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Patients.cs",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
+              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
+              "RelativeToolTip": "..\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T07:26:58.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckDoctorExistController.cs",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Controllers\\CheckDoctorExistController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CheckDoctorExistController.cs",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Controllers\\CheckDoctorExistController.cs",
+              "RelativeToolTip": "Controllers\\CheckDoctorExistController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T06:23:21.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CheckPatinetExistController.cs",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Controllers\\CheckPatinetExistController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CheckPatinetExistController.cs",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Controllers\\CheckPatinetExistController.cs",
+              "RelativeToolTip": "Controllers\\CheckPatinetExistController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T05:24:14.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CheckDoctorExist.cs",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\CheckDoctorExist.cs",
+              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\Request\\Commands\\CheckDoctorExist.cs",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\CheckDoctorExist.cs",
+              "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\CheckDoctorExist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T06:14:33.298Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -122,303 +133,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Patients.cs",
-              "DocumentMoniker": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
-              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
-              "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
-              "RelativeToolTip": "..\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T12:39:18.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AddpatientDTO.cs",
-              "DocumentMoniker": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\DTO\\AddpatientDTO.cs",
-              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\DTO\\AddpatientDTO.cs",
-              "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\DTO\\AddpatientDTO.cs",
-              "RelativeToolTip": "..\\AppointmentScheduling.Application\\DTO\\AddpatientDTO.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwAsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T12:29:28.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppointmentController.cs",
-              "DocumentMoniker": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Controllers\\AppointmentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AppointmentController.cs",
-              "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Controllers\\AppointmentController.cs",
-              "RelativeToolTip": "Controllers\\AppointmentController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T12:27:56.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "AddPatientCommand.cs",
-              "DocumentMoniker": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\AddPatientCommand.cs",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\AddPatientCommand.cs",
               "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\Request\\Commands\\AddPatientCommand.cs",
-              "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\AddPatientCommand.cs",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\AddPatientCommand.cs",
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\AddPatientCommand.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwC4AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:37:43.534Z",
+              "WhenOpened": "2024-10-30T04:40:08.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABoAAAAaAAAAAAAAAA==",
+              "Title": "AddpatientDTO.cs",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\DTO\\AddpatientDTO.cs",
+              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\DTO\\AddpatientDTO.cs",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\DTO\\AddpatientDTO.cs",
+              "RelativeToolTip": "..\\AppointmentScheduling.Application\\DTO\\AddpatientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:35:07.508Z",
+              "WhenOpened": "2024-10-30T04:40:02.757Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppointmentScheduling.Application",
-              "DocumentMoniker": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
-              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
-              "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
-              "RelativeToolTip": "..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-29T09:36:18.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
-              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
-              "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
-              "RelativeToolTip": "..\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:19:04.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DoctorConfiguration.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorConfiguration.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorConfiguration.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorConfiguration.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:04:46.769Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DoctorSpecializationConfiguration.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorSpecializationConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorSpecializationConfiguration.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorSpecializationConfiguration.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\DoctorSpecializationConfiguration.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:27:30.186Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Appointments.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Appointments.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Appointments.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Appointments.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Appointments.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:43:26.017Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Doctor.cs",
+              "Title": "CheckPatinetExist.cs",
+              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\CheckPatinetExist.cs",
+              "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\Request\\Commands\\CheckPatinetExist.cs",
+              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\CheckPatinetExist.cs",
+              "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\CheckPatinetExist.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:42:56.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "SpecializationConfiguration.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\SpecializationConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\SpecializationConfiguration.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\SpecializationConfiguration.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\Configurations\\SpecializationConfiguration.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:13:32.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "20241029080413_migration1.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029080413_migration1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029080413_migration1.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029080413_migration1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029080413_migration1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T08:04:13.526Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20241029071533_migration1.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071533_migration1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071533_migration1.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071533_migration1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071533_migration1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:15:33.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Specialization.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Specialization.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Specialization.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Specialization.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Specialization.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:43:40.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DoctorSpecialization.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\DoctorSpecialization.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\DoctorSpecialization.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\DoctorSpecialization.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\DoctorSpecialization.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:09:12.449Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "20241029071246_migration1.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071246_migration1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071246_migration1.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071246_migration1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029071246_migration1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:12:46.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AppointmentSchedulingContext.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\AppointmentSchedulingContext.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\AppointmentSchedulingContext.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\AppointmentSchedulingContext.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Data\\AppointmentSchedulingContext.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:29:01.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20241029070806_migration1.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070806_migration1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070806_migration1.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070806_migration1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070806_migration1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:08:06.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20241029070738_migration1.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070738_migration1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070738_migration1.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070738_migration1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070738_migration1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:07:38.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "20241029070356_migration1.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070356_migration1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070356_migration1.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070356_migration1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029070356_migration1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:03:56.616Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Patients.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\Entity\\Patients.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:42:43.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20241029064544_migration2.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064544_migration2.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064544_migration2.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064544_migration2.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064544_migration2.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:45:44.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20241029064158_migration1.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064158_migration1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064158_migration1.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064158_migration1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\Migrations\\20241029064158_migration1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:41:58.733Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AppointmentScheduling.Infrastructure.csproj",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Infrastructure\\AppointmentScheduling.Infrastructure.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-29T04:28:26.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Class1.cs",
-              "ToolTip": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Class1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Class1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:24:19.815Z"
+              "WhenOpened": "2024-10-30T05:00:40.525Z",
+              "EditorCaption": ""
             }
           ]
         }

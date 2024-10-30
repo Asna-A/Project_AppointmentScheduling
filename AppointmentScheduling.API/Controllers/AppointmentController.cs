@@ -18,7 +18,7 @@ namespace AppointmentScheduling.API.Controllers
             _mediator = mediator;
         }
         [HttpPost]
-        public async Task<int> AddPatient(AddpatientDTO dto)
+        public async Task<IActionResult> AddPatient(AddpatientDTO dto)
         {
             var command = new AddPatientCommand
             {
@@ -38,7 +38,8 @@ namespace AppointmentScheduling.API.Controllers
                 password=dto.password
 
             };
-            return await _mediator.Send(command);
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
     }

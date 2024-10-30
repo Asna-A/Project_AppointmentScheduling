@@ -117,8 +117,9 @@ namespace AppointmentScheduling.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
+                    b.Property<string>("Age")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -129,10 +130,6 @@ namespace AppointmentScheduling.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("PIN")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -145,6 +142,10 @@ namespace AppointmentScheduling.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pin")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

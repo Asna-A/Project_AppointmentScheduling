@@ -13,13 +13,14 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppointmentSchedulingContext>(
     x =>
-    { x.UseSqlServer(@"Server=localhost;Database=AppointmentProject;User Id=sa;Password=Pass@word1;TrustServerCertificate=true"); });
+    { x.UseSqlServer(@"Server=localhost.,1432;Database=AppointmentScheduling;User Id=sa;Password=Pass@123;TrustServerCertificate=true");
+    });
 
 
 builder.Services.AddScoped<AppointmentSchedulingContext>();
 
 builder.Services.AddMediatR(x => {
-    x.RegisterServicesFromAssembly(Assembly.Load("Card.Application"));
+    x.RegisterServicesFromAssembly(Assembly.Load("AppointmentScheduling.Application"));
 
 
 });

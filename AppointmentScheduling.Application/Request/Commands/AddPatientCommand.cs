@@ -4,20 +4,20 @@ using MediatR;
 
 namespace AppointmentScheduling.Application.Request.Commands
 {
-    public class AddPatientCommand:IRequest<int>
+    public class AddPatientCommand : IRequest<int>
     {
         public string PatientName { get; set; }
         public String Age { get; set; }
-        public char Gender { get; set; }
+        public String Gender { get; set; }
 
-        public string Email {  get; set; }
+        public string Email { get; set; }
         public string Phone { get; set; }
 
         public string City { get; set; }
 
         public string State { get; set; }
 
-        public string Pin {  get; set; }
+        public string Pin { get; set; }
         public string username { get; set; }
         public string password { get; set; }
 
@@ -29,7 +29,7 @@ namespace AppointmentScheduling.Application.Request.Commands
             {
                 _context = context;
             }
-            public Task<int> Handle(AddPatientCommand request, CancellationToken cancellationToken)
+            public async Task<int> Handle(AddPatientCommand request, CancellationToken cancellationToken)
             {
                 var patient = new Patients
                 {
@@ -45,4 +45,10 @@ namespace AppointmentScheduling.Application.Request.Commands
                     Password = request.password
 
                 };
+                _context.patients.Add(patient);
+                await _context.SaveChangesAsync();
+                return patient.Id;
+            }
         }
+    }
+}
