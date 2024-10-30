@@ -19,7 +19,7 @@ builder.Services.AddDbContext<AppointmentSchedulingContext>(
 builder.Services.AddScoped<AppointmentSchedulingContext>();
 
 builder.Services.AddMediatR(x => {
-    x.RegisterServicesFromAssembly(Assembly.Load("Card.Application"));
+    x.RegisterServicesFromAssembly(Assembly.Load("AppointmentScheduling.Application"));
 
 
 });

@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-import { NgSelectComponent, NgSelectModule } from '@ng-select/ng-select';
 import { confirmPasswordValidator } from '../confirm-password.validator';
+import { AuthenticationServiceService } from '../authentication-service.service';
 
-interface patientForm {
+
+interface patientForm
+ {
   Name :FormControl<string|null>;
   Age: FormControl<string|null>;
   Email: FormControl<string|null>;
@@ -24,7 +26,7 @@ interface patientForm {
 @Component({
   selector: 'app-patient-signup',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,NgSelectModule,NgSelectComponent],
+  imports: [CommonModule,ReactiveFormsModule,FormsModule],
   templateUrl: './patient-signup.component.html',
   styleUrl: './patient-signup.component.scss'
 })
@@ -32,9 +34,12 @@ interface patientForm {
 
 export class PatientSignupComponent {
 
-  patient_form : FormGroup<patientForm>;
+ 
 
-  constructor(private em : FormBuilder){
+  patient_form : FormGroup<patientForm>;
+ 
+
+  constructor(private em : FormBuilder,private AuthenticationServiceService:AuthenticationServiceService){
     this.patient_form = this.em.group<patientForm>({
       Name: new FormControl(null,Validators.required),
       Age: new FormControl(null,Validators.required),
@@ -50,5 +55,12 @@ export class PatientSignupComponent {
       
     }, { validators: [confirmPasswordValidator]})}
 
+    onSubmit()
+    {
+      if(this.patient_form.valid)
+      {
+        this.AuthenticationServiceService.submitSignup(this.patient_form.value);
+      }
+    }
 
 }

@@ -23,3 +23,8 @@ C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentSchedul
 C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.pdb
 C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\ref\AppointmentScheduling.Application.dll
 C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\AppointmentScheduling.Application.csproj.AssemblyReference.cache
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Domain.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Infrastructure.dll
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Infrastructure.pdb
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\bin\Debug\net8.0\AppointmentScheduling.Domain.pdb
+C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.Application\obj\Debug\net8.0\Appointm.CAAD1409.Up2Date

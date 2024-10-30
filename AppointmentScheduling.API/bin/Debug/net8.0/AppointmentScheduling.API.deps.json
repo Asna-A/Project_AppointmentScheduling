@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "AppointmentScheduling.API/1.0.0": {
         "dependencies": {
+          "AppointmentScheduling.Application": "1.0.0",
           "AppointmentScheduling.Infrastructure": "1.0.0",
           "MediatR": "12.4.1",
           "Microsoft.EntityFrameworkCore": "8.0.10",
@@ -960,6 +961,18 @@
           }
         }
       },
+      "AppointmentScheduling.Application/1.0.0": {
+        "dependencies": {
+          "AppointmentScheduling.Infrastructure": "1.0.0",
+          "MediatR": "12.4.1"
+        },
+        "runtime": {
+          "AppointmentScheduling.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "AppointmentScheduling.Domain/1.0.0": {
         "runtime": {
           "AppointmentScheduling.Domain.dll": {
@@ -1576,6 +1589,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "AppointmentScheduling.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "AppointmentScheduling.Domain/1.0.0": {
       "type": "project",

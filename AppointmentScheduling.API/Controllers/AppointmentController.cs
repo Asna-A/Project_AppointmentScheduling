@@ -10,15 +10,15 @@ namespace AppointmentScheduling.API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class AppointmentController : ControllerBase
+    public class SignUpController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public AppointmentController(IMediator mediator)
+        public SignUpController(IMediator mediator)
         {
             _mediator = mediator;
         }
         [HttpPost]
-        public async Task<int> AddPatient(AddpatientDTO dto)
+        public async Task<IActionResult> AddPatient(AddpatientDTO dto)
         {
             var command = new AddPatientCommand
             {
@@ -38,7 +38,9 @@ namespace AppointmentScheduling.API.Controllers
                 password=dto.password
 
             };
-            return await _mediator.Send(command);
+           var  result= await _mediator.Send(command);
+            return Ok(result);
+
         }
 
     }
