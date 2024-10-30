@@ -16,9 +16,7 @@ export class SpecializationsComponent {
   showDermCount:boolean=false;
   showCardCount:boolean=false;
   specializationId:number|null=null;
-  constructor(private AuthenticationServiceService:AuthenticationServiceService) {
-    
-    
+  constructor(private AuthenticationServiceService:AuthenticationServiceService) {  
   }
 
   
