@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\asna.a\\.nuget\\packages\\": {}
+    "C:\\Users\\Mukhil.mp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj",
+      "projectUniqueName": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj",
       "projectName": "AppointmentScheduling.Domain",
-      "projectPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj",
-      "packagesPath": "C:\\Users\\asna.a\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\obj\\",
+      "projectPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\AppointmentScheduling.Domain.csproj",
+      "packagesPath": "C:\\Users\\Mukhil.mp\\.nuget\\packages\\",
+      "outputPath": "C:\\CRUD_Application\\Project_AppointmentScheduling\\AppointmentScheduling.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\asna.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mukhil.mp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

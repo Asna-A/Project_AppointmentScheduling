@@ -298,3 +298,5 @@ C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentSchedul
 C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.API\obj\Debug\net8.0\ref\AppointmentScheduling.API.dll
 C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.API\bin\Debug\net8.0\AppointmentScheduling.Application.dll
 C:\Users\asna.a\Desktop\project\Project_AppointmentScheduling\AppointmentScheduling.API\bin\Debug\net8.0\AppointmentScheduling.Application.pdb
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.API\bin\Debug\net8.0\AppointmentScheduling.Application.dll
+C:\CRUD_Application\Project_AppointmentScheduling\AppointmentScheduling.API\bin\Debug\net8.0\AppointmentScheduling.Application.pdb

@@ -1,0 +1,13 @@
+<p>doctor-information works!</p>
+
+<div *ngIf="drlist">
+    {{drlist}}
+    <ul>
+      <li *ngFor="let doctor of  drlist">
+        {{doctor}}
+        {{ doctor.Name }} - {{ doctor.Experience }}
+      </li>
+    </ul>
+  </div>
+
+  
