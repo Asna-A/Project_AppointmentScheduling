@@ -1,0 +1,22 @@
+<div class="card w-75">
+    <div class="card-body">
+      <h2 class="card-title">Dermatology</h2>
+      <p class="card-text" *ngIf="showDermCount">{{dermcount}} doctors available</p>
+      <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(1)">
+        Click here to know available doctors
+    </button>
+    </div>
+  </div>
+
+  <div class="card w-75">
+    <div class="card-body">
+      <h2 class="card-title">Cardiology</h2>
+      <p class="card-text" *ngIf="showCardCount">{{cardcount}} doctors available</p>
+      <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(3)">
+        Click here to know available doctors
+    </button>
+    </div>
+  </div>
+  
+  
+      
