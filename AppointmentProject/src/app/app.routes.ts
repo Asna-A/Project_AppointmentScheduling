@@ -3,11 +3,13 @@ import { PatientSignupComponent } from './patient-signup/patient-signup.componen
 import { PatientLoginComponent } from './patient-login/patient-login.component';
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { LandingComponent } from './landing/landing.component';
+import { ProfilePageComponent } from './profile-page-patinet/profile-page.component';
 
 export const routes: Routes = [
     {path:'patientSignup',component:PatientSignupComponent},
     {path:'patientLogin',component:PatientLoginComponent},    
     {path:'patientProfile',component:PatientProfileComponent},
     {path:'home',component:LandingComponent},
+    {path:'patient-profile',component:ProfilePageComponent},
     {path:'',redirectTo:'/home',pathMatch:'full'}
 ];

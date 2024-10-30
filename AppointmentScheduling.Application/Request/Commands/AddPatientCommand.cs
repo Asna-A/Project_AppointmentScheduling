@@ -8,7 +8,7 @@ namespace AppointmentScheduling.Application.Request.Commands
     {
         public string PatientName { get; set; }
         public String Age { get; set; }
-        public char Gender { get; set; }
+        public string Gender { get; set; }
 
         public string Email { get; set; }
         public string Phone { get; set; }

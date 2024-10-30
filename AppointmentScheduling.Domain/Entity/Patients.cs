@@ -13,7 +13,7 @@ namespace AppointmentScheduling.Domain.Entity
         public int Id { get; set; }  
         public string PatientName { get; set; }   
         public string Age { get; set; }
-        public char Gender { get; set; }
+        public string Gender { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public string City { get; set; }

@@ -14,7 +14,7 @@
 
     <div class="form-group">
         <label for="Name">Name</label>
-        <input type="text" class="form-control" id="Name"  placeholder="Enter Name" formControlName="Name">
+        <input type="text" class="form-control" id="Name"  placeholder="Enter Name" formControlName="PatientName">
       </div>
     
     <!-- <div *ngIf="profileForm.controls.fname.errors?.['required'] && (profileForm.controls.fname.touched||profileForm.controls.fname.dirty)"> -->
@@ -22,12 +22,12 @@
     <!-- </div> -->
     <div class="form-group">
     <label for="Age">Age</label>
-        <input type="number" class="form-control" id="Age"  placeholder="Enter Age" formControlName="Age"> 
+        <input type="text" class="form-control" id="Age"  placeholder="Enter Age" formControlName="Age"> 
       </div>
       <label for="Email1">Email</label>
       <input type="email" class="form-control" id="Email"  placeholder="Enter Email" formControlName="Email">
     
-      <label for="Gender">Gender</label>
+      <label for="Gender">Gender</label><br>
       <input class="form-check-input" type="radio" id="male" value="Male" formControlName="Gender">
       <label class="form-check-label" for="male">Male</label>
       
@@ -39,7 +39,7 @@
       
       <div class="form-group">
         <label for="Phone">Phone</label>
-            <input type="number" class="form-control" id="Phone"  placeholder="Enter Phone" formControlName="Phone">
+            <input type="text" class="form-control" id="Phone"  placeholder="Enter Phone" formControlName="Phone">
           </div>
       <div class="form-group">
         <label for="City">City</label>
@@ -63,13 +63,14 @@
                           </div>
                           <div class="form-group">
                             <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password"  placeholder="Enter PhoneNumber" formControlName="Password">
+                                <input type="text" class="form-control" id="password"  placeholder="Enter PhoneNumber" formControlName="Password">
                               </div>
                               <div class="form-group">
                                 <label for="ConfirmPassword">ConfirmPassword</label>
-                                    <input type="password" class="form-control" id="ConfirmPassword"  placeholder="Enter PhoneNumber" formControlName="ConfirmPassword">
+                                    <input type="text" class="form-control" id="ConfirmPassword"  placeholder="Enter PhoneNumber" formControlName="ConfirmPassword">
                                     <div class="error-message" *ngIf="patient_form.errors?.['PasswordNoMatch'] && patient_form.get('ConfirmPassword')?.touched">
                                       Password does not match.
+                                    </div>
                                     </div>
 
 
@@ -98,11 +99,13 @@
     <!--     
         <option *ngFor="let item of projects">{{item.name| activeProject:item.isActive}}</option>         -->
         
+        
+    <button type="submit"  routerLink="/patient-profile" routerLinkActive="active" (click)="onSubmit()">Submit</button>
+
     
-    <button type="submit" [disabled]="!patient_form.valid">Submit</button>
     
-    </div>
 </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
 </body>
+<router-outlet></router-outlet>
 </html>

@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { NgSelectComponent, NgSelectModule } from '@ng-select/ng-select';
 import { confirmPasswordValidator } from '../confirm-password.validator';
 import { AuthenticationServiceService } from '../authentication-service.service';
-
+import { HttpClient,withFetch } from '@angular/common/http';
 
 interface patientForm
  {
-  Name :FormControl<string|null>;
+  PatientName :FormControl<string|null>;
   Age: FormControl<string|null>;
   Email: FormControl<string|null>;
   Gender : FormControl<string|null>;
@@ -26,9 +27,10 @@ interface patientForm
 @Component({
   selector: 'app-patient-signup',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, NgSelectModule, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './patient-signup.component.html',
-  styleUrl: './patient-signup.component.scss'
+  styleUrl: './patient-signup.component.scss',
+ 
 })
 
 
@@ -41,7 +43,7 @@ export class PatientSignupComponent {
 
   constructor(private em : FormBuilder,private AuthenticationServiceService:AuthenticationServiceService){
     this.patient_form = this.em.group<patientForm>({
-      Name: new FormControl(null,Validators.required),
+      PatientName: new FormControl(null,Validators.required),
       Age: new FormControl(null,Validators.required),
       Email: new FormControl(null,[Validators.required,Validators.email]),
       Gender : new FormControl(null,[Validators.required]),
@@ -55,6 +57,18 @@ export class PatientSignupComponent {
       
     }, { validators: [confirmPasswordValidator]})}
 
+
+
+    ngOnInit() {
+      this.AuthenticationServiceService.SignUpStatus$.subscribe((status: Boolean) => {
+        if (status) {
+          
+        } else {
+          alert("Signup failed");
+        }
+      });
+    }
+
     onSubmit()
     {
       if(this.patient_form.valid)
@@ -63,4 +77,6 @@ export class PatientSignupComponent {
       }
     }
 
+
+   
 }

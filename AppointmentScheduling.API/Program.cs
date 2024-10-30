@@ -11,9 +11,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "_myAllowSpecificOrigins",
+                      builder =>
+                      {
+                          builder.AllowAnyOrigin()
+                                  .AllowAnyMethod()
+                                  .AllowAnyHeader();
+                      });
+});
+
 builder.Services.AddDbContext<AppointmentSchedulingContext>(
     x =>
-    { x.UseSqlServer(@"Server=localhost;Database=AppointmentProject;User Id=sa;Password=Pass@word1;TrustServerCertificate=true"); });
+    { x.UseSqlServer(@"Server=localhost;Database=Appointment2Project;User Id=sa;Password=Pass@word1;TrustServerCertificate=true"); });
 
 
 builder.Services.AddScoped<AppointmentSchedulingContext>();
@@ -33,9 +44,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseCors("_myAllowSpecificOrigins");
+
+app.UseHttpsRedirection();
+
 
 app.MapControllers();
 
