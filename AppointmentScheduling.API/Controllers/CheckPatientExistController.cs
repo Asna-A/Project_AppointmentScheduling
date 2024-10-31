@@ -17,9 +17,17 @@ namespace AppointmentScheduling.API.Controllers
         }
 
         [HttpPost]
-        public async Task<string> checkUsernamePassword(Application.Request.Commands.CheckPatinetExist checkPatinetExist)
+        public async Task<IActionResult> checkUsernamePassword(Application.Request.Commands.CheckPatinetExist checkPatinetExist)
         {
-            return await mediator.Send(checkPatinetExist);
+            var patientId = await mediator.Send(checkPatinetExist);
+            if (patientId != null)
+            {
+                return Ok(new { patientId });
+            }
+            else
+            {
+                return Unauthorized("Incorrect username or password");
+            }
         }
     }
 }
