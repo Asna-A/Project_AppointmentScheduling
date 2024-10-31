@@ -22,15 +22,18 @@ export class AuthenticationServiceService {
   private SignUpStatus=new Subject<Boolean>();
   SignUpStatus$=this.SignUpStatus.asObservable();
 
+  private LoginStatus=new Subject<Boolean>();
+  LoginStatus$=this.LoginStatus.asObservable();
+
+
+
   private DoctorCount=new Subject<number>();
   DoctorCount$=this.DoctorCount.asObservable();
 
   private Doctordetails = new Subject<Array<IDoctorDetails>>();
   public Doctordetails$ = this.Doctordetails.asObservable();
 
-  constructor(private http:HttpClient) {
-
-   }
+  constructor(private http:HttpClient) {}
 
    submitSignup(data: any): any{
      this.http.post("http://localhost:5218/api/SignUp", data).subscribe(
@@ -41,6 +44,29 @@ export class AuthenticationServiceService {
       }
     );
   }
+
+
+  submitLogin(data:any):any{
+
+    this.http.post<{patientId:string}>("http://localhost:5218/api/Login", data).subscribe(
+      {
+      next:(response)=>{
+        if(response && response.patientId){
+        localStorage.setItem('patientId', response.patientId);
+        this.LoginStatus.next(true);}}
+        else {
+          this.LoginStatus.next(false);
+        },
+      error:(error)=>{this.LoginStatus.next(false);}
+ 
+      }
+    );
+
+  }
+
+
+
+  
 
   CountDoctor(specializationId:number):any{
     
