@@ -50,13 +50,13 @@ export class AuthenticationServiceService {
 
     this.http.post<{patientId:string}>("http://localhost:5218/api/Login", data).subscribe(
       {
-      next:(response)=>{
+      next:(response:any)=>{
         if(response && response.patientId){
         localStorage.setItem('patientId', response.patientId);
-        this.LoginStatus.next(true);}}
+        this.LoginStatus.next(true);}
         else {
           this.LoginStatus.next(false);
-        },
+        }},
       error:(error)=>{this.LoginStatus.next(false);}
  
       }
@@ -64,9 +64,21 @@ export class AuthenticationServiceService {
 
   }
 
+  doctors: any[] = [];
+  viewDoctors(specializationId:number):any{
 
-
+    this.http.get(`http://localhost:5218/api/GetDoctorBySpec/${specializationId}/specialization/`)
+      .subscribe({
+        next: (response: any) => {
+          this.doctors = response;
+        },
+        error: (error) => {
+          console.error("Error fetching doctors:", error);
+        }
+      });
+  }
   
+
 
   CountDoctor(specializationId:number):any{
     
@@ -87,11 +99,27 @@ export class AuthenticationServiceService {
     this.http.get<Array<IDoctorDetails>>("http://localhost:5218/api/GetAllDoctors").subscribe(
       {
         next:(response :Array<IDoctorDetails> ) => {
-          this.Doctordetails.next(response); // Emit the doctor details to the subject
+          this.Doctordetails.next(response); 
           console.log(`direct ${response}`)
         },
         error:(error) => {
-          console.error("Error fetching doctor details:", error); // Handle errors if needed
+          console.error("Error fetching doctor details:", error); 
+        }
+      }
+      
+    );
+  }
+
+
+  bookAppoinment(data:any):void{
+    this.http.post("http://localhost:5218/api/BookDoctor", data).subscribe(
+      {
+        next:(response:any) => {
+          alert("booking success")
+        },
+        error:(error) => {
+          console.error("Error fetching doctor details:", error); 
+          alert("booking failed");
         }
       }
       

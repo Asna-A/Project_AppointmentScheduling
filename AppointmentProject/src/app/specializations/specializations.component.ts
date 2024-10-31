@@ -16,7 +16,8 @@ export class SpecializationsComponent {
   showDermCount:boolean=false;
   showCardCount:boolean=false;
   specializationId:number|null=null;
-  constructor(private AuthenticationServiceService:AuthenticationServiceService) {  
+  DoctorId:number|null=null;
+  constructor(private AuthenticationServiceService:AuthenticationServiceService,private router:Router) {  
   }
 
   
@@ -36,6 +37,19 @@ export class SpecializationsComponent {
   {
     this.specializationId = specializationId;
     this.AuthenticationServiceService.CountDoctor(specializationId);
+  }
+
+  viewDoctors(specializationId: number)
+  {
+    this.specializationId = specializationId;
+    this.AuthenticationServiceService.viewDoctors(specializationId);
+  }
+
+  bookAppointment(DoctorId:number)
+  {
+    this.DoctorId=DoctorId;
+    this.router.navigate(['/book-appointment', DoctorId]);
+
   }
   
 }

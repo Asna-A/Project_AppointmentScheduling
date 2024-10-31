@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-calender',
   standalone: true,
@@ -13,10 +14,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 })
 export class CalenderComponent {
 
+  doctorId: number;
+
   appointmentForm: FormGroup;
   slots = [
-    { value: 'NineToNineThirty', viewValue: '09:00 - 09:30 AM' },
-    { value: 'NineThirtyToTen', viewValue: '09:30 - 10:00 AM' },
+    { val: 'NineToNineThirty', viewValue: '09:00 - 09:30 AM' },
+    { val: 'NineThirtyToTen', viewValue: '09:30 - 10:00 AM' },
 
     
   ];
@@ -28,13 +31,23 @@ export class CalenderComponent {
     });
   }
 
+  ngOnInit(){
+
+    this.doctorId = +this.route.snapshot.paramMap.get('doctorId')!;
+  }
 
   onSubmit()
   {
     {
       if(this.appointmentForm.valid)
       {
-        this.AuthenticationServiceService.bookAppoinment(this.appointmentForm.value);
+        const appointmentData={
+          DoctorId=this.doctorId,
+          PatientId=localStorage.getItem('patientId'),
+          slot=this.appointmentForm.value.slot,
+          AppointmentDate=this.appointmentForm.value.appointmentDate
+        };
+        this.AuthenticationServiceService.bookAppoinment(appointmentData);
       }
     }
   }
