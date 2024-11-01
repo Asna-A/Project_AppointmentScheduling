@@ -7,17 +7,17 @@ namespace AppointmentScheduling.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CheckPatinetExistController : ControllerBase
+    public class LoginController : ControllerBase
     {
         private readonly IMediator mediator;
 
-        public CheckPatinetExistController(IMediator mediator)
+        public LoginController(IMediator mediator)
         {
             this.mediator = mediator;
         }
 
         [HttpPost]
-        public async Task<IActionResult> checkUsernamePassword(Application.Request.Commands.CheckPatinetExist checkPatinetExist)
+        public async Task<IActionResult> Login(CheckPatinetExist checkPatinetExist)
         {
             var patientId = await mediator.Send(checkPatinetExist);
             if (patientId != null)

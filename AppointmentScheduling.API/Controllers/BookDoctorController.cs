@@ -15,14 +15,15 @@ namespace AppointmentScheduling.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost("bookDoctor")]
+        [HttpPost]
         public async Task<IActionResult> BookDoctor([FromBody] BookDoctorCommand command)
         {
             var result = await _mediator.Send(command);
             if (result)
-                return Ok("Appointment booked successfully");
+                return Ok(new { message = "Appointment booked successfully" });
+
             else
-                return BadRequest("Failed to book appointment");
+                return StatusCode(500, new { error = "An error occurred while booking the appointment." });
         }
     }
 }
