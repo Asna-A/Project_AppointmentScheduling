@@ -16,5 +16,6 @@ export const routes: Routes = [
     {path:'specializations',component:SpecializationsComponent},
     {path:'book-appointment/:doctorId',component:CalenderComponent},
     {path:'',redirectTo:'/home',pathMatch:'full'}
+    
 
 ];
