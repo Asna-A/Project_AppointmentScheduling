@@ -120,20 +120,38 @@ export class AuthenticationServiceService {
   }
 
   bookAppoinment(data:any):void{
-    console.log("booook")
-    this.http.post("http://localhost:5218/api/BookDoctor", data).subscribe(
+    
+    this.http.post("http://localhost:5218/api/CheckSlot", data).subscribe(
       {
         next:(response:any) => {
-          alert("booking success")
+          if(response)
+          {
+            this.http.post("http://localhost:5218/api/BookDoctor", data).subscribe(
+              {
+                next:(response:any) => {
+                  alert("booking success")
+                },
+                error:(error) => {
+                  console.error("Error fetching doctor details:", error); 
+                  console.log(error)
+                  alert("booking failed");
+                }
+              }
+              
+            );
+          }
+          else{
+            alert("select other Slot");
+          }
+          
         },
         error:(error) => {
           console.error("Error fetching doctor details:", error); 
           console.log(error)
           alert("booking failed");
-        }
       }
-      
-    );
+    }
+    );  
   } 
 }
   

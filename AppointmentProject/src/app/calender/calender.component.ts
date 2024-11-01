@@ -24,7 +24,6 @@ export class CalenderComponent {
 
   appointmentForm: FormGroup;
   slots = [
-    {slot: 0, viewValue: '10:00 - 10:30 AM' },
     { slot: 1, viewValue: '10:30 - 11:00 AM' },
     { slot: 2, viewValue: '11:00 - 11:30 AM' },
     { slot: 3, viewValue: '04:00 - 04:30 PM' },
@@ -54,26 +53,13 @@ export class CalenderComponent {
   }
 
   ngOnInit(){
-    
-
     this.doctorId = +this.route.snapshot.paramMap.get('doctorId')!;
-    
   }
 
   onSubmit()
   {
-    console.log('Form State:', this.appointmentForm);
-    
-    console.log(this.selectedSlot);
-    
-     console.log(this.appointmentForm.value);
-
      if(this.appointmentForm.valid)
     {
-    
-        console.log(localStorage.getItem('patientId'))
-        console.log("hello");
-        
         const appointmentData={
           DoctorId: this.doctorId,
           PatientId:+localStorage.getItem('patientId')!,
@@ -82,9 +68,6 @@ export class CalenderComponent {
           Status:true 
         };
 
-        console.log(appointmentData);
-
-        
         this.AuthenticationServiceService.bookAppoinment(appointmentData);
       
       }
