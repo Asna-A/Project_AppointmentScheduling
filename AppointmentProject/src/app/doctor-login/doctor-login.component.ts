@@ -3,26 +3,25 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { Router, RouterOutlet } from '@angular/router';
 import { AuthenticationServiceService } from '../authentication-service.service';
 
-interface patientLogin
+interface doctorLogin
  {
   UserName :FormControl<string|null>;
   Password: FormControl<string|null>;
  }
+
+
 @Component({
-  selector: 'app-patient-login',
+  selector: 'app-doctor-login',
   standalone: true,
   imports: [RouterOutlet,ReactiveFormsModule],
-  templateUrl: './patient-login.component.html',
-  styleUrl: './patient-login.component.scss'
+  templateUrl: './doctor-login.component.html',
+  styleUrl: './doctor-login.component.scss'
 })
-
-
-export class PatientLoginComponent {
-  
-  patient_login: FormGroup<patientLogin>;
+export class DoctorLoginComponent {
+  doctor_login: FormGroup<doctorLogin>;
 
   constructor(private em : FormBuilder,private AuthenticationServiceService:AuthenticationServiceService,private router: Router){
-    this.patient_login = this.em.group<patientLogin>({
+    this.doctor_login = this.em.group<doctorLogin>({
       UserName: new FormControl(null,Validators.required),
       Password: new FormControl(null,Validators.required),
 
@@ -42,9 +41,9 @@ ngOnInit() {
 
 onSubmit()
     {
-      if(this.patient_login.valid)
+      if(this.doctor_login.valid)
       {
-        this.AuthenticationServiceService.submitLogin(this.patient_login.value);
+        this.AuthenticationServiceService.submitLogin(this.doctor_login.value);
       }
     }
 
