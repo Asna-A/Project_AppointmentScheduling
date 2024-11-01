@@ -39,6 +39,17 @@ export class AuthenticationServiceService {
   public doctorsDetails$=this.doctorsDetails.asObservable();
 
 
+  private UpdateDetails = new Subject<boolean>();
+  public UpdateDetails$ = this.UpdateDetails.asObservable();
+
+  private PatientAppointmnetsById = new Subject<IPatientAppointmentsById[]>();
+  public PatientAppointmnetsById$ = this.PatientAppointmnetsById.asObservable();
+
+  private CancelAppointmentByPatinet = new Subject<boolean>();
+  public CancelAppointmentByPatinet$ = this.CancelAppointmentByPatinet.asObservable();
+
+
+
   constructor(private http:HttpClient) {}
 
    submitSignup(data: any): any{
@@ -137,7 +148,6 @@ export class AuthenticationServiceService {
                   alert("booking failed");
                 }
               }
-              
             );
           }
           else{
@@ -153,6 +163,48 @@ export class AuthenticationServiceService {
     }
     );  
   } 
+
+  submitUpdateDetails(updateData: IupdateDetails & { Id: number }): void{
+    this.http.patch(`http://localhost:5218/api/UpdateDetails/${updateData.Id}`,updateData).subscribe(
+     {
+     next:(response)=>{
+      console.log(response)
+      this.UpdateDetails.next(true);},
+     error:(error)=>{this.UpdateDetails.next(false);}
+
+     }
+   );
+ }
+
+GetPatinetAppointmentById(id : number) : void{
+  this.http.get<IPatientAppointmentsById[]>(`https://localhost:7076/api/GetAllAppointmentsById/${id}`).subscribe(
+    {
+      next:(Response : IPatientAppointmentsById[])=>{
+        this.PatientAppointmnetsById.next(Response);},
+        error:(error) =>{this.PatientAppointmnetsById.next(error);}
+      });
+    }
+
+    CancelAppoinmentPatient(id :number): void{
+      this.http.patch(`https://localhost:7076/api/CancelAppointmentByPatient`,{id}).subscribe(
+       {
+       next:(response)=>{
+        this.CancelAppointmentByPatinet.next(true);},
+       error:(error)=>{this.CancelAppointmentByPatinet.next(false);}
+  
+       }
+     );
+   }
+
+
+
+
+
+
+
+
+
+
 }
   
 
