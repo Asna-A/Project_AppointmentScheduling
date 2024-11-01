@@ -60,7 +60,6 @@ export class SpecializationsComponent {
   {
     this.DoctorId=DoctorId;
     this.router.navigate(['/book-appointment', this.DoctorId]);
-
   }
   
 }

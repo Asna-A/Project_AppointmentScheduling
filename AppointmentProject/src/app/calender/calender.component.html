@@ -1,15 +1,17 @@
+<form [formGroup]="appointmentForm">
+
 <mat-form-field appearance="fill">
     <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="appointmentDate">
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="appointmentDate" (dateChange)="dateChanged($event)">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
   
-  <mat-form-field appearance="fill">
-    <mat-label>Choose a time slot</mat-label>
-    <mat-select formControlName="slot">
-        <mat-option *ngFor="let slot of slots" [value]="slot.value">{{ slot.viewValue }}</mat-option>
-    </mat-select>
-</mat-form-field>
+  <ng-select [items]="slots"
+  bindLabel="viewValue"
+  bindValue="slot" placeholder="select slot" formControlName="slot" [(ngModel)]="selectedSlot">
+  </ng-select>
 
 <button type="button" class="btn btn-success" (click)="onSubmit()">BOOK</button>
+
+</form>

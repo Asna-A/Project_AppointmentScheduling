@@ -10,9 +10,6 @@ import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/rou
 })
 export class ProfilePageComponent {
 
-  /**
-   *
-   */
   constructor(private router:Router) {
     
     

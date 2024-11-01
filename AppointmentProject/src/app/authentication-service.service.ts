@@ -53,12 +53,13 @@ export class AuthenticationServiceService {
 
 
   submitLogin(data:any):any{
-
     this.http.post<{patientId:string}>("http://localhost:5218/api/Login", data).subscribe(
       {
       next:(response:any)=>{
+        console.log(response)
         if(response && response.patientId){
         localStorage.setItem('patientId', response.patientId);
+        
         this.LoginStatus.next(true);}
         else {
           this.LoginStatus.next(false);
@@ -118,8 +119,8 @@ export class AuthenticationServiceService {
     );
   }
 
-
   bookAppoinment(data:any):void{
+    console.log("booook")
     this.http.post("http://localhost:5218/api/BookDoctor", data).subscribe(
       {
         next:(response:any) => {
@@ -127,16 +128,13 @@ export class AuthenticationServiceService {
         },
         error:(error) => {
           console.error("Error fetching doctor details:", error); 
+          console.log(error)
           alert("booking failed");
         }
       }
       
     );
-  }
-
-
-
-  
+  } 
 }
   
 

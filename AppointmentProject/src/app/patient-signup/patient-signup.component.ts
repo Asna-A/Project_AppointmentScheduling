@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgSelectComponent, NgSelectModule } from '@ng-select/ng-select';
 import { confirmPasswordValidator } from '../confirm-password.validator';
 import { AuthenticationServiceService } from '../authentication-service.service';
@@ -41,7 +41,7 @@ export class PatientSignupComponent {
   patient_form : FormGroup<patientForm>;
  
 
-  constructor(private em : FormBuilder,private AuthenticationServiceService:AuthenticationServiceService){
+  constructor(private em : FormBuilder,private AuthenticationServiceService:AuthenticationServiceService,private router:Router){
     this.patient_form = this.em.group<patientForm>({
       PatientName: new FormControl(null,Validators.required),
       Age: new FormControl(null,Validators.required),
@@ -63,6 +63,7 @@ export class PatientSignupComponent {
       this.AuthenticationServiceService.SignUpStatus$.subscribe((status: Boolean) => {
         if (status) {
           alert("patient added");
+          this.router.navigate(['/patientLogin'])
         } else {
           alert("Signup failed");
         }
