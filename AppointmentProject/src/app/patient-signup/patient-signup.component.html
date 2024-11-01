@@ -17,9 +17,6 @@
         <input type="text" class="form-control" id="Name"  placeholder="Enter Name" formControlName="PatientName">
       </div>
     
-    <!-- <div *ngIf="profileForm.controls.fname.errors?.['required'] && (profileForm.controls.fname.touched||profileForm.controls.fname.dirty)"> -->
-        <!-- First name is required. -->
-    <!-- </div> -->
     <div class="form-group">
     <label for="Age">Age</label>
         <input type="text" class="form-control" id="Age"  placeholder="Enter Age" formControlName="Age"> 
@@ -59,11 +56,11 @@
                  
                       <div class="form-group">
                         <label for="exampleInputEmail1">UserName</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter PhoneNumber" formControlName="UserName">
+                            <input type="text" class="form-control" id="UserName"  placeholder="Enter UserName" formControlName="UserName">
                           </div>
                           <div class="form-group">
                             <label for="password">Password</label>
-                                <input type="text" class="form-control" id="password"  placeholder="Enter PhoneNumber" formControlName="Password">
+                                <input type="text" class="form-control" id="Password"  placeholder="Enter Password" formControlName="Password">
                               </div>
                               <div class="form-group">
                                 <label for="ConfirmPassword">ConfirmPassword</label>
@@ -71,34 +68,7 @@
                                     <div class="error-message" *ngIf="patient_form.errors?.['PasswordNoMatch'] && patient_form.get('ConfirmPassword')?.touched">
                                       Password does not match.
                                     </div>
-                                    </div>
-
-
-
-
-<!--    
-    <div *ngIf="profileForm.controls.email.errors?.['required'] && (profileForm.controls.email.touched||profileForm.controls.email.dirty)">
-        Email is required.
-    </div> -->
-    <!-- <div
-        *ngIf="profileForm.controls.email.invalid && (profileForm.controls.email.touched||profileForm.controls.email.dirty) && !profileForm.controls.email.errors?.['required']">Email is invalid</div> -->
-   
-    <!-- <div *ngIf="profileForm.controls.phoneNumber.errors?.['required'] && (profileForm.controls.phoneNumber.touched||profileForm.controls.phoneNumber.dirty)">
-        phoneNumber is required.
-    </div>
-    <div *ngIf="profileForm.controls.phoneNumber.errors?.['maxlength']">
-        phoneNumber must be less than 10 digits
-      </div>
-      <div *ngIf="profileForm.controls.phoneNumber.invalid && (profileForm.controls.phoneNumber.touched||profileForm.controls.phoneNumber.dirty) && !profileForm.controls.email.errors?.['required']">
-        phoneNumber is invalid
-      </div> -->
-    
-    
-  
-    
-    <!--     
-        <option *ngFor="let item of projects">{{item.name| activeProject:item.isActive}}</option>         -->
-        
+                                    </div>   
         
     <button type="submit"  routerLink="/patient-profile" routerLinkActive="active" (click)="onSubmit()">Submit</button>
 

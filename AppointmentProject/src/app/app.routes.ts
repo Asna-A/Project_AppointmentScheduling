@@ -15,7 +15,7 @@ export const routes: Routes = [
     {path:'home',component:LandingComponent},
     {path:'patient-profile',component:ProfilePageComponent},
     {path:'specializations',component:SpecializationsComponent},
-    {path:'doctorBook',component:CalenderComponent},
+    {path:'book-appointment',component:CalenderComponent},
     {path:'doctorDetails',component:DoctorInformationComponent},
     {path:'',redirectTo:'/home',pathMatch:'full'}
 

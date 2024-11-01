@@ -1,5 +1,6 @@
 ﻿using AppointmentScheduling.Infrastructure.Data;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace AppointmentScheduling.Application.Request.Commands
 {
@@ -17,16 +18,17 @@ namespace AppointmentScheduling.Application.Request.Commands
         {
             this.context = context;
         }
-        async Task<string> IRequestHandler<CheckPatinetExist, string>.Handle(CheckPatinetExist request, CancellationToken cancellationToken)
+        public async Task<string>Handle(CheckPatinetExist request, CancellationToken cancellationToken)
         {
-            Boolean exist = context.patients.Any(x => x.UserName == request.userName && x.Password == request.password);
-            if (exist)
+            var patient = await context.patients.Where(x => x.UserName == request.userName && x.Password == request.password).Select(x => new {x.Id}).FirstOrDefaultAsync(cancellationToken);
+
+            if (patient!=null)
             {
-                return await Task.FromResult("Correct");
+                return patient.Id.ToString();
             }
             else
             {
-                return await Task.FromResult("InCorrect username or password ");
+                return null;
             }
 
         }

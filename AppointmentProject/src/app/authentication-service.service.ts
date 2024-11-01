@@ -22,15 +22,24 @@ export class AuthenticationServiceService {
   private SignUpStatus=new Subject<Boolean>();
   SignUpStatus$=this.SignUpStatus.asObservable();
 
+  private LoginStatus=new Subject<Boolean>();
+  LoginStatus$=this.LoginStatus.asObservable();
+
+
+
   private DoctorCount=new Subject<number>();
   DoctorCount$=this.DoctorCount.asObservable();
 
   private Doctordetails = new Subject<Array<IDoctorDetails>>();
   public Doctordetails$ = this.Doctordetails.asObservable();
 
-  constructor(private http:HttpClient) {
 
-   }
+
+  private doctorsDetails=new Subject<any[]>();
+  public doctorsDetails$=this.doctorsDetails.asObservable();
+
+
+  constructor(private http:HttpClient) {}
 
    submitSignup(data: any): any{
      this.http.post("http://localhost:5218/api/SignUp", data).subscribe(
@@ -41,6 +50,43 @@ export class AuthenticationServiceService {
       }
     );
   }
+
+
+  submitLogin(data:any):any{
+
+    this.http.post<{patientId:string}>("http://localhost:5218/api/Login", data).subscribe(
+      {
+      next:(response:any)=>{
+        if(response && response.patientId){
+        localStorage.setItem('patientId', response.patientId);
+        this.LoginStatus.next(true);}
+        else {
+          this.LoginStatus.next(false);
+        }},
+      error:(error)=>{this.LoginStatus.next(false);}
+ 
+      }
+    );
+
+  }
+
+  doctors: any[] = [];
+  viewDoctors(specializationId:number):any{
+
+    this.http.get(`http://localhost:5218/api/GetDoctorBySpec/${specializationId}/specialization/`)
+      .subscribe({
+        next: (response: any) => {
+          this.doctorsDetails.next(response);
+          console.log(response)
+
+        },
+        error: (error) => {
+          console.error("Error fetching doctors:", error);
+        }
+      });
+  }
+  
+
 
   CountDoctor(specializationId:number):any{
     
@@ -61,11 +107,27 @@ export class AuthenticationServiceService {
     this.http.get<Array<IDoctorDetails>>("http://localhost:5218/api/GetAllDoctors").subscribe(
       {
         next:(response :Array<IDoctorDetails> ) => {
-          this.Doctordetails.next(response); // Emit the doctor details to the subject
+          this.Doctordetails.next(response); 
           console.log(`direct ${response}`)
         },
         error:(error) => {
-          console.error("Error fetching doctor details:", error); // Handle errors if needed
+          console.error("Error fetching doctor details:", error); 
+        }
+      }
+      
+    );
+  }
+
+
+  bookAppoinment(data:any):void{
+    this.http.post("http://localhost:5218/api/BookDoctor", data).subscribe(
+      {
+        next:(response:any) => {
+          alert("booking success")
+        },
+        error:(error) => {
+          console.error("Error fetching doctor details:", error); 
+          alert("booking failed");
         }
       }
       
