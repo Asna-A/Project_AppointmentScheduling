@@ -1,0 +1,38 @@
+<p>update-details works!</p>
+
+
+<form [formGroup]= "update_form" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="UpdateName"  placeholder="Enter Name" formControlName="PatientName">
+      </div>
+    
+      <label for="Email1">Email</label>
+      <input type="email" class="form-control" id="UpdateEmail"  placeholder="Enter Email" formControlName="Email">
+
+      
+      <div class="form-group">
+        <label for="Phone">Phone</label>
+            <input type="text" class="form-control" id="UpdatePhone"  placeholder="Enter Phone" formControlName="phone">
+          </div>
+      <div class="form-group">
+        <label for="City">City</label>
+            <input type="text" class="form-control" id="UpdateCity" placeholder="Enter City" formControlName="City">
+          </div>
+
+          <div class="form-group">
+            <label for="State">State</label>
+                <input type="text" class="form-control" id="UpdateState"  placeholder="Enter State" formControlName="State">
+              </div>   
+
+              <div class="form-group">
+                <label for="Pin">Pin</label>
+                    <input type="text" class="form-control" id="UpdatePin"  placeholder="Enter Pin" formControlName="Pin">
+                  </div>
+
+                 
+  
+        
+    <button type="submit"  routerLink="/patient-profile" routerLinkActive="active">Submit</button>
+</form>

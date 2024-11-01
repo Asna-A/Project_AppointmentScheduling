@@ -1,0 +1,23 @@
+<p>patient-appointment-details works!</p>
+
+<div *ngIf="list">
+    <h3>Available Doctors</h3>
+    <ul>
+      <li *ngFor="let Appointmnet of list">
+        <p>DoctorName:{{ Appointmnet.doctorName }}</p>
+        <p>appointmentDate:{{ Appointmnet.appointmentDate }}</p>
+        <p>SlotTime:{{ getSlotTime(Appointmnet.slotTime) }}</p>
+        <p>Status : {{getStatus(Appointmnet.status) }}</p>
+        <p>Specializations :</p>
+        <ul>
+            <li *ngFor=" let Specializations of Appointmnet.doctorSpecialization">
+                {{Specializations}}
+            </li>
+        </ul>
+        <div *ngIf="Appointmnet.status">
+            <button (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
+        </div>
+        
+      </li>
+    </ul>
+  </div>
