@@ -5,7 +5,7 @@
       <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(1)">
         Click here to know no of available doctors
     </button>
-    <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDocotors(1)">
+    <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDoctors(1)">
       Click here to Book
   </button>
     </div>
@@ -18,7 +18,7 @@
       <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(3)">
         Click here to know no of available doctors
     </button>
-    <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDocotors(1)">
+    <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDoctors(3)">
       Click here to Book
   </button>
     </div>
@@ -28,10 +28,10 @@
     <h3>Available Doctors</h3>
     <ul>
       <li *ngFor="let doctor of doctors">
-        <p>Name:{{ doctor.Name }}</p>
-        <p>RegistrationId:{{ doctor.RegistrationId }}</p>
-        <p>Experience:{{ doctor.Experience }}</p>
-        <button (click)="bookAppointment(doctor.DoctorId)">Book Now</button>
+        <p>Name:{{ doctor.name }}</p>
+        <p>RegistrationId:{{ doctor.registrationId }}</p>
+        <p>Experience:{{ doctor.experience }}</p>
+        <button (click)="bookAppointment(doctor.doctorId)">Book Now</button>
       </li>
     </ul>
   </div>

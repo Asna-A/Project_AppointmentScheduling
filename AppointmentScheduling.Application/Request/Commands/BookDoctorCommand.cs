@@ -1,12 +1,6 @@
 ﻿using AppointmentScheduling.Domain.Entity;
 using AppointmentScheduling.Infrastructure.Data;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static AppointmentScheduling.Domain.Entity.Appointments;
 
 namespace AppointmentScheduling.Application.Request.Commands

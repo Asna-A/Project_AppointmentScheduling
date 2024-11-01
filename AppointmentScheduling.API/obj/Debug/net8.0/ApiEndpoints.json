@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "AppointmentScheduling.API.Controllers.BookDoctorController",
+    "Method": "BookDoctor",
+    "RelativePath": "api/BookDoctor/bookDoctor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "AppointmentScheduling.Application.Request.Commands.BookDoctorCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AppointmentScheduling.API.Controllers.CheckDoctorExistController",
     "Method": "checkUsernamePassword",
     "RelativePath": "api/CheckDoctorExist",
@@ -39,17 +55,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "AppointmentScheduling.API.Controllers.CountDoctorController",
@@ -96,6 +102,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.GetDoctorBySpecController",
+    "Method": "GetDoctorBySpec",
+    "RelativePath": "api/GetDoctorBySpec/{specializationId}/specialization",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "specializationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "AppointmentScheduling.API.Controllers.SignUpController",

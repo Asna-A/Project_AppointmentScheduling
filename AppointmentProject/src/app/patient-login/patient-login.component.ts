@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterOutlet } from '@angular/router';
+import { AuthenticationServiceService } from '../authentication-service.service';
+
 interface patientLogin
  {
   UserName :FormControl<string|null>;
@@ -8,11 +11,15 @@ interface patientLogin
 @Component({
   selector: 'app-patient-login',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,ReactiveFormsModule],
   templateUrl: './patient-login.component.html',
   styleUrl: './patient-login.component.scss'
 })
+
+
 export class PatientLoginComponent {
+  
+  patient_login: FormGroup<patientLogin>;
 
   constructor(private em : FormBuilder,private AuthenticationServiceService:AuthenticationServiceService,private router: Router){
     this.patient_login = this.em.group<patientLogin>({

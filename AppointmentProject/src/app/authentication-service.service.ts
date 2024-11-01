@@ -33,6 +33,12 @@ export class AuthenticationServiceService {
   private Doctordetails = new Subject<Array<IDoctorDetails>>();
   public Doctordetails$ = this.Doctordetails.asObservable();
 
+
+
+  private doctorsDetails=new Subject<any[]>();
+  public doctorsDetails$=this.doctorsDetails.asObservable();
+
+
   constructor(private http:HttpClient) {}
 
    submitSignup(data: any): any{
@@ -70,7 +76,9 @@ export class AuthenticationServiceService {
     this.http.get(`http://localhost:5218/api/GetDoctorBySpec/${specializationId}/specialization/`)
       .subscribe({
         next: (response: any) => {
-          this.doctors = response;
+          this.doctorsDetails.next(response);
+          console.log(response)
+
         },
         error: (error) => {
           console.error("Error fetching doctors:", error);
