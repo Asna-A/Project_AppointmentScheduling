@@ -7,6 +7,8 @@ import { ProfilePageComponent } from './profile-page-patinet/profile-page.compon
 import { SpecializationsComponent } from './specializations/specializations.component';
 import { CalenderComponent } from './calender/calender.component';
 import { DoctorInformationComponent } from './doctor-information/doctor-information.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
+import { PatientAppointmentDetailsComponent } from './patient-appointment-details/patient-appointment-details.component';
 
 export const routes: Routes = [
     {path:'patientSignup',component:PatientSignupComponent},
@@ -17,6 +19,8 @@ export const routes: Routes = [
     {path:'specializations',component:SpecializationsComponent},
     {path:'book-appointment',component:CalenderComponent},
     {path:'doctorDetails',component:DoctorInformationComponent},
+    {path: 'editprofile',component:UpdateDetailsComponent},
+    {path: 'Appointment-Detail-of-patinetById',component:PatientAppointmentDetailsComponent},
     {path:'',redirectTo:'/home',pathMatch:'full'}
 
 ];
