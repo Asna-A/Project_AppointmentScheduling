@@ -17,12 +17,8 @@ export const routes: Routes = [
     {path:'patient-profile',component:ProfilePageComponent},
     {path:'specializations',component:SpecializationsComponent},
     {path:'book-appointment',component:CalenderComponent},
-    {path:'doctorDetails',component:DoctorInformationComponent},
     {path: 'editprofile',component:UpdateDetailsComponent},
     {path: 'Appointment-Detail-of-patinetById',component:PatientAppointmentDetailsComponent},
     {path:'book-appointment/:doctorId',component:CalenderComponent},
-
     {path:'',redirectTo:'/home',pathMatch:'full'}
-    
-
 ];

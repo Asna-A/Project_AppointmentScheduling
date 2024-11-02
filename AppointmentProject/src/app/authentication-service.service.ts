@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { Injectable } from '@angular/core';
 import {  Subject } from 'rxjs';
+import { IPatientAppointmentsById } from './Interfaces/ipatient-appointments-by-id';
+import { IupdateDetails } from './Interfaces/iupdate-details';
 
 
 interface GetCountDTO {

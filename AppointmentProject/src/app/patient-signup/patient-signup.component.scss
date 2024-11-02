@@ -1,4 +1,50 @@
 
-.signin{
-    background-color: #ffff;
+.patientForm{   
+    background-color: #9cbcb7;
+    padding: 25px;
+    
+}
+.pForm{
+    background-color:#dfebe9;
+    border-radius: 0.35rem;
+    padding: 15px;
+    
+}
+.form-group {
+    margin-bottom: 1.5rem;     
+}
+
+label{
+    margin-bottom: 3px;
+    font-family: alkatra;
+    color: #56486c;
+}
+
+.gender{
+    gap:12px;
+    display: flex;
+}
+
+input.form-control {
+    border-radius: 0.25rem;    
+    font-family: alkatra;
+
+}
+
+input.form-control:focus {
+    border-color: #56486c;   
+}
+
+.form-check-input {
+    margin-right: 0.5rem; 
+}
+
+button {
+    background-color: #56486c; 
+    color: white;             
+    border-radius: 0.25rem;     
+}
+
+button:hover {
+    background-color: #473b5e;  /* Darker shade on hover */
 }

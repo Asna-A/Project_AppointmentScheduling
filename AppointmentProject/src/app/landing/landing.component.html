@@ -1,34 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-                <div class="mb-3">
-                    <button type="button" class="btn btn-light form-control shadow bg-body rounded text" routerLink="/patientSignup" routerLinkActive="active">Signup for patient</button>   
-                </div>
-                <div class="mb-3">
-                    <button type="button" class="btn btn-light form-control shadow bg-body rounded text" routerLink="/patientLogin" routerLinkActive="active">
-                       Login as Patient
-                    </button>
-                </div>
-                <div class="mb-3">
-                    <button type="button" class="btn btn-light form-control shadow bg-body rounded text" routerLink="/patientProfile" routerLinkActive="active">
-                       Login as Doctor
-                    </button>
-                </div>
-                <div class="mb-3">
-                    <button type="button" class="btn btn-light form-control shadow bg-body rounded text" routerLink="/doctorDetails" routerLinkActive="active">
-                       Doctor details
-                    </button>
-                </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary backg ">
+  <div class="container-fluid navClass">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="patientSignup">Sign UP</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="patientLogin">Patient Login</a></li>
+            <li><a class="dropdown-item" href="patientLogin">Doctor Login</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+
+<div class="row container-fluid fullBody">
+  <div class="col-6 landing"></div>
+  <div class="col-6 getStart">
+    <p>Book your Appointment</p>
+    <button type="submit"  routerLink="/patient-profile" routerLinkActive="active" class="btn">Get Started</button>
+
+  </div>
+  
+</div>
+
+        
+      
                 <router-outlet></router-outlet>  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
-</body>
-</html>
