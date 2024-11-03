@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
   selector: 'app-profile-page',
   standalone: true,
   imports: [RouterOutlet,RouterLink,RouterLinkActive,CommonModule],
-  templateUrl: './profile-page.component.html',
-  styleUrl: './profile-page.component.scss'
+  templateUrl: './profile-page-doctor.component.html',
+  styleUrl: './profile-page-doctor.component.scss'
 })
-export class ProfilePageComponent {
-  patientDetails: any;
+export class doctorProfilePageComponent {
+  doctorDetails: any;
   status:boolean=false;
 
   constructor(private router:Router,private AuthenticationServiceService:AuthenticationServiceService) {
@@ -19,21 +19,22 @@ export class ProfilePageComponent {
   }
 
   ngOnInit() {
-    this.AuthenticationServiceService.getPatientDetails();
-    this.AuthenticationServiceService.getPatientDetailsStatus$.subscribe(
+    this.AuthenticationServiceService.getDoctorDetailProfile();
+    this.AuthenticationServiceService.getDoctorProfileStatus$.subscribe(
       (response: any) => {
         if (response) {
           this.status=true;
-          this.patientDetails=response;  
+          this.doctorDetails=response;  
         } else {
           alert("error!Cant fetch Details");
         }
       }
     );
-    
+   
   }
 
   
+
   goToSpecializations() {
     this.router.navigate(['/specializations']);
   }

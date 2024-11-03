@@ -14,10 +14,24 @@
                 {{Specializations}}
             </li>
         </ul>
-        <div *ngIf="Appointmnet.status">
+        <!-- <div *ngIf="Appointmnet.status">
             <button (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
-        </div>
-        
+        </div> -->
+        <div *ngIf="Appointmnet.status">
+          <ng-container *ngIf="isFutureDate(Appointmnet.appointmentDate); else doneTemplate">
+              <button (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
+          </ng-container>
+          <ng-template #doneTemplate>
+            <button type="button">Cancel Appointment</button>
+          </ng-template>
+      </div>
+      
+      <div *ngIf="!Appointmnet.status">
+        <button type="button">Cancelled Appointment</button>
+    </div>
+      <div *ngIf="!isFutureDate(Appointmnet.appointmentDate)">
+        <button type="button">Done</button>
+      </div>
       </li>
     </ul>
   </div>

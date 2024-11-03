@@ -1,41 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppointmentScheduling.Infrastructure.Data;
+﻿using AppointmentScheduling.Infrastructure.Data;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace AppointmentScheduling.Application.Request.Commands
 {
-    public class CheckDoctorExist : IRequest<string>
+    public class checkDoctorExist : IRequest<string>
     {
-        public string username { get; set; }
+        public string userName { get; set; }
         public string password { get; set; }
-
     }
 
-    public class CheckDoctorExistHandler : IRequestHandler<CheckDoctorExist, string>
+    public class checkDoctorExistHandler : IRequestHandler<checkDoctorExist, string>
     {
         private readonly AppointmentSchedulingContext context;
 
-        public CheckDoctorExistHandler(AppointmentSchedulingContext context)
+        public checkDoctorExistHandler(AppointmentSchedulingContext context)
         {
             this.context = context;
         }
-
-        public async Task<string> Handle(CheckDoctorExist request, CancellationToken cancellationToken)
+        public async Task<string> Handle(checkDoctorExist request, CancellationToken cancellationToken)
         {
-            Boolean exist = context.Doctors.Any(x => x.UserName == request.username && x.Password == request.password);
+            var doctor = await context.Doctors.Where(x => x.UserName == request.userName && x.Password == request.password).Select(x => new { x.Id }).FirstOrDefaultAsync(cancellationToken);
 
-            if (exist)
+            if (doctor != null)
             {
-                return await Task.FromResult("Correct");
+                return doctor.Id.ToString();
             }
             else
             {
-                return await Task.FromResult("InCorrect username or password");
+                return null;
             }
+
         }
     }
 }

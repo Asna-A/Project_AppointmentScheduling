@@ -1,3 +1,4 @@
+
 .landing {  
     background-image: url("/landing.png");
     background-size: contain; 
@@ -6,13 +7,13 @@
     height: 100vh;
 }
 
+
 .fullBody{
     background-color:#dfebe9;
+    margin: 0;
 }
 
-.backg {
-    background-color: #6e4975;
-}
+
 .getStart {
     display: flex;
     flex-direction: column;
@@ -25,16 +26,6 @@
 }
 .getStart .btn{
     color: #dfebe9;
-    background-color: #56486c;
+    background-color: #6e4975;
     font-size: 20px; 
-}
-
-.navbar {
-    position: absolute;
-    width: 100%; 
-    z-index: 1; 
-}
-
-.navbar-brand, .nav-link, .dropdown-item {
-    color:#dfebe9;
 }

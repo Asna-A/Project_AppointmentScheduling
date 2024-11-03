@@ -15,6 +15,12 @@ interface IDoctorDetails {
   Name : string;
   Experience : number;  
 }
+
+interface IPatientDetails{
+
+}
+
+
 @Injectable({
   providedIn: 'root'
 
@@ -27,7 +33,8 @@ export class AuthenticationServiceService {
   private LoginStatus=new Subject<Boolean>();
   LoginStatus$=this.LoginStatus.asObservable();
 
-
+  private doctorLoginStatus=new Subject<Boolean>();
+  doctorLoginStatus$=this.doctorLoginStatus.asObservable();
 
   private DoctorCount=new Subject<number>();
   DoctorCount$=this.DoctorCount.asObservable();
@@ -50,7 +57,16 @@ export class AuthenticationServiceService {
   private CancelAppointmentByPatinet = new Subject<boolean>();
   public CancelAppointmentByPatinet$ = this.CancelAppointmentByPatinet.asObservable();
 
+  private getPatientDetailsStatus = new Subject<IPatientDetails>();
+  public getPatientDetailsStatus$ = this.getPatientDetailsStatus.asObservable();
 
+  private getDoctorProfileStatus = new Subject<any>();
+  public getDoctorProfileStatus$ = this.getDoctorProfileStatus.asObservable();
+
+
+
+  private AppointmentDetailsByDoctor=new Subject<any>();
+  public AppointmentDetailsByDoctor$=this.AppointmentDetailsByDoctor.asObservable()
 
   constructor(private http:HttpClient) {}
 
@@ -82,6 +98,54 @@ export class AuthenticationServiceService {
       }
     );
 
+  }
+
+
+
+  doctorLogin(data:any):any{
+    this.http.post("http://localhost:5218/api/doctorLogin", data).subscribe(
+      {
+      next:(response:any)=>{
+        console.log(response)
+        if(response && response.doctorId){
+        localStorage.setItem('doctorId', response.doctorId);
+        this.doctorLoginStatus.next(true);}
+        else {
+          this.doctorLoginStatus.next(false);
+        }},
+      error:(error)=>{this.LoginStatus.next(false);}
+ 
+      }
+    );
+
+  }
+
+  getPatientDetails():any{
+    const patientId = localStorage.getItem('patientId');
+    if(patientId)
+    {
+      this.http.get("`http://localhost:5218/api/getPatientDetails/${patientId}`").subscribe(
+        {
+        next:(response:any)=>{
+          this.getPatientDetailsStatus.next(response);},
+        error:(error)=>{this.LoginStatus.next(error);}
+        }
+      );
+    }
+  }
+
+  getDoctorDetailProfile():any{
+    const doctorId = localStorage.getItem('doctorId');
+    if(doctorId)
+    {
+      this.http.get("`http://localhost:5218/api/getDoctorProfile/${docotorId}`").subscribe(
+        {
+        next:(response:any)=>{
+          this.getPatientDetailsStatus.next(response);},
+        error:(error)=>{this.LoginStatus.next(error);}
+        }
+      );
+    }
   }
 
   doctors: any[] = [];
@@ -117,6 +181,7 @@ export class AuthenticationServiceService {
       }
     );
   }
+  
   getDoctorDetails(): void {
     this.http.get<Array<IDoctorDetails>>("http://localhost:5218/api/GetAllDoctors").subscribe(
       {
@@ -187,6 +252,21 @@ GetPatinetAppointmentById(id : number) : void{
       });
     }
 
+    GetAppointmentDetailsByDoctor(id : number) : any{
+      this.http.get(`https://localhost:7076/api/GetAppointmentDetailsByDoctor/${id}`).subscribe(
+        {
+          next:(response:any)=>{
+            this.AppointmentDetailsByDoctor.next(Response);},
+            error:(error) =>{this.AppointmentDetailsByDoctor.next(error);}
+          });
+        }
+    
+
+
+
+
+
+
     CancelAppoinmentPatient(id :number): void{
       this.http.patch(`https://localhost:7076/api/CancelAppointmentByPatient`,{id}).subscribe(
        {
@@ -197,15 +277,6 @@ GetPatinetAppointmentById(id : number) : void{
        }
      );
    }
-
-
-
-
-
-
-
-
-
 
 }
   

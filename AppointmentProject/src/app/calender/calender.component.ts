@@ -56,6 +56,9 @@ export class CalenderComponent {
     this.doctorId = +this.route.snapshot.paramMap.get('doctorId')!;
   }
 
+
+
+  
   onSubmit()
   {
      if(this.appointmentForm.valid)

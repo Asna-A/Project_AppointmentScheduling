@@ -29,10 +29,10 @@ export class DoctorLoginComponent {
 
 
 ngOnInit() {
-  this.AuthenticationServiceService.LoginStatus$.subscribe((status: Boolean) => {
+  this.AuthenticationServiceService.doctorLoginStatus$.subscribe((status: Boolean) => {
     if (status) {
       alert("Login success");
-      this.router.navigate(['/patient-profile']);
+      this.router.navigate(['/doctorProfile']);
     } else {
       alert("Login failed");
     }
@@ -43,7 +43,7 @@ onSubmit()
     {
       if(this.doctor_login.valid)
       {
-        this.AuthenticationServiceService.submitLogin(this.doctor_login.value);
+        this.AuthenticationServiceService.doctorLogin(this.doctor_login.value);
       }
     }
 

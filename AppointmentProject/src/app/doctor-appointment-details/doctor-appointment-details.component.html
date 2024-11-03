@@ -1,0 +1,26 @@
+
+<div *ngIf="status">
+    <ul>
+      <li *ngFor="let Appointment of appointmentDetails">
+        <p>patientName:{{ Appointment.patientName }}</p>
+        <p>appointmentDate:{{ Appointment.appointmentDate }}</p>
+        <p>SlotTime:{{ getSlotTime(Appointment.slotTime) }}</p>
+        <p>Status : {{getStatus(Appointment.status) }}</p>
+        <!-- <div *ngIf="Appointmnet.status">
+            <button (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
+        </div> -->
+        <div *ngIf="Appointment.status">
+            <ng-container *ngIf="isFutureDate(Appointment.appointmentDate); else doneTemplate">
+                <button (click)="Cancel(Appointment.id)">Cancel Appointment</button>
+            </ng-container>
+            <ng-template #doneTemplate>
+                <span>Done</span>
+            </ng-template>
+        </div>
+        
+      <div *ngIf="!isFutureDate(Appointment.appointmentDate)">
+        <button type="button">Done</button>
+      </div>
+      </li>
+    </ul>
+  </div>

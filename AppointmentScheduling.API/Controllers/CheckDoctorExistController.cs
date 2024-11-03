@@ -7,19 +7,27 @@ namespace AppointmentScheduling.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CheckDoctorExistController : ControllerBase
+    public class doctorLoginController : ControllerBase
     {
         private readonly IMediator mediator;
 
-        public CheckDoctorExistController(IMediator mediator)
+        public doctorLoginController(IMediator mediator)
         {
             this.mediator = mediator;
         }
 
         [HttpPost]
-        public async Task<string> checkUsernamePassword(CheckDoctorExist checkDoctorExist)
+        public async Task<IActionResult> Login(checkDoctorExist checkDoctorExist)
         {
-            return await mediator.Send(checkDoctorExist);
+            var doctorId = await mediator.Send(checkDoctorExist);
+            if (doctorId != null)
+            {
+                return Ok(new { doctorId });
+            }
+            else
+            {
+                return Unauthorized("Incorrect username or password");
+            }
         }
     }
 }

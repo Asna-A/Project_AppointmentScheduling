@@ -1,5 +1,13 @@
-<p>profile-page </p>
+<div *ngIf="status">
+    <h2>{{ patientDetails.name }}</h2>
+    <p>Email: {{ patientDetails.email }}</p>
+    <p>Phone: {{ patientDetails.phone }}</p>
+
+  </div>
+  
+<div class="buttons">
 <div> <button class="shadow p-3 mb-5 bg-white rounded">Edit Profile</button> </div>
 <div><button class="shadow p-3 mb-5 bg-white rounded">Appointment History</button></div>
 <div><button class="shadow p-3 mb-5 bg-white rounded" (click)="goToSpecializations()">Book Doctor</button> </div>
+</div>
 <router-outlet></router-outlet>
