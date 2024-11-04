@@ -36,7 +36,7 @@ export class ProfilePageComponent {
   }
 
   
-  goToSpecializations() {
-    this.router.navigate(['/specializations']);
-  }
+  // goToSpecializations() {
+  //   this.router.navigate(['/specializations']);
+  // }
 }

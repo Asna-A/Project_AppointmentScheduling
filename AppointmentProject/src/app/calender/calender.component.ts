@@ -24,13 +24,16 @@ export class CalenderComponent {
 
   appointmentForm: FormGroup;
   slots = [
-    { slot: 1, viewValue: '10:30 - 11:00 AM' },
-    { slot: 2, viewValue: '11:00 - 11:30 AM' },
-    { slot: 3, viewValue: '04:00 - 04:30 PM' },
-    { slot: 4, viewValue: '04:30 - 05:00 PM' },
-    { slot: 5, viewValue: '05:00 - 05:30 PM' },
-    { slot: 6, viewValue: '05:30 - 06:00 PM' },
-    { slot: 7, viewValue: '06:00 - 06:30 PM' }, 
+    { slot: 1, viewValue: '09:30 - 10:00 AM' },
+    { slot: 2, viewValue: '10:00 - 10:30 AM' },
+    { slot: 3, viewValue: '10:30 - 11:00 AM' },
+    { slot: 4, viewValue: '11:00 - 11:30 AM' },
+    { slot: 5, viewValue: '04:00 - 04:30 PM' },
+    { slot: 6, viewValue: '04:30 - 05:00 PM' },
+    { slot: 7, viewValue: '05:00 - 05:30 PM' }, 
+    { slot: 8, viewValue: '05:30 - 06:00 PM' }, 
+    { slot: 9, viewValue: '06:00 - 06:30 PM' }, 
+
   ];
   appointmentDate: any;
   selectedSlot: number|null=null;
@@ -42,16 +45,16 @@ export class CalenderComponent {
     });
   }
 
-
+  dateChanged($event: any) {
+    const dateForSchedule = new Date($event.target.value);
+    const year = dateForSchedule.getFullYear();
+    const month = (dateForSchedule.getMonth() + 1).toString().padStart(2, '0'); 
+    const day = dateForSchedule.getDate().toString().padStart(2, '0');
   
-  dateChanged($event:any)
-  {
-    
-    var dateForSchedule=$event.target.value
-    var formattedDate = dateForSchedule.toISOString().split('T')[0];
-    this.appointmentForm.patchValue({appointmentDate:formattedDate})
+    const formattedDate = `${year}-${month}-${day}`;
+    console.log(formattedDate)
+    this.appointmentForm.patchValue({ appointmentDate: formattedDate });
   }
-
   ngOnInit(){
     this.doctorId = +this.route.snapshot.paramMap.get('doctorId')!;
 
