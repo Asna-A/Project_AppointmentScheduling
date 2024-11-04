@@ -158,8 +158,7 @@
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\DTO\\GetAppointmentsByDoctorDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T09:50:02.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T09:50:02.748Z"
             },
             {
               "$type": "Document",
@@ -169,7 +168,7 @@
               "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\Request\\Queries\\getAppointmentsByDoctorQuery.cs",
               "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Queries\\getAppointmentsByDoctorQuery.cs",
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Queries\\getAppointmentsByDoctorQuery.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCAAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T09:49:17.308Z",
               "EditorCaption": ""
@@ -196,8 +195,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:35:07.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T04:35:07.508Z"
             },
             {
               "$type": "Document",
