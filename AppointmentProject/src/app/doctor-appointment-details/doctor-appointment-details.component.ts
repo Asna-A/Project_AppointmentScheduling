@@ -59,6 +59,18 @@ export class DoctorAppointmentDetailsComponent {
     return dict[slot] ;
   }
 
+
+
+  slotStatus:boolean=false;
+  SlotTimeCheck(slot:string):boolean{
+    if(slot!="0")
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
   Cancel(AppointmentId : string) : void{
 
     const parsedId = parseInt(AppointmentId, 10);

@@ -31,6 +31,7 @@ namespace AppointmentScheduling.Application.Request.Queries
                 .Include(a=>a.Patient)
                 .Select(a => new GetAppointmentsByDoctorDTO
                 { 
+                    Id=a.Id,
                     patientName = a.Patient.PatientName,
                     AppointmentDate = a.AppointmentDate,
                     SlotTime = a.slot,
