@@ -263,6 +263,41 @@ export class AuthenticationServiceService {
     }
   
 
+    // username : any 
+
+    // submitSignup(data:any):any{
+    //   console.log("hiiiii")
+    //   console.log(data.UserName)
+    //   this.username = String(data.UserName)
+    //   console.log(this.username)
+    //   const model = { userName: this.username };
+    //   this.http.post("https://localhost:7076/api/CheckUserNameAvailable", model).subscribe(
+    //     {
+    //       next:(Response:any)=>{
+    //         if(Response)
+    //         {
+    //           console.log(Response)
+    //           this.http.post("http://localhost:5218/api/SignUp", data).subscribe(
+    //             {
+    //             next:(response)=>{this.SignUpStatus.next(true);},
+    //             error:(error)=>{this.SignUpStatus.next(false);}
+           
+    //             }
+    //           );
+    //         }
+    //       },
+    //       error:(Error : any)=>{
+    //         debugger;
+    //         alert("UserName Already Exist")
+    //       }
+    //     }
+    //   )
+  
+    // }
+
+
+
+
   submitUpdateDetails(updateData: IupdateDetails & { Id: number }): void{
     this.http.patch(`http://localhost:5218/api/UpdateDetails/${updateData.Id}`,updateData).subscribe(
      {
