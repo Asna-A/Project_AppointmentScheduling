@@ -5,11 +5,13 @@
     <div class="form-group">
         <label for="Name">UserName</label>
         <input type="text" class="form-control" id="Name"  placeholder="Enter Name" formControlName="UserName">
+        <div *ngIf ="doctor_login.get('UserName')?.invalid && doctor_login.get('UserName')?.touched ">UserName is required </div>
       </div>
     
     <div class="form-group ">
     <label for="Age">Password</label>
-        <input type="text" class="form-control" id="Age"  placeholder="Enter Age" formControlName="Password"> 
+        <input type="password" class="form-control" id="Age"  placeholder="Enter Age" formControlName="Password"> 
+        <div *ngIf ="doctor_login.get('Password')?.invalid && doctor_login.get('Password')?.touched ">Password is required </div>
       </div>
 
       <button type="submit" (click)="onSubmit()">Submit</button>

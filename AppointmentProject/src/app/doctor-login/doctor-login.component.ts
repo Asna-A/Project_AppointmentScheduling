@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 import { AuthenticationServiceService } from '../authentication-service.service';
+import { CommonModule } from '@angular/common';
 
 interface doctorLogin
  {
@@ -13,7 +14,7 @@ interface doctorLogin
 @Component({
   selector: 'app-doctor-login',
   standalone: true,
-  imports: [RouterOutlet,ReactiveFormsModule],
+  imports: [RouterOutlet,ReactiveFormsModule,CommonModule],
   templateUrl: './doctor-login.component.html',
   styleUrl: './doctor-login.component.scss'
 })
