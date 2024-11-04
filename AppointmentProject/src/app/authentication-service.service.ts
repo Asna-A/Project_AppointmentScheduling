@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import {  Subject } from 'rxjs';
 import { IPatientAppointmentsById } from './Interfaces/ipatient-appointments-by-id';
 import { IupdateDetails } from './Interfaces/iupdate-details';
+import { Ispecialization } from './Interfaces/ispecialization';
 
 
 interface GetCountDTO {
@@ -66,9 +67,15 @@ export class AuthenticationServiceService {
   private bookAppointmentStatus=new Subject<boolean>();
   public bookAppointmentStatus$=this.bookAppointmentStatus.asObservable();
 
+  private getSpecializationIdNameStatus=new Subject<Ispecialization[]>();
+  public getSpecializationIdNameStatus$=this.getSpecializationIdNameStatus.asObservable();
+
 
   private AppointmentDetailsByDoctor=new Subject<any>();
   public AppointmentDetailsByDoctor$=this.AppointmentDetailsByDoctor.asObservable()
+
+
+
 
   constructor(private http:HttpClient) {}
 
@@ -300,18 +307,29 @@ export class AuthenticationServiceService {
 
 
 
-  submitUpdateDetails(updateData: IupdateDetails & { Id: number }): void{
-    this.http.patch(`http://localhost:5218/api/UpdateDetails/${updateData.Id}`,updateData).subscribe(
+  submitUpdateDetails(updateData: IupdateDetails ): void{
+    const patientId=localStorage.getItem('patientId')
+    this.http.patch(`http://localhost:5218/api/UpdateDetails/${patientId}`,updateData).subscribe(
      {
      next:(response)=>{
       console.log(response)
       this.UpdateDetails.next(true);},
      error:(error)=>{this.UpdateDetails.next(false);}
-
      }
    );
  }
 
+ getAllSpecializations(): void
+ {
+  this.http.get<Array<Ispecialization>>("https://localhost:7076/api/GetSpecializationIdNameQuery").subscribe(
+    {
+      next:(response:Ispecialization[])=>{
+        console.log(response)
+        this.getSpecializationIdNameStatus.next(response);},
+       error:(error)=>{this.getSpecializationIdNameStatus.next(error);}
+    }
+  )
+ }
 
 
 GetPatinetAppointmentById() : any{

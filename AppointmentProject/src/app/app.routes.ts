@@ -18,7 +18,6 @@ export const routes: Routes = [
     {path:'doctorLogin',component:DoctorLoginComponent},   
     {path:'patientProfile',component:ProfilePageComponent},
     {path:'home',component:LandingComponent},
-    {path:'patientProfile',component:ProfilePageComponent},
     {path:'doctorProfile',component:doctorProfilePageComponent},
     {path:'specializations',component:SpecializationsComponent},
     // {path:'bookAppointment',component:CalenderComponent},

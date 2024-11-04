@@ -15,10 +15,10 @@ namespace AppointmentScheduling.API.Controllers
             this.mediator = mediator;
         }
 
-        [HttpPatch("{id}")]  // Accept the ID as a route parameter
+        [HttpPatch("{id}")]  
         public async Task<int> Update(int id,UpdateDetailsCommand update)
         {
-            // Set the command's Id property with the route parameter value
+           
             update.Id = id;
             return await mediator.Send(update);
         }

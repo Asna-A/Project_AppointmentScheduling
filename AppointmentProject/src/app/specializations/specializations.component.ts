@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthenticationServiceService } from '../authentication-service.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { Ispecialization } from '../Interfaces/ispecialization';
 
 interface doctors {
   name: string;
@@ -19,25 +20,40 @@ interface doctors {
 export class SpecializationsComponent {
   cardcount: number=0;
   dermcount:number=0;
-  showDermCount:boolean=false;
-  showCardCount:boolean=false;
+  DoctorCount:number=0;
+  showDoctorCount:boolean=false;
   specializationId:number|null=null;
   DoctorId:string|null=null;
   doctors: doctors[]=[];
+  specializations:Ispecialization[]=[]
   constructor(private AuthenticationServiceService:AuthenticationServiceService,private router:Router) {  
   }
 
   
   ngOnInit() {
-    this.AuthenticationServiceService.DoctorCount$.subscribe((count:number) => {
-      if (this.specializationId == 1) {
-        this.showDermCount=true;
-        this.dermcount = count;
-      } else if (this.specializationId == 3) {
-        this.showCardCount=true;
-        this.cardcount = count;
+  
+
+    this.AuthenticationServiceService.getAllSpecializations();
+    this.AuthenticationServiceService.getSpecializationIdNameStatus$.subscribe((response:Ispecialization[])=>
+    {
+      if(response)
+      {
+        this.specializations=response;
       }
-    });
+      else
+      {
+        alert("error")
+      }
+    }
+
+    )
+
+    this.AuthenticationServiceService.DoctorCount$.subscribe((count:number) => {
+      
+        this.showDoctorCount=!this.showDoctorCount;
+        this.DoctorCount = count;
+      }
+    );
 
     this.AuthenticationServiceService.doctorsDetails$.subscribe((doctors:doctors[])=>{
       this.doctors=doctors;
