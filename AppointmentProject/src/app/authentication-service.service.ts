@@ -149,11 +149,13 @@ export class AuthenticationServiceService {
     const doctorId = localStorage.getItem('doctorId');
     if(doctorId)
     {
-      this.http.get("`http://localhost:5218/api/getDoctorProfile/${docotorId}`").subscribe(
+     
+      this.http.get(`http://localhost:5218/api/getDoctorProfile/${doctorId}`).subscribe(
         {
         next:(response:any)=>{
-          this.getPatientDetailsStatus.next(response);},
-        error:(error)=>{this.LoginStatus.next(error);}
+          console.log("hai")
+          this.getDoctorProfileStatus.next(response);},
+        error:(error)=>{this.getDoctorProfileStatus.next(error);}
         }
       );
     }

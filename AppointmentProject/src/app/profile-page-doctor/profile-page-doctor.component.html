@@ -1,17 +1,40 @@
-<div *ngIf="status">
-    <h2>{{ doctorDetails.name }}</h2>
-    <p>Experience: {{ doctorDetails.experience }} years</p>
-    <p>Registration ID: {{ doctorDetails.registrationId }}</p>
-    <p>Specializations:</p>
-    <ul>
-      <li *ngFor="let specialization of doctorDetails.specializations">
-        {{ specialization }}
-      </li>
-    </ul>
+
+ 
+  <div class="sidebar">
+   
+    <a href="/AppointmentDetailByDoctor">Appointment History</a>
   </div>
   
-<div class="buttons">
-<div> <button class="shadow p-3 mb-5 bg-white rounded">Edit Profile</button> </div>
-<div><button class="shadow p-3 mb-5 bg-white rounded" routerLink="/AppointmentDetailByDoctor" routerLinkActive="active">Appointment History</button></div>
-</div>
+  <div class="content">
+    <div class="specializations">
+      <div class="specialization">
+    <div>
+      <div class="card ">
+        <div class="card-body">
+          <p class="card-text" *ngIf="status"></p>
+          <h2>{{ doctorDetails.name }}</h2>
+      <p>Experience: {{ doctorDetails.experience }}</p>
+      <p>Registration ID: {{ doctorDetails.registrationId }}</p>
+      <p>Specializations:</p>
+      <ul>
+        
+        <li *ngFor="let specialization of doctorDetails.specializations">
+          {{ specialization }}
+        </li>
+      </ul>
+              
+           
+    </div>
+    
+    </div>
+
+      
+
+
+  
+    
+    </div>
+    
+  </div>
+
 <router-outlet></router-outlet>
