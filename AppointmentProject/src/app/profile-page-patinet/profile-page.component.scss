@@ -1,0 +1,34 @@
+
+.profile{
+    background-color:#9cbcb7;
+    height: 100%; 
+    overflow: hidden; 
+    margin: 0px;
+    padding: 0px;
+}
+
+.myButtons{
+    margin-top: 5px;
+    background-color: #dfebe9;
+    height: 100vh;
+    padding-top: 80px;
+    
+    
+}
+.container-fluid{ 
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.details{
+    background-color:#dfebe9;
+    height: 100vh;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    border-radius: 0.25rem;
+    font-family: EB Garamond;
+    padding: 30px;
+    color: #56486c;
+    font-size: 15px;
+}

@@ -1,23 +1,55 @@
-<p>patient-appointment-details works!</p>
 
-<div *ngIf="list">
-    <h3>Available Doctors</h3>
-    <ul>
-      <li *ngFor="let Appointmnet of list">
-        <p>DoctorName:{{ Appointmnet.doctorName }}</p>
-        <p>appointmentDate:{{ Appointmnet.appointmentDate }}</p>
-        <p>SlotTime:{{ getSlotTime(Appointmnet.slotTime) }}</p>
-        <p>Status : {{getStatus(Appointmnet.status) }}</p>
-        <p>Specializations :</p>
-        <ul>
-            <li *ngFor=" let Specializations of Appointmnet.doctorSpecialization">
-                {{Specializations}}
-            </li>
-        </ul>
-        <div *ngIf="Appointmnet.status">
-            <button (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
+
+
+  <div class="specializations">
+    <div class="specialization">
+    
+      <div>
+      <div class="card">
+          <div class="card-body">
+            
+            <ul>
+              <li class="card-text"*ngFor="let Appointmnet of list">
+                <div class="newAppointment">
+                <p class="card-text">DoctorName:{{ Appointmnet.doctorName }}</p>
+                <p class="card-text">appointmentDate:{{ Appointmnet.appointmentDate }}</p>
+                <p class="card-text" *ngIf="SlotTimeCheck(Appointmnet.slotTime)">SlotTime:{{ getSlotTime(Appointmnet.slotTime) }}</p>
+      
+                <div *ngIf="Appointmnet.status">
+                  <ng-container *ngIf="isFutureDate(Appointmnet.appointmentDate); else doneTemplate">
+                    <div class="cardButtons">
+                      <div>
+                      <button (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
+                      </div>
+                    </div>
+                  </ng-container>
+                  <ng-template #doneTemplate>
+                    <div class="cardButtons">
+                      <div>
+                    <button type="button">Done</button>
+                  </div>
+                </div>
+                  </ng-template>
+              </div>
+              
+              <div *ngIf="!Appointmnet.status">
+                <div class="cardButtons">
+                  <div>
+                <button type="button">Cancelled Appointment</button>
+              </div>
+            </div>
+            </div>
+          </div>
+              </li>
+            </ul>
+
+
+          
+      </div>
+      </div>
+    
+          </div>
         </div>
-        
-      </li>
-    </ul>
-  </div>
+      </div>
+    
+    

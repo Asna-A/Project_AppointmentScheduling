@@ -1,0 +1,45 @@
+.specialization{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap:30px;
+    font-family: EB Garamond;
+    margin-top: 56px;
+}
+
+.specializations{   
+    background-color: #9cbcb7;
+    padding: 25px;
+    height: 100%; 
+    overflow: scroll;  
+   
+}
+
+.doctorAvail{
+    font-size: 20px;
+}
+
+.card{
+    width: 90vh;
+    background-color:#dfebe9;
+    color: #56486c;
+}
+
+.cardButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-title{
+    text-align: center;
+    font-family: EB Garamond;    
+}
+.btn {
+    
+    border: none; 
+    color: #56486c;
+     
+}
+

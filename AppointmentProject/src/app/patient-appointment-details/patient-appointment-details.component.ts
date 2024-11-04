@@ -12,8 +12,8 @@ import { IPatientAppointmentsById } from '../Interfaces/ipatient-appointments-by
 })
 export class PatientAppointmentDetailsComponent {
 
-  patientId : number = 1;
-
+  
+  appointmentStatus:string='';
 
   list : IPatientAppointmentsById[]=[]
 
@@ -22,7 +22,8 @@ export class PatientAppointmentDetailsComponent {
   }
 
   ngOnInit(){
-    this.AuthenticationServiceService.GetPatinetAppointmentById(this.patientId);
+
+    this.AuthenticationServiceService.GetPatinetAppointmentById();
     this.AuthenticationServiceService.PatientAppointmnetsById$.subscribe((list : IPatientAppointmentsById[])=>{
       console.log(list)
       this.list = list
@@ -31,7 +32,6 @@ export class PatientAppointmentDetailsComponent {
 
     })
   }
-
   getSlotTime(slot: string): string {
     const dict: { [key: string]: string } = {
       1: '9:30 AM - 10:00 AM',
@@ -45,11 +45,17 @@ export class PatientAppointmentDetailsComponent {
       9: '6:00 PM - 6:30 PM'
     };
   
+
     return dict[slot] ;
+  }
+  isFutureDate(appointmentDate: string): boolean {
+    const appointment = new Date(appointmentDate);
+    const now = new Date();
+    return appointment > now;
   }
 
   getStatus(status : string) : string{
-    if(status == 'true'){
+    if(status == "true"){
       return "Appointment Not cancelled"
     }
     else{
@@ -57,15 +63,29 @@ export class PatientAppointmentDetailsComponent {
     }
   }
 
+  slotStatus:boolean=false;
+  SlotTimeCheck(slot:string):boolean{
+    if(slot!="0")
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  
+
   Cancel(AppointmentId : string) : void{
 
     const parsedId = parseInt(AppointmentId, 10);
-
+    
     this.AuthenticationServiceService.CancelAppoinmentPatient(parsedId);
 
     this.AuthenticationServiceService.CancelAppointmentByPatinet$.subscribe((status: Boolean) => {
       if (status) {
+
         alert("Cancellation Done");
+
       } else {
         alert("Cancellation Failed");
       }

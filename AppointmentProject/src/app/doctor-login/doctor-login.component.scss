@@ -1,0 +1,47 @@
+
+.patientLogin{   
+    background-color: #9cbcb7;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pForm{
+    background-color:#dfebe9;
+    border-radius: 0.35rem;
+    padding: 15px; 
+    min-width: 700px; 
+   
+    
+}
+.form-group {
+    margin-bottom: 1.5rem;     
+}
+
+label{
+    margin-bottom: 3px;
+    font-family: EB Garamond;
+    color: #56486c;
+}
+
+
+input.form-control {
+    border-radius: 0.25rem;    
+    font-family: EB Garamond;
+
+}
+
+input.form-control:focus {
+    border-color: #56486c;   
+}
+
+button {
+    background-color: #56486c; 
+    color: white;             
+    border-radius: 0.25rem;     
+}
+
+button:hover {
+    background-color: #473b5e;  /* Darker shade on hover */
+}

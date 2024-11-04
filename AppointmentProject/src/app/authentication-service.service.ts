@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { Injectable } from '@angular/core';
 import {  Subject } from 'rxjs';
+import { IPatientAppointmentsById } from './Interfaces/ipatient-appointments-by-id';
+import { IupdateDetails } from './Interfaces/iupdate-details';
 
 
 interface GetCountDTO {
@@ -13,6 +15,12 @@ interface IDoctorDetails {
   Name : string;
   Experience : number;  
 }
+
+interface IPatientDetails{
+
+}
+
+
 @Injectable({
   providedIn: 'root'
 
@@ -25,7 +33,8 @@ export class AuthenticationServiceService {
   private LoginStatus=new Subject<Boolean>();
   LoginStatus$=this.LoginStatus.asObservable();
 
-
+  private doctorLoginStatus=new Subject<Boolean>();
+  doctorLoginStatus$=this.doctorLoginStatus.asObservable();
 
   private DoctorCount=new Subject<number>();
   DoctorCount$=this.DoctorCount.asObservable();
@@ -48,7 +57,18 @@ export class AuthenticationServiceService {
   private CancelAppointmentByPatinet = new Subject<boolean>();
   public CancelAppointmentByPatinet$ = this.CancelAppointmentByPatinet.asObservable();
 
+  private getPatientDetailsStatus = new Subject<IPatientDetails>();
+  public getPatientDetailsStatus$ = this.getPatientDetailsStatus.asObservable();
 
+  private getDoctorProfileStatus = new Subject<any>();
+  public getDoctorProfileStatus$ = this.getDoctorProfileStatus.asObservable();
+
+  private bookAppointmentStatus=new Subject<boolean>();
+  public bookAppointmentStatus$=this.bookAppointmentStatus.asObservable();
+
+
+  private AppointmentDetailsByDoctor=new Subject<any>();
+  public AppointmentDetailsByDoctor$=this.AppointmentDetailsByDoctor.asObservable()
 
   constructor(private http:HttpClient) {}
 
@@ -64,7 +84,7 @@ export class AuthenticationServiceService {
 
 
   submitLogin(data:any):any{
-    this.http.post<{patientId:string}>("http://localhost:5218/api/Login", data).subscribe(
+    this.http.post("http://localhost:5218/api/Login", data).subscribe(
       {
       next:(response:any)=>{
         console.log(response)
@@ -80,6 +100,63 @@ export class AuthenticationServiceService {
       }
     );
 
+  }
+
+
+
+  doctorLogin(data:any):any{
+    this.http.post("http://localhost:5218/api/doctorLogin", data).subscribe(
+      {
+      next:(response:any)=>{
+        console.log(response)
+        if(response && response.doctorId){
+        localStorage.setItem('doctorId', response.doctorId);
+        this.doctorLoginStatus.next(true);}
+        else {
+          this.doctorLoginStatus.next(false);
+        }},
+      error:(error)=>{this.doctorLoginStatus.next(false);}
+ 
+      }
+    );
+
+  }
+
+  getPatientDetails():any{
+    console.log("hai")
+    const patientId = localStorage.getItem('patientId');
+    console.log(patientId)
+    if(patientId)
+    {
+      
+      this.http.get(`http://localhost:5218/api/getPatientDetails/${patientId}`).subscribe(
+        {
+        next:(response:any)=>{
+          this.getPatientDetailsStatus.next(response);
+         
+        },
+          
+        error:(error)=>{this.LoginStatus.next(error);
+         
+        }
+
+        }
+      );
+    }
+  }
+
+  getDoctorDetailProfile():any{
+    const doctorId = localStorage.getItem('doctorId');
+    if(doctorId)
+    {
+      this.http.get("`http://localhost:5218/api/getDoctorProfile/${docotorId}`").subscribe(
+        {
+        next:(response:any)=>{
+          this.getPatientDetailsStatus.next(response);},
+        error:(error)=>{this.LoginStatus.next(error);}
+        }
+      );
+    }
   }
 
   doctors: any[] = [];
@@ -115,6 +192,7 @@ export class AuthenticationServiceService {
       }
     );
   }
+  
   getDoctorDetails(): void {
     this.http.get<Array<IDoctorDetails>>("http://localhost:5218/api/GetAllDoctors").subscribe(
       {
@@ -141,6 +219,8 @@ export class AuthenticationServiceService {
               {
                 next:(response:any) => {
                   alert("booking success")
+                  this.bookAppointmentStatus.next(true);
+                  
                 },
                 error:(error) => {
                   console.error("Error fetching doctor details:", error); 
@@ -164,6 +244,25 @@ export class AuthenticationServiceService {
     );  
   } 
 
+
+
+  GetDoctorAppointmentById():any{
+    const id=localStorage.getItem('doctorId')
+    
+  this.http.get(`https://localhost:7076/api/getAppointmentDetailsByDoctor/${id}`).subscribe(
+    {
+    
+      next:(Response : any)=>{
+        this.AppointmentDetailsByDoctor.next(Response);
+        console.log(Response)
+      },
+        error:(error) =>{
+          console.log(error)
+          this.AppointmentDetailsByDoctor.next(error);}
+      });
+    }
+  
+
   submitUpdateDetails(updateData: IupdateDetails & { Id: number }): void{
     this.http.patch(`http://localhost:5218/api/UpdateDetails/${updateData.Id}`,updateData).subscribe(
      {
@@ -176,14 +275,46 @@ export class AuthenticationServiceService {
    );
  }
 
-GetPatinetAppointmentById(id : number) : void{
-  this.http.get<IPatientAppointmentsById[]>(`https://localhost:7076/api/GetAllAppointmentsById/${id}`).subscribe(
+
+
+GetPatinetAppointmentById() : any{
+
+  const id=localStorage.getItem('patientId')
+  this.http.get(`https://localhost:7076/api/GetAllAppointmentsById/${id}`).subscribe(
     {
-      next:(Response : IPatientAppointmentsById[])=>{
-        this.PatientAppointmnetsById.next(Response);},
-        error:(error) =>{this.PatientAppointmnetsById.next(error);}
+    
+      next:(Response : any)=>{
+        this.PatientAppointmnetsById.next(Response);
+        console.log(Response)
+      },
+        error:(error) =>{
+          console.log(error)
+          this.PatientAppointmnetsById.next(error);}
       });
     }
+
+
+
+
+
+
+
+
+
+    GetAppointmentDetailsByDoctor(id : number) : any{
+      this.http.get(`https://localhost:7076/api/GetAppointmentDetailsByDoctor/${id}`).subscribe(
+        {
+          next:(response:any)=>{
+            this.AppointmentDetailsByDoctor.next(Response);},
+            error:(error) =>{this.AppointmentDetailsByDoctor.next(error);}
+          });
+        }
+    
+
+
+
+
+
 
     CancelAppoinmentPatient(id :number): void{
       this.http.patch(`https://localhost:7076/api/CancelAppointmentByPatient`,{id}).subscribe(
@@ -195,15 +326,6 @@ GetPatinetAppointmentById(id : number) : void{
        }
      );
    }
-
-
-
-
-
-
-
-
-
 
 }
   

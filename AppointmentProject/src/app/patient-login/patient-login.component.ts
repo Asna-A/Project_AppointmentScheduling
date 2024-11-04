@@ -33,7 +33,7 @@ ngOnInit() {
   this.AuthenticationServiceService.LoginStatus$.subscribe((status: Boolean) => {
     if (status) {
       alert("Login success");
-      this.router.navigate(['/patient-profile']);
+      this.router.navigate(['/patientProfile']);
     } else {
       alert("Login failed");
     }

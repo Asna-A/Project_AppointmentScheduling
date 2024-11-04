@@ -35,7 +35,7 @@ export class CalenderComponent {
   appointmentDate: any;
   selectedSlot: number|null=null;
 
-  constructor(private fb: FormBuilder, private AuthenticationServiceService:AuthenticationServiceService,private route: ActivatedRoute) {
+  constructor(private fb: FormBuilder, private AuthenticationServiceService:AuthenticationServiceService,private route: ActivatedRoute,private router: Router) {
     this.appointmentForm = this.fb.group({
       appointmentDate:new FormControl('',[Validators.required]),
       slot:new FormControl('',[Validators.required]),
@@ -54,8 +54,16 @@ export class CalenderComponent {
 
   ngOnInit(){
     this.doctorId = +this.route.snapshot.paramMap.get('doctorId')!;
-  }
 
+    this.AuthenticationServiceService.bookAppointmentStatus$.subscribe((status:boolean)=>
+    {
+      if (status) {
+        this.router.navigate(['/patientProfile']);
+      } else {
+        alert("Booking error");
+      }
+    });
+  }
   onSubmit()
   {
      if(this.appointmentForm.valid)

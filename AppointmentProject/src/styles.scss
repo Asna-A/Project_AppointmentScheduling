@@ -1,4 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;}
+@import "../node_modules/@ng-select/ng-select/themes/default.theme.css";
+
+
+.dropdown-menu{
+    background-color: #6e4975;
+}
+.dropdown-item:hover{
+    background-color: #56486c;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%; 
+    z-index: 1; 
+}
+
+.navbar-brand, .nav-link, .dropdown-item {
+    color:#dfebe9;
+}
+
+.navbar-brand, .nav-link:hover{
+    color:#ffffff;
+}
+.backg {
+    background-color: #6e4975;
+}

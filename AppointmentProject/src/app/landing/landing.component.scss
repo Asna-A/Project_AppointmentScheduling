@@ -1,0 +1,31 @@
+
+.landing {  
+    background-image: url("/landing.png");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+
+.fullBody{
+    background-color:#dfebe9;
+    margin: 0;
+}
+
+
+.getStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    color: #56486c; 
+    font-family:alkatra; 
+    font-size: 35px;
+   
+}
+.getStart .btn{
+    color: #dfebe9;
+    background-color: #6e4975;
+    font-size: 20px; 
+}

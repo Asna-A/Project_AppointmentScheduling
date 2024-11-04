@@ -7,22 +7,28 @@ import { SpecializationsComponent } from './specializations/specializations.comp
 import { CalenderComponent } from './calender/calender.component';
 import { UpdateDetailsComponent } from './update-details/update-details.component';
 import { PatientAppointmentDetailsComponent } from './patient-appointment-details/patient-appointment-details.component';
+import { doctorProfilePageComponent } from './profile-page-doctor/profile-page-doctor.component';
+import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
+import { DoctorAppointmentDetailsComponent } from './doctor-appointment-details/doctor-appointment-details.component';
 
 
 export const routes: Routes = [
     {path:'patientSignup',component:PatientSignupComponent},
-    {path:'patientLogin',component:PatientLoginComponent},    
+    {path:'patientLogin',component:PatientLoginComponent}, 
+    {path:'doctorLogin',component:DoctorLoginComponent},   
     {path:'patientProfile',component:ProfilePageComponent},
     {path:'home',component:LandingComponent},
-    {path:'patient-profile',component:ProfilePageComponent},
+    {path:'patientProfile',component:ProfilePageComponent},
+    {path:'doctorProfile',component:doctorProfilePageComponent},
     {path:'specializations',component:SpecializationsComponent},
-    {path:'book-appointment',component:CalenderComponent},
-    {path:'doctorDetails',component:DoctorInformationComponent},
-    {path: 'editprofile',component:UpdateDetailsComponent},
-    {path: 'Appointment-Detail-of-patinetById',component:PatientAppointmentDetailsComponent},
-    {path:'book-appointment/:doctorId',component:CalenderComponent},
-
+    // {path:'bookAppointment',component:CalenderComponent},
+    {path: 'editProfile',component:UpdateDetailsComponent},
+    {path: 'AppointmentDetailOfPatinetById',component:PatientAppointmentDetailsComponent},
+    {path:'bookAppointment/:doctorId',component:CalenderComponent},
+    {path:'AppointmentDetailByDoctor',component:DoctorAppointmentDetailsComponent},
     {path:'',redirectTo:'/home',pathMatch:'full'}
     
+
+
 
 ];
