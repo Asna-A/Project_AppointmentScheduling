@@ -1,29 +1,55 @@
-<div *ngIf="status">
-    <ul>
-      <li *ngFor="let Appointment of appointmentDetails">
-        <p>patientName:{{ Appointment.patientName }}</p>
-        <p>appointmentDate:{{ Appointment.appointmentDate }}</p>
-        <p>SlotTime:{{ getSlotTime(Appointment.slotTime) }}</p>
-        <p>Status : {{getStatus(Appointment.status) }}</p>
-        <!-- <div *ngIf="Appointmnet.status">
-            <button (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
-        </div> -->
-        <div *ngIf="Appointment.status">
-            <ng-container *ngIf="isFutureDate(Appointment.appointmentDate); else doneTemplate">
-                <button (click)="Cancel(Appointment.id)">Cancel Appointment</button>
-            </ng-container>
-            <ng-template #doneTemplate>
-                <span>Done</span>
-            </ng-template>
-        </div>
-        
-      <div *ngIf="!isFutureDate(Appointment.appointmentDate)">
-        <button type="button">Done</button>
+
+
+
+  <div class="specializations">
+    <div class="specialization">
+    
+      <div>
+      <div class="card">
+          <div class="card-body">
+            
+            <ul>
+              <li class="card-text"*ngFor="let Appointment of appointmentDetails">
+                <div class="newAppointment">
+                <p class="card-text">patientName:{{ Appointment.patientName }}</p>
+                <p class="card-text">appointmentDate:{{ Appointment.appointmentDate }}</p>
+                <p class="card-text" *ngIf="SlotTimeCheck(Appointment.slotTime)">SlotTime:{{ getSlotTime(Appointment.slotTime) }}</p>
+      
+                <div *ngIf="Appointment.status">
+                  <ng-container *ngIf="isFutureDate(Appointment.appointmentDate); else doneTemplate">
+                    <div class="cardButtons">
+                      <div>
+                      <button (click)="Cancel(Appointment.id)">Cancel Appointment</button>
+                      </div>
+                    </div>
+                  </ng-container>
+                  <ng-template #doneTemplate>
+                    <div class="cardButtons">
+                      <div>
+                    <button type="button">Done</button>
+                  </div>
+                </div>
+                  </ng-template>
+              </div>
+              
+              <div *ngIf="!Appointment.status">
+                <div class="cardButtons">
+                  <div>
+                <button type="button">Cancelled Appointment</button>
+              </div>
+            </div>
+            </div>
+          </div>
+              </li>
+            </ul>
+
+
+          
       </div>
-      </li>
-    </ul>
-  </div>
-
-
-
-
+      </div>
+    
+          </div>
+        </div>
+      </div>
+    
+    

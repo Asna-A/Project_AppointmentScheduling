@@ -2,6 +2,7 @@
 {
     public class GetAppointmentsByDoctorDTO
     {
+        public int Id { get; set; }
         public string patientName { get; set; }
         public List<string> DoctorSpecialization { get; set; }
         public DateOnly AppointmentDate { get; set; }
