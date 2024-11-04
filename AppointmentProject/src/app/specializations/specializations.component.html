@@ -1,56 +1,76 @@
 <div class="specializations">
 <div class="specialization">
+
   <div>
-<div class="card">
-    <div class="card-body">
-      <h2 class="card-title">Dermatology</h2>
-      <p class="card-text" *ngIf="showDermCount">{{dermcount}} doctors available</p>
-      <div class="cardButtons">
-        <div>
-      <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(1)">
-        Click here to know no of available doctors
+  <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Dermatology</h2>
+        <p class="card-text" *ngIf="showDermCount">{{dermcount}} doctors available</p>
+        <div class="cardButtons">
+          <div>
+        <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(1)">
+          Click here to know no of available doctors
+      </button>
+    </div>
+    <div>
+      <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDoctors(1)">
+        Click here to Book
     </button>
   </div>
-  <div>
-    <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDoctors(1)">
-      Click here to Book
-  </button>
-</div>
-</div>
+  </div>
+
+      </div>
     </div>
   </div>
-</div>
-<div>
+
+
+
+  <div>
+    <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Cardiology</h2>
+          <p class="card-text" *ngIf="showCardCount">{{cardcount}} doctors available</p>
+          <div class="cardButtons">
+            <div>
+          <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(3)">
+            Click here to know no of available doctors
+        </button>
+      </div>
+      <div>
+        <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDoctors(3)">
+          Click here to Book
+      </button>
+    </div>
+    </div>
+  
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+
+
+  <div>
   <div class="card ">
     <div class="card-body">
-      <h2 class="card-title">Cardiology</h2>
-      <p class="card-text" *ngIf="showCardCount">{{cardcount}} doctors available</p>
-      <div class="cardButtons">
-        <div>
-      <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(1)">
-        Click here to know no of available doctors
-    </button>
-  </div>
-  <div>
-    <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDoctors(1)">
-      Click here to Book
-  </button>
-</div>
-</div>
-</div>
+      <p class="card-text" *ngIf="doctors.length > 0"></p>
+      <h2 class="card-title doctorAvail">Available Doctors</h2>
+      <ul>
+        <li *ngFor="let doctor of doctors">
+          <p>Name:{{ doctor.name }}</p>
+          <p>RegistrationId:{{ doctor.registrationId }}</p>
+          <p>Experience:{{ doctor.experience }}</p>
+          <button class="btn shadow "  (click)="bookAppointment(doctor.doctorId)">Book Now</button>
+        </li>
+      </ul>
 </div>
 
-  <div *ngIf="doctors.length > 0">
-    <h3>Available Doctors</h3>
-    <ul>
-      <li *ngFor="let doctor of doctors">
-        <p>Name:{{ doctor.name }}</p>
-        <p>RegistrationId:{{ doctor.registrationId }}</p>
-        <p>Experience:{{ doctor.experience }}</p>
-        <button class="btn shadow"  (click)="bookAppointment(doctor.doctorId)">Book Now</button>
-      </li>
-    </ul>
-  </div>
 </div>
-  
-      
+   
+
+
+
+

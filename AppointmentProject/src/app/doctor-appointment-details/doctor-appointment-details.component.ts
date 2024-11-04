@@ -18,6 +18,7 @@ export class DoctorAppointmentDetailsComponent {
 
   ngOnInit()
   {
+    this.AuthenticationServiceService.GetDoctorAppointmentById();
     this.AuthenticationServiceService.AppointmentDetailsByDoctor$.subscribe(
       (response:any)=>{
         this.status=true;

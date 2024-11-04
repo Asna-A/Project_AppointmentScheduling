@@ -1,8 +1,8 @@
 
 <div class="patientForm">
 <form [formGroup]= "update_form" (ngSubmit)="onSubmit()">
-
-    <div class="form-group">
+<div class="pForm">
+    <div class="form-group ">
         <label for="Name">Name</label>
         <input type="text" class="form-control" id="UpdateName"  placeholder="Enter Name" formControlName="PatientName">
       </div>
@@ -34,5 +34,6 @@
   
         
     <button type="submit">Submit</button>
+</div>
 </form>
 </div>

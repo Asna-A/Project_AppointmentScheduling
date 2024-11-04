@@ -12,7 +12,7 @@ import { IPatientAppointmentsById } from '../Interfaces/ipatient-appointments-by
 })
 export class PatientAppointmentDetailsComponent {
 
-  patientId : number = 1;
+  
   appointmentStatus:string='';
 
   list : IPatientAppointmentsById[]=[]
@@ -22,7 +22,8 @@ export class PatientAppointmentDetailsComponent {
   }
 
   ngOnInit(){
-    this.AuthenticationServiceService.GetPatinetAppointmentById(this.patientId);
+
+    this.AuthenticationServiceService.GetPatinetAppointmentById();
     this.AuthenticationServiceService.PatientAppointmnetsById$.subscribe((list : IPatientAppointmentsById[])=>{
       console.log(list)
       this.list = list
@@ -44,6 +45,7 @@ export class PatientAppointmentDetailsComponent {
       9: '6:00 PM - 6:30 PM'
     };
   
+
     return dict[slot] ;
   }
   isFutureDate(appointmentDate: string): boolean {
@@ -53,13 +55,25 @@ export class PatientAppointmentDetailsComponent {
   }
 
   getStatus(status : string) : string{
-    if(status == 'true'){
+    if(status == "true"){
       return "Appointment Not cancelled"
     }
     else{
       return "Appointment Cancelled"
     }
   }
+
+  slotStatus:boolean=false;
+  SlotTimeCheck(slot:string):boolean{
+    if(slot!="0")
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  
 
   Cancel(AppointmentId : string) : void{
 
@@ -71,6 +85,7 @@ export class PatientAppointmentDetailsComponent {
       if (status) {
 
         alert("Cancellation Done");
+
       } else {
         alert("Cancellation Failed");
       }

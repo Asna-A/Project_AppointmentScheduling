@@ -14,17 +14,19 @@ export class ProfilePageComponent {
   status:boolean=false;
 
   constructor(private router:Router,private AuthenticationServiceService:AuthenticationServiceService) {
-    
+    this.AuthenticationServiceService.getPatientDetails();
     
   }
 
   ngOnInit() {
-    this.AuthenticationServiceService.getPatientDetails();
+    
     this.AuthenticationServiceService.getPatientDetailsStatus$.subscribe(
       (response: any) => {
         if (response) {
+
           this.status=true;
-          this.patientDetails=response;  
+          this.patientDetails=response;
+          console.log(this.patientDetails)  
         } else {
           alert("error!Cant fetch Details");
         }

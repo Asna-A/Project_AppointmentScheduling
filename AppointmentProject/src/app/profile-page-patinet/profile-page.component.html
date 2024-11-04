@@ -1,13 +1,28 @@
+<div class="profile">
+  <div class="row container-fluid">
+ 
+  <div class="col-4 buttons">
+  <div class="myButtons">
+    <div> <button class="shadow p-3 mb-5 bg-white rounded" routerLink="/editProfile" routerLinkActive="active">Edit Profile</button> </div>
+    <div><button class="shadow p-3 mb-5 bg-white rounded" routerLink="/AppointmentDetailOfPatinetById" routerLinkActive="active">Appointment History</button></div>
+    <div><button class="shadow p-3 mb-5 bg-white rounded" (click)="goToSpecializations()">Book Doctor</button> </div>
+    </div>
+  </div>
+
+  <div class="col-8 details">   
+
 <div *ngIf="status">
-    <h2>{{ patientDetails.name }}</h2>
-    <p>Email: {{ patientDetails.email }}</p>
-    <p>Phone: {{ patientDetails.phone }}</p>
+  
+  <h2>{{ patientDetails.patientName }}</h2>
+  <p>Email: {{ patientDetails.email }}</p>
+  <p>Phone: {{ patientDetails.phone }}</p>
+  <p>Age:{{patientDetails.age}}</p>
+  <p>Gender:{{patientDetails.gender}}</p>
+</div>
+
+</div>
+</div>
 
   </div>
-  
-<div class="buttons">
-<div> <button class="shadow p-3 mb-5 bg-white rounded" routerLink="/editProfile" routerLinkActive="active">Edit Profile</button> </div>
-<div><button class="shadow p-3 mb-5 bg-white rounded">Appointment History</button></div>
-<div><button class="shadow p-3 mb-5 bg-white rounded" (click)="goToSpecializations()">Book Doctor</button> </div>
-</div>
+
 <router-outlet></router-outlet>

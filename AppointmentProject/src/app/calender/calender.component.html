@@ -1,7 +1,7 @@
 <div class="calender">
 <form [formGroup]="appointmentForm">
-  <div>
-
+  <div class="booking">
+ 
 <mat-form-field appearance="fill">
     <mat-label>Choose a date</mat-label>
     <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="appointmentDate" (dateChange)="dateChanged($event)">
@@ -12,15 +12,14 @@
 
 
     <div class="mb-3">
-  <ng-select [items]="slots" 
+  <ng-select [items]="slots" class="option"
   bindLabel="viewValue"
   bindValue="slot" placeholder="select slot" formControlName="slot" [(ngModel)]="selectedSlot">
   </ng-select>
 </div>
 
 
-<button type="button" class="btn btn-success" (click)="onSubmit()">BOOK</button>
-
+<button type="button" class="btn shadow" (click)="onSubmit()">BOOK</button>
 
 </form>
 </div>

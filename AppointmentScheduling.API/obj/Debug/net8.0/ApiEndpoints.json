@@ -2,7 +2,7 @@
   {
     "ContainingType": "AppointmentScheduling.API.Controllers.BookDoctorController",
     "Method": "BookDoctor",
-    "RelativePath": "api/BookDoctor/bookDoctor",
+    "RelativePath": "api/BookDoctor",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,22 +16,22 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AppointmentScheduling.API.Controllers.CheckDoctorExistController",
-    "Method": "checkUsernamePassword",
-    "RelativePath": "api/CheckDoctorExist",
-    "HttpMethod": "POST",
+    "ContainingType": "AppointmentScheduling.API.Controllers.CancelAppointmentByPatientController",
+    "Method": "CancelAppointmentByPatient",
+    "RelativePath": "api/CancelAppointmentByPatient",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "checkDoctorExist",
-        "Type": "AppointmentScheduling.Application.Request.Commands.CheckDoctorExist",
+        "Name": "id",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CancelAppointmentByPatientCommand",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "System.Int32",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -42,20 +42,30 @@
     ]
   },
   {
-    "ContainingType": "AppointmentScheduling.API.Controllers.CheckPatinetExistController",
-    "Method": "checkUsernamePassword",
-    "RelativePath": "api/CheckPatinetExist",
+    "ContainingType": "AppointmentScheduling.API.Controllers.CheckSlotController",
+    "Method": "CheckSlot",
+    "RelativePath": "api/CheckSlot",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "checkPatinetExist",
-        "Type": "AppointmentScheduling.Application.Request.Commands.CheckPatinetExist",
+        "Name": "command",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CheckSlotCommand",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "AppointmentScheduling.API.Controllers.CountDoctorController",
@@ -74,6 +84,48 @@
     "ReturnTypes": [
       {
         "Type": "AppointmentScheduling.Application.DTO.GetCountDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.doctorLoginController",
+    "Method": "Login",
+    "RelativePath": "api/doctorLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "checkDoctorExist",
+        "Type": "AppointmentScheduling.Application.Request.Commands.checkDoctorExist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.GetAllAppointmentsByIdController",
+    "Method": "GetAllAppointmentById",
+    "RelativePath": "api/GetAllAppointmentsById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AppointmentScheduling.Application.DTO.GetAllAppointmentsOfPatientByIdDTO, AppointmentScheduling.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -104,6 +156,22 @@
     ]
   },
   {
+    "ContainingType": "AppointmentScheduling.API.Controllers.getAppointmentDetailsByDoctorController",
+    "Method": "getAppointmentDetailsByDoctor",
+    "RelativePath": "api/getAppointmentDetailsByDoctor/{doctorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AppointmentScheduling.API.Controllers.GetDoctorBySpecController",
     "Method": "GetDoctorBySpec",
     "RelativePath": "api/GetDoctorBySpec/{specializationId}/specialization",
@@ -114,6 +182,54 @@
       {
         "Name": "specializationId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.getDoctorProfileController",
+    "Method": "getDoctorDetails",
+    "RelativePath": "api/getDoctorProfile/{doctorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.getPatientDetailsController",
+    "Method": "getPatientDetails",
+    "RelativePath": "api/getPatientDetails/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "checkPatinetExist",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CheckPatinetExist",
         "IsRequired": true
       }
     ],
@@ -134,5 +250,36 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.UpdateDetailsController",
+    "Method": "Update",
+    "RelativePath": "api/UpdateDetails/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "update",
+        "Type": "AppointmentScheduling.Application.Request.Commands.UpdateDetailsCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
