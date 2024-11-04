@@ -13,6 +13,7 @@ import { AuthenticationServiceService } from '../authentication-service.service'
 export class UpdateDetailsComponent {
 
   update_form : FormGroup;
+  patientDetails : any;
 
   constructor(private em : FormBuilder,private AuthenticationServiceService : AuthenticationServiceService){
     this.update_form = this.em.group<IupdateDetails>({
@@ -33,6 +34,19 @@ export class UpdateDetailsComponent {
         alert("Update Failed");
       }
     });
+
+    this.AuthenticationServiceService.getPatientDetails()
+
+    this.AuthenticationServiceService.getPatientDetailsStatus$.subscribe(
+      (response: any) => {
+        if (response) {
+          this.patientDetails=response;
+          console.log(this.patientDetails)  
+        } else {
+          alert("error!Cant fetch Details");
+        }
+      }
+    );
   }
  patientId : number = 3
 
