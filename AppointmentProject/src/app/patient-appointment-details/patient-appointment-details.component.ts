@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthenticationServiceService } from '../authentication-service.service';
 import { CommonModule } from '@angular/common';
 import { IPatientAppointmentsById } from '../Interfaces/ipatient-appointments-by-id';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-patient-appointment-details',
@@ -13,11 +14,12 @@ import { IPatientAppointmentsById } from '../Interfaces/ipatient-appointments-by
 export class PatientAppointmentDetailsComponent {
 
   
-  appointmentStatus:boolean = true;
+  appointmentStatus:string = '';
 
   list : IPatientAppointmentsById[]=[]
+  cancellation: boolean=false;
 
-  constructor(private AuthenticationServiceService: AuthenticationServiceService){
+  constructor(private AuthenticationServiceService: AuthenticationServiceService,private router:Router){
 
   }
 
@@ -26,7 +28,8 @@ export class PatientAppointmentDetailsComponent {
     this.AuthenticationServiceService.GetPatinetAppointmentById();
     this.AuthenticationServiceService.PatientAppointmnetsById$.subscribe((list : IPatientAppointmentsById[])=>{
       console.log(list)
-      this.list = list
+      this.list = list.reverse();
+
 
 
 
@@ -74,19 +77,27 @@ export class PatientAppointmentDetailsComponent {
     }
   }
   
-
-  Cancel(AppointmentId : string) : void{
-
-    const parsedId = parseInt(AppointmentId, 10);
+  goToProfile()
+  {
+    const patientId=localStorage.getItem('patientId');
+    this.router.navigate(['/patientProfile',patientId]);
     
-    this.AuthenticationServiceService.CancelAppoinmentPatient(parsedId);
+  }
+  Cancel(AppointmentId : number) : void{
+
+   
+    
+    this.AuthenticationServiceService.CancelAppoinmentPatient(AppointmentId);
 
     this.AuthenticationServiceService.CancelAppointmentByPatinet$.subscribe((status: Boolean) => {
       if (status) {
 
         alert("Cancellation Done");
-        
-
+        const appointment = this.list.find(app => app.id === AppointmentId);
+        if (appointment) {
+          appointment.status = false; 
+        }
+       
       } else {
         alert("Cancellation Failed");
       }

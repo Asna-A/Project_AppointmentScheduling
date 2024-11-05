@@ -63,6 +63,12 @@ export class UpdateDetailsComponent {
     console.log(this.update_form.value);
       this.AuthenticationServiceService.submitUpdateDetails(this.update_form.value);
     }
+    goToProfile()
+  {
+    const patientId=localStorage.getItem('patientId');
+    this.router.navigate(['/patientProfile',patientId]);
+    
+  }
   
 }
 

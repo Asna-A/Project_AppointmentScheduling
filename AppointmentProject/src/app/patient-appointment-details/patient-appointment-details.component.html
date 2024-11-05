@@ -1,6 +1,13 @@
-
-
-
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary backg ">
+    <div class="container-fluid navClass">
+      <a class=navbar-brand (click)="goToProfile()">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  
   <div class="specializations">
     <div class="specialization">
     
@@ -18,27 +25,36 @@
                 <div *ngIf="Appointmnet.status">
                   <ng-container *ngIf="isFutureDate(Appointmnet.appointmentDate); else doneTemplate">
                     <div class="cardButtons">
-                      <div *ngIf="appointmentStatus">
-                      <button class="btn shadow"   (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
-                      </div>
-                      <div *ngIf="!appointmentStatus">
-                        <button type="button" class="btn shadow"  > Appointment Cancelled</button>
+                      <div>
+                      <button class="btn shadow" (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
                       </div>
                     </div>
                   </ng-container>
                   <ng-template #doneTemplate>
                     <div class="cardButtons">
                       <div>
-                    <button class="btn shadow" type="button">Done</button>
+                    <button type="button" class="btn shadow">Done</button>
                   </div>
                 </div>
                   </ng-template>
               </div>
+              
+              <div *ngIf="!Appointmnet.status ">
+                <div class="cardButtons">
+                  <div>
+                <button type="button" class="btn shadow">Cancelled Appointment</button>
+              </div>
             </div>
-          </li>
-        </ul>     
+            </div>
+          </div>
+              </li>
+            </ul>
+
+
+          
       </div>
       </div>
+    
           </div>
         </div>
       </div>

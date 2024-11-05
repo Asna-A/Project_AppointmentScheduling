@@ -79,5 +79,10 @@ export class SpecializationsComponent {
     this.DoctorId=DoctorId;
     this.router.navigate(['/bookAppointment', this.DoctorId]);
   }
-  
+  goToProfile()
+  {
+    const patientId=localStorage.getItem('patientId');
+    this.router.navigate(['/patientProfile',patientId]);
+    
+  }
 }

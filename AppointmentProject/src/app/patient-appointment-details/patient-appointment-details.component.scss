@@ -1,3 +1,32 @@
+
+.dropdown-menu{
+    background-color: #6e4975;
+}
+.dropdown-item:hover{
+    background-color: #56486c;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%; 
+    z-index: 1; 
+}
+
+.navbar-brand, .nav-link, .dropdown-item {
+    color:#dfebe9;
+}
+
+.navbar-brand, .nav-link:hover{
+    color:#ffffff;
+}
+.backg {
+    background-color: #6e4975;
+}
+
+a:hover{
+    color:white;
+}
+
 .specialization{
     display: flex;
     flex-direction: column;  
@@ -44,5 +73,8 @@ li{
 .newAppointment{
     margin-bottom: 50px;
 }
+
+
+
 
 

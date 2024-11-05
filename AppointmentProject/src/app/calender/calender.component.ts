@@ -73,6 +73,13 @@ export class CalenderComponent {
       }
     });
   }
+
+  goToProfile()
+  {
+    const patientId=localStorage.getItem('patientId');
+    this.router.navigate(['/patientProfile',patientId]);
+    
+  }
   onSubmit()
   {
      if(this.appointmentForm.valid)
@@ -92,6 +99,9 @@ export class CalenderComponent {
         console.log(this.appointmentForm.errors); 
         console.log(this.appointmentForm.value); 
       }
+
+
+      
 
 }
 }
