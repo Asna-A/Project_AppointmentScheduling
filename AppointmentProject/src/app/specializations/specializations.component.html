@@ -6,6 +6,16 @@
     </button>
   </div>
 </nav>
+
+<div class="sidebar">
+   
+  <a href="/editProfile">Edit Profile</a>
+  <a href="/AppointmentDetailOfPatinetById">Appointment History</a>
+  <a href="/specializations">Book Doctor</a>
+</div>
+
+<div class="content">
+
 <div class="specializations">
 <div class="specialization" *ngFor="let specialization of specializations">
   <div>
@@ -42,6 +52,7 @@
                 <button class="btn shadow "  (click)="bookAppointment(doctor.doctorId)">Book Now</button>
               </li>
             </ul>
+      </div>
       </div>
     </div>
 

@@ -14,7 +14,7 @@
     background-color: #9cbcb7;
     padding: 25px;
     height: 100%; 
-    overflow: scroll;  
+     
    
 }
 
@@ -45,3 +45,69 @@ li{
 .newAppointment{
     margin-bottom: 50px;
 }
+
+
+
+body {
+    margin: 0;
+    
+  }
+  
+  .sidebar {
+    margin-top: 50px;
+    padding: 0;
+    width: 200px;
+    background-color: #bbd3d9;
+    position: fixed;
+    height: 100%;
+   
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    background-color:#99a2d0;
+    font-family: EB Garamond;
+    
+
+  }
+   
+  .sidebar a.active {
+    background-color: #04AA6D;
+    
+  }
+  
+  .sidebar a:hover{
+    background-color: #bcbcbc;
+  }
+ 
+  div.content {
+    background-color:#9cbcb7;
+    margin-left: 200px;
+    padding: 1px 16px;
+    padding-top: 60px;
+    height: 100%;
+    font-family: EB Garamond;
+
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    .sidebar a{margin-top: 20px;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  

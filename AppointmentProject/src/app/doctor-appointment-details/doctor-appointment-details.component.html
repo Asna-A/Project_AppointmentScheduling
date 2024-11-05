@@ -7,6 +7,12 @@
   </div>
 </nav>
 
+<div class="sidebar">
+   
+  <a href="/AppointmentDetailByDoctor">Appointment History</a>
+</div>
+
+<div class="content">
 
   <div class="specializations">
     <div class="specialization">
@@ -26,14 +32,14 @@
                   <ng-container *ngIf="isFutureDate(Appointment.appointmentDate); else doneTemplate">
                     <div class="cardButtons">
                       <div>
-                      <button class="btn shadow" (click)="Cancel(Appointment.id)">Cancel Appointment</button>
+                      <button class="btn shadow cancel" (click)="Cancel(Appointment.id)">Cancel Appointment</button>
                       </div>
                     </div>
                   </ng-container>
                   <ng-template #doneTemplate>
                     <div class="cardButtons">
                       <div>
-                    <button class="btn shadow" type="button">Done</button>
+                    <button class="btn shadow done" type="button">Done</button>
                   </div>
                 </div>
                   </ng-template>
@@ -42,13 +48,14 @@
               <div *ngIf="!Appointment.status">
                 <div class="cardButtons">
                   <div>
-                <button class="btn shadow" type="button">Cancelled Appointment</button>
+                <button class="btn shadow cancelled" type="button">Cancelled Appointment</button>
               </div>
             </div>
             </div>
           </div>
               </li>
             </ul>
+</div>
 
 
           
