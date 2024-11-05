@@ -13,7 +13,7 @@ import { IPatientAppointmentsById } from '../Interfaces/ipatient-appointments-by
 export class PatientAppointmentDetailsComponent {
 
   
-  appointmentStatus:string='';
+  appointmentStatus:boolean = true;
 
   list : IPatientAppointmentsById[]=[]
 
@@ -85,6 +85,7 @@ export class PatientAppointmentDetailsComponent {
       if (status) {
 
         alert("Cancellation Done");
+        
 
       } else {
         alert("Cancellation Failed");

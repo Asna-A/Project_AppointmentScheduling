@@ -68,6 +68,22 @@
     ]
   },
   {
+    "ContainingType": "AppointmentScheduling.API.Controllers.CheckUserExistController",
+    "Method": "Login",
+    "RelativePath": "api/CheckUserExist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CheckUserExist",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CheckUserExist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AppointmentScheduling.API.Controllers.CountDoctorController",
     "Method": "CountDoctor",
     "RelativePath": "api/CountDoctor/{specializationId}/doctor-count",
