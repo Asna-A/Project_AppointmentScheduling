@@ -52,6 +52,12 @@ export class CalenderComponent {
     const day = dateForSchedule.getDate().toString().padStart(2, '0');
   
     const formattedDate = `${year}-${month}-${day}`;
+    const selectedDate= new Date(formattedDate);
+    const currentDate = new Date();
+    if(selectedDate < currentDate)
+    {
+      alert("select an upcoming date")
+    }
     console.log(formattedDate)
     this.appointmentForm.patchValue({ appointmentDate: formattedDate });
   }
@@ -80,7 +86,7 @@ export class CalenderComponent {
         };
 
         this.AuthenticationServiceService.bookAppoinment(appointmentData);
-      
+
       }
       else {
         console.log(this.appointmentForm.errors); 

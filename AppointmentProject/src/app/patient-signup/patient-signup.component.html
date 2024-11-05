@@ -4,7 +4,7 @@
         <div class="form-group">
           <label for="PatientName">Name</label>
           <input type="text" class="form-control" id="PatientName" placeholder="Enter Name" formControlName="PatientName">
-          <div *ngIf="patient_form.get('PatientName')?.invalid && patient_form.get('PatientName')?.touched">
+          <div class="error"*ngIf="patient_form.get('PatientName')?.invalid && patient_form.get('PatientName')?.touched">
             Name is required
           </div>
         </div>
@@ -12,7 +12,7 @@
         <div class="form-group">
           <label for="Age">Age</label>
           <input type="text" class="form-control" id="Age" placeholder="Enter Age" formControlName="Age">
-          <div *ngIf="patient_form.get('Age')?.invalid && patient_form.get('Age')?.touched">
+          <div class="error" *ngIf="patient_form.get('Age')?.invalid && patient_form.get('Age')?.touched">
             Age is required
           </div>
         </div>
@@ -20,8 +20,8 @@
         <div class="form-group">
           <label for="Email">Email</label>
           <input type="email" class="form-control" id="Email" placeholder="Enter Email" formControlName="Email">
-          <div *ngIf="patient_form.get('Email')?.invalid && patient_form.get('Email')?.touched">
-            Email is required
+          <div class="error" *ngIf="patient_form.get('Email')?.invalid && patient_form.get('Email')?.touched">
+           valid Email is required
           </div>
         </div>
     
@@ -40,7 +40,7 @@
               <input class="form-check-input" type="radio" id="Other" value="Other" formControlName="Gender">
               <label class="form-check-label" for="Other">Other</label>
             </div>
-            <div *ngIf="patient_form.get('Gender')?.invalid && patient_form.get('Gender')?.touched">
+            <div  class="error" *ngIf="patient_form.get('Gender')?.invalid && patient_form.get('Gender')?.touched">
               Gender is required
             </div>
           </div>
@@ -48,16 +48,16 @@
     
         <div class="form-group">
           <label for="Phone">Phone</label>
-          <input type="text" class="form-control" id="Phone" placeholder="Enter Phone" formControlName="Phone">
-          <div *ngIf="patient_form.get('Phone')?.invalid && patient_form.get('Phone')?.touched">
-            Phone is required
+          <input type="text" class="form-control" id="Phone" placeholder="Enter PhoneNumber" formControlName="Phone">
+          <div class="error" *ngIf="patient_form.get('Phone')?.invalid && patient_form.get('Phone')?.touched">
+            PhoneNumber should be exactly 10 digits
           </div>
         </div>
     
         <div class="form-group">
           <label for="City">City</label>
           <input type="text" class="form-control" id="City" placeholder="Enter City" formControlName="City">
-          <div *ngIf="patient_form.get('City')?.invalid && patient_form.get('City')?.touched">
+          <div class="error" *ngIf="patient_form.get('City')?.invalid && patient_form.get('City')?.touched">
             City is required
           </div>
         </div>
@@ -65,7 +65,7 @@
         <div class="form-group">
           <label for="State">State</label>
           <input type="text" class="form-control" id="State" placeholder="Enter State" formControlName="State">
-          <div *ngIf="patient_form.get('State')?.invalid && patient_form.get('State')?.touched">
+          <div class="error" *ngIf="patient_form.get('State')?.invalid && patient_form.get('State')?.touched">
             State is required
           </div>
         </div>
@@ -73,7 +73,7 @@
         <div class="form-group">
           <label for="Pin">Pin</label>
           <input type="text" class="form-control" id="Pin" placeholder="Enter Pin" formControlName="Pin">
-          <div *ngIf="patient_form.get('Pin')?.invalid && patient_form.get('Pin')?.touched">
+          <div class="error" *ngIf="patient_form.get('Pin')?.invalid && patient_form.get('Pin')?.touched">
             Pin is required
           </div>
         </div>
@@ -81,7 +81,7 @@
         <div class="form-group">
           <label for="UserName">UserName</label>
           <input type="text" class="form-control" id="UserName" placeholder="Enter UserName" formControlName="UserName">
-          <div *ngIf="patient_form.get('UserName')?.invalid && patient_form.get('UserName')?.touched">
+          <div class="error" *ngIf="patient_form.get('UserName')?.invalid && patient_form.get('UserName')?.touched">
             UserName is required
           </div>
         </div>
@@ -89,7 +89,7 @@
         <div class="form-group">
           <label for="Password">Password</label>
           <input type="password" class="form-control" id="Password" placeholder="Enter Password" formControlName="Password">
-          <div *ngIf="patient_form.get('Password')?.invalid && patient_form.get('Password')?.touched">
+          <div class="error" *ngIf="patient_form.get('Password')?.invalid && patient_form.get('Password')?.touched">
             Password is required
           </div>
         </div>
@@ -97,7 +97,7 @@
         <div class="form-group">
           <label for="ConfirmPassword">Confirm Password</label>
           <input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm Password" formControlName="ConfirmPassword">
-          <div class="error-message" *ngIf="patient_form.errors?.['PasswordNoMatch'] && patient_form.get('ConfirmPassword')?.touched">
+          <div class="error-message error" *ngIf="patient_form.errors?.['PasswordNoMatch'] && patient_form.get('ConfirmPassword')?.touched">
             Password does not match.
           </div>
         </div>

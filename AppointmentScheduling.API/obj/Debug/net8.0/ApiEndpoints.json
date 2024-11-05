@@ -220,6 +220,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AppointmentScheduling.API.Controllers.GetSpecializationIdNameQueryController",
+    "Method": "GetSpecializationIdName",
+    "RelativePath": "api/GetSpecializationIdNameQuery",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AppointmentScheduling.API.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login",
