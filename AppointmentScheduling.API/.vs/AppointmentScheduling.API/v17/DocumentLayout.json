@@ -182,8 +182,7 @@
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\Functions\\Hashing.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T10:38:29.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T10:38:29.406Z"
             },
             {
               "$type": "Document",
@@ -195,8 +194,7 @@
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\AppointmentScheduling.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-29T09:36:18.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T09:36:18.34Z"
             },
             {
               "$type": "Document",
@@ -218,7 +216,7 @@
               "RelativeDocumentMoniker": "..\\AppointmentScheduling.Application\\Request\\Commands\\CheckPatientExist.cs",
               "ToolTip": "C:\\Users\\asna.a\\Desktop\\project\\Project_AppointmentScheduling\\AppointmentScheduling.Application\\Request\\Commands\\CheckPatientExist.cs",
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\CheckPatientExist.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwA4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T08:32:17.475Z",
               "EditorCaption": ""
@@ -233,8 +231,7 @@
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\AddPatientCommand.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAiwDAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:37:43.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T09:37:43.534Z"
             },
             {
               "$type": "Document",
@@ -246,8 +243,7 @@
               "RelativeToolTip": "..\\AppointmentScheduling.Application\\Request\\Commands\\CheckUserExist.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T05:04:49.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T05:04:49.213Z"
             },
             {
               "$type": "Document",
