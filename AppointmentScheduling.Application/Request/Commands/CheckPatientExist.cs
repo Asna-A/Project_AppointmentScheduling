@@ -1,4 +1,5 @@
-﻿using AppointmentScheduling.Infrastructure.Data;
+﻿using AppointmentScheduling.Application.Functions;
+using AppointmentScheduling.Infrastructure.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,8 +21,9 @@ namespace AppointmentScheduling.Application.Request.Commands
         }
         public async Task<string>Handle(CheckPatinetExist request, CancellationToken cancellationToken)
         {
-            var patient = await context.patients.Where(x => x.UserName == request.userName && x.Password == request.password).Select(x => new {x.Id}).FirstOrDefaultAsync(cancellationToken);
-
+            Hashing hashing = new Hashing();
+            var hashedPassword = hashing.HashPassword(request.password);
+            var patient = await context.patients.Where(x => x.UserName == request.userName && x.Password == hashedPassword).Select(x => new { x.Id }).FirstOrDefaultAsync(cancellationToken);
             if (patient!=null)
             {
                 return patient.Id.ToString();
