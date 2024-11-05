@@ -1,6 +1,7 @@
 ﻿using AppointmentScheduling.Domain.Entity;
 using AppointmentScheduling.Infrastructure.Data;
 using MediatR;
+using AppointmentScheduling.Application.Functions;
 
 namespace AppointmentScheduling.Application.Request.Commands
 {
@@ -31,6 +32,9 @@ namespace AppointmentScheduling.Application.Request.Commands
             }
             public async Task<int> Handle(AddPatientCommand request, CancellationToken cancellationToken)
             {
+                Hashing Hashing = new Hashing();
+                string hashedPassword = Hashing.HashPassword(request.password);
+
                 var patient = new Patients
                 {
                     PatientName = request.PatientName,
@@ -42,7 +46,7 @@ namespace AppointmentScheduling.Application.Request.Commands
                     State = request.State,
                     Pin = request.Pin,
                     UserName = request.username,
-                    Password = request.password
+                    Password = hashedPassword
 
                 };
 
