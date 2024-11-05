@@ -19,14 +19,14 @@
                   <ng-container *ngIf="isFutureDate(Appointmnet.appointmentDate); else doneTemplate">
                     <div class="cardButtons">
                       <div>
-                      <button (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
+                      <button class="btn shadow"   (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
                       </div>
                     </div>
                   </ng-container>
                   <ng-template #doneTemplate>
                     <div class="cardButtons">
                       <div>
-                    <button type="button">Done</button>
+                    <button class="btn shadow" type="button">Done</button>
                   </div>
                 </div>
                   </ng-template>
@@ -35,7 +35,7 @@
               <div *ngIf="!Appointmnet.status">
                 <div class="cardButtons">
                   <div>
-                <button type="button">Cancelled Appointment</button>
+                <button type="button" class="btn shadow"  >Cancelled Appointment</button>
               </div>
             </div>
             </div>

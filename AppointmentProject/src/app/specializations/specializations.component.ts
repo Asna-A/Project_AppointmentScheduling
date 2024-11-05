@@ -26,6 +26,7 @@ export class SpecializationsComponent {
   DoctorId:string|null=null;
   doctors: doctors[]=[];
   specializations:Ispecialization[]=[]
+  showDoctors: boolean=false;
   constructor(private AuthenticationServiceService:AuthenticationServiceService,private router:Router) {  
   }
 
@@ -56,6 +57,7 @@ export class SpecializationsComponent {
     );
 
     this.AuthenticationServiceService.doctorsDetails$.subscribe((doctors:doctors[])=>{
+      this.showDoctors=!this.showDoctors;
       this.doctors=doctors;
     })
   }
