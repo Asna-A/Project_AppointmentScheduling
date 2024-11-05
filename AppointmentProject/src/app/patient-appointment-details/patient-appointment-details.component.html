@@ -1,46 +1,51 @@
 
 
 
-  <div class="specializations">
-    <div class="specialization">
+<div class="specializations">
+  <div class="specialization">
+  
+    <div>
+    <div class="card">
+        <div class="card-body">
+          
+          <ul>
+            <li class="card-text"*ngFor="let Appointmnet of list">
+              <div class="newAppointment">
+              <p class="card-text">DoctorName:{{ Appointmnet.doctorName }}</p>
+              <p class="card-text">appointmentDate:{{ Appointmnet.appointmentDate }}</p>
+              <p class="card-text" *ngIf="SlotTimeCheck(Appointmnet.slotTime)">SlotTime:{{ getSlotTime(Appointmnet.slotTime) }}</p>
     
-      <div>
-      <div class="card">
-          <div class="card-body">
-            
-            <ul>
-              <li class="card-text"*ngFor="let Appointmnet of list">
-                <div class="newAppointment">
-                <p class="card-text">DoctorName:{{ Appointmnet.doctorName }}</p>
-                <p class="card-text">appointmentDate:{{ Appointmnet.appointmentDate }}</p>
-                <p class="card-text" *ngIf="SlotTimeCheck(Appointmnet.slotTime)">SlotTime:{{ getSlotTime(Appointmnet.slotTime) }}</p>
-      
-                <div *ngIf="Appointmnet.status">
-                  <ng-container *ngIf="isFutureDate(Appointmnet.appointmentDate); else doneTemplate">
-                    <div class="cardButtons">
-                      <div *ngIf="appointmentStatus">
-                      <button class="btn shadow"   (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
-                      </div>
-                      <div *ngIf="!appointmentStatus">
-                        <button type="button" class="btn shadow"  > Appointment Cancelled</button>
-                      </div>
+              <div *ngIf="Appointmnet.status">
+                <ng-container *ngIf="isFutureDate(Appointmnet.appointmentDate); else doneTemplate">
+                  <div class="cardButtons">
+                    <div>
+                    <button class="btn shadow" (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
                     </div>
-                  </ng-container>
-                  <ng-template #doneTemplate>
-                    <div class="cardButtons">
-                      <div>
-                    <button class="btn shadow" type="button">Done</button>
                   </div>
+                </ng-container>
+                <ng-template #doneTemplate>
+                  <div class="cardButtons">
+                    <div>
+                  <button class="btn shadow" type="button">Done</button>
                 </div>
-                  </ng-template>
               </div>
+                </ng-template>
             </div>
-          </li>
-        </ul>     
-      </div>
-      </div>
+            
+            <div *ngIf="!Appointmnet.status">
+              <div class="cardButtons">
+                <div>
+              <button class="btn shadow" type="button">Cancelled Appointment</button>
+            </div>
+          </div>
           </div>
         </div>
+            </li>
+          </ul>        
+    </div>
+    </div>
+        </div>
       </div>
-    
-    
+    </div>
+  
+  

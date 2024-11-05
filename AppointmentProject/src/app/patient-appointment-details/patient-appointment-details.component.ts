@@ -13,7 +13,7 @@ import { IPatientAppointmentsById } from '../Interfaces/ipatient-appointments-by
 export class PatientAppointmentDetailsComponent {
 
   
-  appointmentStatus:boolean = true;
+  appointmentStatus:string='';
 
   list : IPatientAppointmentsById[]=[]
 
@@ -26,7 +26,7 @@ export class PatientAppointmentDetailsComponent {
     this.AuthenticationServiceService.GetPatinetAppointmentById();
     this.AuthenticationServiceService.PatientAppointmnetsById$.subscribe((list : IPatientAppointmentsById[])=>{
       console.log(list)
-      this.list = list
+      this.list = list.reverse();
 
 
 
@@ -75,17 +75,20 @@ export class PatientAppointmentDetailsComponent {
   }
   
 
-  Cancel(AppointmentId : string) : void{
+  Cancel(AppointmentId : number) : void{
 
-    const parsedId = parseInt(AppointmentId, 10);
+    // const parsedId = parseInt(AppointmentId, 10);
     
-    this.AuthenticationServiceService.CancelAppoinmentPatient(parsedId);
+    this.AuthenticationServiceService.CancelAppoinmentPatient(AppointmentId);
 
     this.AuthenticationServiceService.CancelAppointmentByPatinet$.subscribe((status: Boolean) => {
       if (status) {
 
         alert("Cancellation Done");
-        
+        const appointment = this.list.find(app => app.id === AppointmentId);
+        if (appointment) {
+          appointment.status = false; // Assuming status is boolean
+        }
 
       } else {
         alert("Cancellation Failed");

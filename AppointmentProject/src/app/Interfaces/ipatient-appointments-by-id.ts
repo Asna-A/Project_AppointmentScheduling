@@ -1,10 +1,10 @@
 import { StickyDirection } from "@angular/cdk/table";
 
 export interface IPatientAppointmentsById {
-    id : string
+    id : number
     doctorName : string;
     doctorSpecialization : Array<string>;
     appointmentDate : string;
     slotTime : string;
-    status : string;
+    status : boolean;
 }
