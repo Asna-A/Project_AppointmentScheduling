@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthenticationServiceService } from '../authentication-service.service';
 import { CommonModule } from '@angular/common';
 import { IPatientAppointmentsById } from '../Interfaces/ipatient-appointments-by-id';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-patient-appointment-details',
@@ -13,11 +14,12 @@ import { IPatientAppointmentsById } from '../Interfaces/ipatient-appointments-by
 export class PatientAppointmentDetailsComponent {
 
   
-  appointmentStatus:string='';
+  appointmentStatus:string = '';
 
   list : IPatientAppointmentsById[]=[]
+  cancellation: boolean=false;
 
-  constructor(private AuthenticationServiceService: AuthenticationServiceService){
+  constructor(private AuthenticationServiceService: AuthenticationServiceService,private router:Router){
 
   }
 
@@ -27,6 +29,7 @@ export class PatientAppointmentDetailsComponent {
     this.AuthenticationServiceService.PatientAppointmnetsById$.subscribe((list : IPatientAppointmentsById[])=>{
       console.log(list)
       this.list = list.reverse();
+
 
 
 
@@ -74,10 +77,15 @@ export class PatientAppointmentDetailsComponent {
     }
   }
   
-
+  goToProfile()
+  {
+    const patientId=localStorage.getItem('patientId');
+    this.router.navigate(['/patientProfile',patientId]);
+    
+  }
   Cancel(AppointmentId : number) : void{
 
-    // const parsedId = parseInt(AppointmentId, 10);
+   
     
     this.AuthenticationServiceService.CancelAppoinmentPatient(AppointmentId);
 
@@ -87,9 +95,9 @@ export class PatientAppointmentDetailsComponent {
         alert("Cancellation Done");
         const appointment = this.list.find(app => app.id === AppointmentId);
         if (appointment) {
-          appointment.status = false; // Assuming status is boolean
+          appointment.status = false; 
         }
-
+       
       } else {
         alert("Cancellation Failed");
       }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthenticationServiceService } from '../authentication-service.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-doctor-appointment-details',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './doctor-appointment-details.component.scss'
 })
 export class DoctorAppointmentDetailsComponent {
-  constructor(private AuthenticationServiceService: AuthenticationServiceService){
+  constructor(private AuthenticationServiceService: AuthenticationServiceService,private router:Router){
 
   }
   appointmentDetails:any;
@@ -70,6 +71,15 @@ export class DoctorAppointmentDetailsComponent {
     else{
       return false;
     }
+  }
+
+
+  goToProfile()
+  {
+    
+    const doctorId=localStorage.getItem('doctorId');
+    this.router.navigate(['/doctorProfile',doctorId]);
+    
   }
   Cancel(AppointmentId : string) : void{
 
