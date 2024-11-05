@@ -69,12 +69,28 @@ export class PatientSignupComponent {
         }
       });
     }
+  
 
     onSubmit()
     {
       if(this.patient_form.valid)
       {
-        this.AuthenticationServiceService.submitSignup(this.patient_form.value);
+
+        const data={
+          PatientName: this.patient_form.value,
+          Age: this.patient_form.value,
+          Email: this.patient_form.value,
+          Gender :this.patient_form.value,
+          Phone: this.patient_form.value,
+          City: this.patient_form.value,
+          State:this.patient_form.value,
+          Pin: this.patient_form.value,
+          UserName: this.patient_form.value,
+          Password:this.patient_form.value
+         
+
+        }
+        this.AuthenticationServiceService.submitSignup(data,this.patient_form.value);
       }
     }
 
