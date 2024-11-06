@@ -102,4 +102,16 @@ export class SpecializationsComponent {
     this.router.navigate(['/patientProfile',patientId]);
     
   }
+
+  logOut(){
+    if(localStorage.getItem('patientId'))
+    {
+      localStorage.setItem('patientId','')
+    }
+    else{
+      localStorage.setItem('doctorId','')
+    }
+    
+      {this.router.navigate(['/home']);}
+  }
 }

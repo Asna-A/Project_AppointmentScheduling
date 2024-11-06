@@ -12,11 +12,11 @@
 .specializations{   
     background-color: #9cbcb7;
     padding: 25px;
- 
-}
+
 
 body{
   background-color: #9cbcb7;
+
 }
 
 .doctorAvail{
@@ -158,6 +158,9 @@ body {
     gap: 5px;
 }
 
+.homeLog:hover{
+  cursor: pointer;
+}
 // .controlButton:hover{
 //     background-color: #99a2d0;
 // }
