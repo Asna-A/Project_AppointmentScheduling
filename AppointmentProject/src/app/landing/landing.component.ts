@@ -1,3 +1,4 @@
+import { PlatformLocation } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
@@ -9,5 +10,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './landing.component.scss'
 })
 export class LandingComponent {
+  constructor(private PlatformLocation : PlatformLocation){
+    history.pushState(null, '', location.href);
 
+    this.PlatformLocation.onPopState(() => {
+      history.pushState(null, '', location.href);
+    });
+  }
 }

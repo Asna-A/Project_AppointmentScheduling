@@ -124,9 +124,18 @@ export class DoctorAppointmentDetailsComponent {
       }  
     });
 
+  }
 
-
-
+  logOut(){
+    if(localStorage.getItem('patientId'))
+    {
+      localStorage.setItem('patientId','')
+    }
+    else{
+      localStorage.setItem('doctorId','')
+    }
+    
+      {this.router.navigate(['/home']);}
   }
 
 

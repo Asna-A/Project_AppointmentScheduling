@@ -99,10 +99,19 @@ export class CalenderComponent {
       else {
         console.log(this.appointmentForm.errors); 
         console.log(this.appointmentForm.value); 
-      }
+      }   
 
+}
 
-      
-
+logOut(){
+  if(localStorage.getItem('patientId'))
+  {
+    localStorage.setItem('patientId','')
+  }
+  else{
+    localStorage.setItem('doctorId','')
+  }
+  
+    {this.router.navigate(['/home']);}
 }
 }

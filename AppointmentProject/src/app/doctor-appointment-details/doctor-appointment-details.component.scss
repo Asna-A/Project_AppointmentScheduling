@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    background-color:  #9cbcb7;
     
   }
 .dropdown-menu{
@@ -45,11 +46,14 @@ a:hover{
 }
 
 .specializations{   
-    background-color: #9cbcb7;
-    padding: 25px;
-    height: 100%; 
-    
-   
+  background-color: #9cbcb7;
+  padding: 25px;
+
+  
+ 
+}
+.content{
+background-color: #9cbcb7;
 }
 
 .card{
@@ -132,6 +136,10 @@ li{
       text-align: center;
       float: none;
     }
+  }
+
+  .homeLog:hover{
+    cursor: pointer;
   }
 
 

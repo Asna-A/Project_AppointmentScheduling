@@ -51,9 +51,6 @@ body{
     font-size: 20px;
 }
 
-
-
-
 body {
     margin: 0;
     
@@ -156,6 +153,10 @@ body {
 
 .gap{
     gap: 5px;
+}
+
+.homeLog:hover{
+  cursor: pointer;
 }
 
 // .controlButton:hover{
