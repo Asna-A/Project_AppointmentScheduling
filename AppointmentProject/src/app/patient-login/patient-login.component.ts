@@ -22,7 +22,7 @@ export class PatientLoginComponent {
   
   patient_login: FormGroup<patientLogin>;
 
-  constructor(private em : FormBuilder,private AuthenticationServiceService:AuthenticationServiceService,private router: Router){
+  constructor(private em : FormBuilder,private AuthenticationServiceService:AuthenticationServiceService,public router: Router){
     this.patient_login = this.em.group<patientLogin>({
       UserName: new FormControl(null,Validators.required),
       Password: new FormControl(null,Validators.required),
@@ -34,7 +34,8 @@ ngOnInit() {
   this.AuthenticationServiceService.LoginStatus$.subscribe((status: Boolean) => {
     if (status) {
       alert("Login success");
-      this.router.navigate(['/patientProfile']);
+      if(localStorage.getItem('patientId'))
+      {this.router.navigate(['/patientProfile']);}
     } else {
       alert("Login failed");
     }

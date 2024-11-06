@@ -47,7 +47,7 @@ a:hover{
 .specializations{   
     background-color: #9cbcb7;
     padding: 25px;
-    height: 100%; 
+    height: 100vh;
     
    
 }
@@ -146,6 +146,10 @@ li{
       text-align: center;
       float: none;
     }
+  }
+
+  .homeLog:hover{
+    cursor: pointer;
   }
 
 

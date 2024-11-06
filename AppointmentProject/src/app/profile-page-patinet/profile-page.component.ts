@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { AuthenticationServiceService } from '../authentication-service.service';
-import { CommonModule } from '@angular/common';
+import {  CommonModule, PlatformLocation } from '@angular/common';
 @Component({
   selector: 'app-profile-page',
   standalone: true,
@@ -13,10 +13,19 @@ export class ProfilePageComponent {
   patientDetails: any;
   status:boolean=false;
 
-  constructor(private router:Router,private AuthenticationServiceService:AuthenticationServiceService) {
+  constructor(private router:Router,private AuthenticationServiceService:AuthenticationServiceService,private PlatformLocation : PlatformLocation) {
     this.AuthenticationServiceService.getPatientDetails();
+
+      history.pushState(null, '', location.href);
+  
+      this.PlatformLocation.onPopState(() => {
+        history.pushState(null, '', location.href);
+      });
+  
     
+
   }
+
 
   ngOnInit() {
     
@@ -37,6 +46,16 @@ export class ProfilePageComponent {
 
 
  
-  
+  logOut(){
+    if(localStorage.getItem('patientId'))
+    {
+      localStorage.setItem('patientId','')
+    }
+    else{
+      localStorage.setItem('doctorId','')
+    }
+    
+      {this.router.navigate(['/home']);}
+  }
  
 }
