@@ -35,7 +35,7 @@ namespace AppointmentScheduling.Application.Request.Queries
                     patientName = a.Patient.PatientName,
                     AppointmentDate = a.AppointmentDate,
                     SlotTime = a.slot,
-                    status = a.Status,
+                    Status = a.Status,
                 }).ToListAsync();
             return AppointmentList;
         }

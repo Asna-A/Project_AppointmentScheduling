@@ -33,41 +33,57 @@
                 <p class="card-text">appointmentDate:{{ Appointmnet.appointmentDate }}</p>
                 <p class="card-text" *ngIf="SlotTimeCheck(Appointmnet.slotTime)">SlotTime:{{ getSlotTime(Appointmnet.slotTime) }}</p>
       
-                <div *ngIf="Appointmnet.status">
-                  <ng-container *ngIf="isFutureDate(Appointmnet.appointmentDate); else doneTemplate">
+                <div *ngIf="Appointmnet.status=='0' && isFutureDate(Appointmnet.appointmentDate)">
+                
                     <div class="cardButtons">
                       <div>
                       <button class="btn shadow Cancel" (click)="Cancel(Appointmnet.id)">Cancel Appointment</button>
                       </div>
                     </div>
-                  </ng-container>
-                  <ng-template #doneTemplate>
-                    <div class="cardButtons">
-                      <div>
-                    <button type="button" class="btn shadow Done">Done</button>
-                  </div>
-                </div>
-                  </ng-template>
               </div>
               
-              <div *ngIf="!Appointmnet.status ">
+                    <div *ngIf="Appointmnet.status=='1'">
+                    <div class="cardButtons">
+                      <div>
+                    <button type="button" class="btn shadow Done">Cancelled</button>
+                  </div>
+                </div>
+                    </div>
+
+
+              <div *ngIf="Appointmnet.status=='2'">
+                
                 <div class="cardButtons">
                   <div>
-                <button type="button" class="btn shadow Cancelled">Cancelled Appointment</button>
+                  <button class="btn shadow ">Consulted</button>
+                  </div>
+                </div>
+              </div>
+
+          <div *ngIf="!isFutureDate(Appointmnet.appointmentDate) && Appointmnet.status!='1'  &&  Appointmnet.status!='2'" >
+                
+            <div class="cardButtons">
+              <div>
+              <button class="btn shadow Cancel" >Not Consulted</button>
               </div>
             </div>
-            </div>
-          </div>
+      </div>
+                </div>
               </li>
-            </ul>  
-            </div>
-            
-      </div>
-      </div>
-    
+            </ul>
           </div>
-        </div>
       </div>
+    </div>
+  
+            
+            
+          
+             
+           
+   
+
+    
+     
     
     
   

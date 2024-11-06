@@ -31,7 +31,15 @@ namespace AppointmentScheduling.Domain.Entity
         }
 
         public SlotTime slot {  get; set; } 
-        public Boolean Status { get; set; } = true;
+        public enum StatusEnum
+        {
+            live,
+            cancelled,
+            consulted,
+            not_Consulted
+            
+        }
+        public StatusEnum Status { get; set; } = StatusEnum.not_Consulted;
 
         public Patients Patient { get; set; }
         public int PatientId { get; set; }
