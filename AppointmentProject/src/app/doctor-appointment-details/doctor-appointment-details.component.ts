@@ -91,6 +91,11 @@ export class DoctorAppointmentDetailsComponent {
     this.AuthenticationServiceService.CancelAppointmentByPatinet$.subscribe((status: Boolean) => {
       if (status) {
         alert("Cancellation Done");
+        const appointment = this.appointmentDetails.find(app => app.id === AppointmentId);
+        if(appointment)
+        {appointment.status='1'
+        }
+        
       } else {
         alert("Cancellation Failed");
       }
@@ -109,6 +114,10 @@ export class DoctorAppointmentDetailsComponent {
     this.AuthenticationServiceService.updateConsult$.subscribe((status: boolean) => {
       if (status) {
         alert("Marked as consulted"); 
+        const appointment = this.appointmentDetails.find(app => app.id === AppointmentId);
+        if(appointment)
+        {appointment.status='2'
+        }
       } 
       else {
         alert("Consultation marking failed");

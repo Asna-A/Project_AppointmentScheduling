@@ -96,6 +96,10 @@ export class PatientAppointmentDetailsComponent {
       if (status) {
 
         alert("Cancellation Done");
+        const appointment = this.list.find(app => app.id === AppointmentId);
+        if(appointment)
+        {appointment.status='1'
+        }
 
         // this.cancelled=true;
         // const appointment = this.list.find(app => app.id === AppointmentId);
