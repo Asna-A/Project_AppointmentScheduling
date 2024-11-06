@@ -4,9 +4,7 @@ body{
 .patientForm{   
     background-color: #9cbcb7;
     padding: 25px;
-    height: 100vh;
-   
-    
+    height: 100vh;    
 }
 .pForm{
     background-color:#dfebe9;
@@ -68,6 +66,7 @@ body {
     position: fixed;
     height: 100%;
     overflow: auto;
+    border-right:  1px solid black;
   }
   
   .sidebar a {
@@ -77,6 +76,7 @@ body {
     text-decoration: none;
     background-color:#99a2d0;
     font-family: EB Garamond;
+    border-bottom: 1px solid black;
     
 
   }
