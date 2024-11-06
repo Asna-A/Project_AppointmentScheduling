@@ -28,42 +28,62 @@
                 <p class="card-text">appointmentDate:{{ Appointment.appointmentDate }}</p>
                 <p class="card-text" *ngIf="SlotTimeCheck(Appointment.slotTime)">SlotTime:{{ getSlotTime(Appointment.slotTime) }}</p>
       
-                <div *ngIf="Appointment.status">
-                  <ng-container *ngIf="isFutureDate(Appointment.appointmentDate); else doneTemplate">
+              
+                  
+                  <div *ngIf="Appointment.status=='0' && isFutureDate(Appointment.appointmentDate)">
                     <div class="cardButtons">
                       <div>
-                      <button class="btn shadow cancel" (click)="Cancel(Appointment.id)">Cancel Appointment</button>
+                      <button class="btn shadow Cancel" (click)="Cancel(Appointment.id)">Cancel Appointment</button>
                       </div>
                     </div>
-                  </ng-container>
-                  <ng-template #doneTemplate>
-                    <div class="cardButtons">
-                      <div>
-                    <button class="btn shadow done" type="button">Done</button>
-                  </div>
-                </div>
-                  </ng-template>
               </div>
-              
-              <div *ngIf="!Appointment.status">
+
+              <div *ngIf="Appointment.status=='1'">
                 <div class="cardButtons">
                   <div>
-                <button class="btn shadow cancelled" type="button">Cancelled Appointment</button>
+                <button type="button" class="btn shadow Done">Cancelled</button>
               </div>
             </div>
+                </div>
+                <div *ngIf="!isFutureDate(Appointment.appointmentDate) && Appointment.status!='1' &&  Appointment.status!='2'" >
+                
+                  <div class="cardButtons">
+                    <div>
+                    <button class="btn shadow Cancel" >Not Consulted</button>
+                    </div>
+                  </div>
             </div>
-          </div>
+
+            <div *ngIf="Appointment.status=='2'">
+                
+              <div class="cardButtons">
+                <div>
+                <button class="btn shadow ">Consulted</button>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="Appointment.status=='0' && !isFutureDate(Appointment.appointmentDate)">
+                
+              <div class="cardButtons">
+                <div>
+                <button class="btn shadow " (click)="updateConsultation(Appointment.id)">Mark as consulted</button>
+                </div>
+              </div>
+            </div>
+
+             
+                </div>
               </li>
             </ul>
-</div>
-
-
-          
-      </div>
-      </div>
-    
           </div>
-        </div>
       </div>
+      </div>
+    </div>
+  </div>
+</div>        
+     
+      
+        
     
     

@@ -9,7 +9,7 @@
         public DateOnly  AppointmentDate {  get; set; } 
         public AppointmentScheduling.Domain.Entity.Appointments.SlotTime SlotTime { get; set; }
 
-        public Boolean status { get; set; }
+        public Domain.Entity.Appointments.StatusEnum Status { get; set; }
 
 
 

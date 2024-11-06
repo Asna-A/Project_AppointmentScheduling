@@ -6,5 +6,5 @@ export interface IPatientAppointmentsById {
     doctorSpecialization : Array<string>;
     appointmentDate : string;
     slotTime : string;
-    status : boolean;
+    status : string;
 }

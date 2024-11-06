@@ -20,11 +20,10 @@ namespace AppointmentScheduling.API.Controllers
         public async Task<bool> CheckSlot([FromBody] CheckSlotCommand command)
         {
             var result = await _mediator.Send(command);
-            if (result)
-                return true;
+            
+            return result;
 
-            else
-                return false;
+            
         }
     }
 }

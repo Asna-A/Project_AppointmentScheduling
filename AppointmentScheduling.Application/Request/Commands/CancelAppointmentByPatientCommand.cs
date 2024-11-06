@@ -26,7 +26,7 @@ namespace AppointmentScheduling.Application.Request.Commands
         {
             Appointments appointments = context.Appointments.Where(x => x.Id == request.Id).FirstOrDefault();
 
-            appointments.Status = false;
+            appointments.Status = Appointments.StatusEnum.cancelled;
             appointments.slot = AppointmentScheduling.Domain.Entity.Appointments.SlotTime.NineToNineThirty;
             context.Appointments.Update(appointments);
             return await context.SaveChangesAsync();

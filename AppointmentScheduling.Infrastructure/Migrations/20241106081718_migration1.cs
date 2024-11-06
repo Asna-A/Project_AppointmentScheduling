@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppointmentScheduling.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class migartion3 : Migration
+    public partial class migration1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -71,7 +71,7 @@ namespace AppointmentScheduling.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AppointmentDate = table.Column<DateOnly>(type: "date", nullable: false),
                     slot = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
                     PatientId = table.Column<int>(type: "int", nullable: false),
                     DoctorId = table.Column<int>(type: "int", nullable: false)
                 },

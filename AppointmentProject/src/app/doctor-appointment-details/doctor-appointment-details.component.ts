@@ -92,13 +92,38 @@ export class DoctorAppointmentDetailsComponent {
       if (status) {
         alert("Cancellation Done");
         const appointment = this.appointmentDetails.find(app => app.id === AppointmentId);
-        if (appointment) {
-          appointment.status = false; 
+        if(appointment)
+        {appointment.status='1'
         }
+        
       } else {
         alert("Cancellation Failed");
       }
     });
+
+
+
+  }
+
+
+
+  updateConsultation(AppointmentId : number):void{
+
+    this.AuthenticationServiceService.updateConsultation(AppointmentId);
+
+    this.AuthenticationServiceService.updateConsult$.subscribe((status: boolean) => {
+      if (status) {
+        alert("Marked as consulted"); 
+        const appointment = this.appointmentDetails.find(app => app.id === AppointmentId);
+        if(appointment)
+        {appointment.status='2'
+        }
+      } 
+      else {
+        alert("Consultation marking failed");
+      }  
+    });
+
 
 
 

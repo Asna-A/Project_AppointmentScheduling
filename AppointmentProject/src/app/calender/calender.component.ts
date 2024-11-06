@@ -37,7 +37,7 @@ export class CalenderComponent {
   ];
   appointmentDate: any;
   selectedSlot: number|null=null;
-
+ liveStatus:number=0;
   constructor(private fb: FormBuilder, private AuthenticationServiceService:AuthenticationServiceService,private route: ActivatedRoute,private router: Router) {
     this.appointmentForm = this.fb.group({
       appointmentDate:new FormControl('',[Validators.required]),
@@ -82,6 +82,7 @@ export class CalenderComponent {
   }
   onSubmit()
   {
+    
      if(this.appointmentForm.valid)
     {
         const appointmentData={
@@ -89,7 +90,7 @@ export class CalenderComponent {
           PatientId:+localStorage.getItem('patientId')!,
           slot:this.selectedSlot,
           AppointmentDate:this.appointmentForm.value.appointmentDate,
-          Status:true 
+          Status:this.liveStatus
         };
 
         this.AuthenticationServiceService.bookAppoinment(appointmentData);

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppointmentScheduling.Infrastructure.Migrations
 {
     [DbContext(typeof(AppointmentSchedulingContext))]
-    [Migration("20241030065930_migartion3")]
-    partial class migartion3
+    [Migration("20241106081718_migration1")]
+    partial class migration1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,8 +42,8 @@ namespace AppointmentScheduling.Infrastructure.Migrations
                     b.Property<int>("PatientId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<int>("slot")
                         .HasColumnType("int");

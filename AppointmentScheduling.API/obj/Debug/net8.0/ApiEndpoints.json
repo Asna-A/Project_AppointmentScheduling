@@ -8,12 +8,22 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "command",
+        "Name": "BookDoctorCommand",
         "Type": "AppointmentScheduling.Application.Request.Commands.BookDoctorCommand",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "AppointmentScheduling.Application.DTO.BookStatusDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "AppointmentScheduling.API.Controllers.CancelAppointmentByPatientController",
@@ -276,6 +286,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AppointmentScheduling.API.Controllers.updateConsultationController",
+    "Method": "updateConsultation",
+    "RelativePath": "api/updateConsultation",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "AppointmentScheduling.API.Controllers.UpdateDetailsController",
