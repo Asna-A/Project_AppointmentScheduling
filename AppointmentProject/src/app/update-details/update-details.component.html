@@ -7,6 +7,15 @@
   </div>
 </nav>
 
+ 
+<div class="sidebar">
+   
+  <a href="/editProfile">Edit Profile</a>
+  <a href="/AppointmentDetailOfPatinetById">Appointment History</a>
+  <a href="/specializations">Book Doctor</a>
+</div>
+
+<div class="content">
 <div class="patientForm">
 <form [formGroup]= "update_form" (ngSubmit)="onSubmit()">
 <div class="pForm">
@@ -42,6 +51,7 @@
   
         
     <button type="submit">Submit</button>
-</div>
+  </div>
+
 </form>
 
