@@ -18,6 +18,7 @@ export class PatientAppointmentDetailsComponent {
 
   list : IPatientAppointmentsById[]=[]
   cancellation: boolean=false;
+  cancelled: boolean=false;
 
   constructor(private AuthenticationServiceService: AuthenticationServiceService,private router:Router){
 
@@ -57,14 +58,16 @@ export class PatientAppointmentDetailsComponent {
     return appointment > now;
   }
 
-  getStatus(status : string) : string{
-    if(status == "true"){
-      return "Appointment Not cancelled"
-    }
-    else{
-      return "Appointment Cancelled"
-    }
-  }
+ 
+
+  // getStatus(status : string) : string{
+  //   if(status == "true"){
+  //     return "Appointment Not cancelled"
+  //   }
+  //   else{
+  //     return "Appointment Cancelled"
+  //   }
+  // }
 
   slotStatus:boolean=false;
   SlotTimeCheck(slot:string):boolean{
@@ -93,10 +96,10 @@ export class PatientAppointmentDetailsComponent {
       if (status) {
 
         alert("Cancellation Done");
-        const appointment = this.list.find(app => app.id === AppointmentId);
-        if (appointment) {
-          appointment.status = false; 
-        }
+
+        // this.cancelled=true;
+        // const appointment = this.list.find(app => app.id === AppointmentId);
+        
        
       } else {
         alert("Cancellation Failed");

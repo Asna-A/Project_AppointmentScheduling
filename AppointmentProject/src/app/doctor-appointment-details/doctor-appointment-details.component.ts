@@ -91,14 +91,30 @@ export class DoctorAppointmentDetailsComponent {
     this.AuthenticationServiceService.CancelAppointmentByPatinet$.subscribe((status: Boolean) => {
       if (status) {
         alert("Cancellation Done");
-        const appointment = this.appointmentDetails.find(app => app.id === AppointmentId);
-        if (appointment) {
-          appointment.status = false; 
-        }
       } else {
         alert("Cancellation Failed");
       }
     });
+
+
+
+  }
+
+
+
+  updateConsultation(AppointmentId : number):void{
+
+    this.AuthenticationServiceService.updateConsultation(AppointmentId);
+
+    this.AuthenticationServiceService.updateConsult$.subscribe((status: boolean) => {
+      if (status) {
+        alert("Marked as consulted"); 
+      } 
+      else {
+        alert("Consultation marking failed");
+      }  
+    });
+
 
 
 

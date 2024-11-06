@@ -77,7 +77,8 @@ export class AuthenticationServiceService {
   private AppointmentDetailsByDoctor=new Subject<any>();
   public AppointmentDetailsByDoctor$=this.AppointmentDetailsByDoctor.asObservable()
 
-
+  private updateConsult=new Subject<any>();
+  public updateConsult$=this.updateConsult.asObservable()
 
 
   constructor(private http:HttpClient) {}
@@ -173,6 +174,24 @@ export class AuthenticationServiceService {
     }
   }
 
+
+
+  updateConsultation(AppointmentId : number):any{
+    this.http.patch(`http://localhost:5218/api/updateConsultation`,AppointmentId).subscribe(
+      {
+        next:(response)=>{
+          console.log(response)
+
+         this.updateConsult.next(true);},
+        error:(error)=>{this.updateConsult.next(false);
+          console.log(`error${error}`)
+        }
+   
+        }
+    );
+
+  }
+
   getDoctorDetailProfile():any{
     const doctorId = localStorage.getItem('doctorId');
     if(doctorId)
@@ -257,12 +276,16 @@ export class AuthenticationServiceService {
     this.http.post("http://localhost:5218/api/CheckSlot", data).subscribe(
       {
         next:(response:any) => {
+          console.log(response)
           if(response)
           {
+
             this.http.post("http://localhost:5218/api/BookDoctor", data).subscribe(
               {
                 next:(response:any) => {
+                  console.log(response);
                   alert("booking success")
+                  console.log("hello")
                   this.bookAppointmentStatus.next(true);
                   
                 },

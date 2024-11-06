@@ -1,4 +1,5 @@
-﻿using AppointmentScheduling.Application.Request.Commands;
+﻿using AppointmentScheduling.Application.DTO;
+using AppointmentScheduling.Application.Request.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,14 +17,13 @@ namespace AppointmentScheduling.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> BookDoctor([FromBody] BookDoctorCommand command)
+        public async Task<BookStatusDTO> BookDoctor([FromBody] BookDoctorCommand BookDoctorCommand)
         {
-            var result = await _mediator.Send(command);
-            if (result)
-                return Ok(new { message = "Appointment booked successfully" });
+          
+            return await _mediator.Send(BookDoctorCommand);
+            
 
-            else
-                return StatusCode(500, new { error = "An error occurred while booking the appointment." });
+           
         }
     }
 }

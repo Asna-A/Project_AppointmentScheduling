@@ -24,7 +24,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<AppointmentSchedulingContext>(
     x =>
-    { x.UseSqlServer(@"Server=localhost;Database=Appointment2Project;User Id=sa;Password=Pass@word1;TrustServerCertificate=true"); });
+    { x.UseSqlServer(@"Server=localhost;Database=Appointment3Project;User Id=sa;Password=Pass@word1;TrustServerCertificate=true"); });
 
 
 builder.Services.AddScoped<AppointmentSchedulingContext>();

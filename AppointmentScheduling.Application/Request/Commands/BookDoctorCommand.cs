@@ -1,20 +1,22 @@
-﻿using AppointmentScheduling.Domain.Entity;
+﻿using AppointmentScheduling.Application.DTO;
+using AppointmentScheduling.Domain.Entity;
 using AppointmentScheduling.Infrastructure.Data;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using static AppointmentScheduling.Domain.Entity.Appointments;
 
 namespace AppointmentScheduling.Application.Request.Commands
 {
-    public class BookDoctorCommand:IRequest<bool>
+    public class BookDoctorCommand:IRequest<BookStatusDTO>
     {
         
             public string AppointmentDate { get; set; }
           
             public SlotTime slot { get; set; }
 
-            public bool Status { get; set; } = true;
+        public Domain.Entity.Appointments.StatusEnum Status { get; set; }
 
-            public int PatientId { get; set; }
+        public int PatientId { get; set; }
 
            
             public int DoctorId { get; set; }
@@ -22,7 +24,7 @@ namespace AppointmentScheduling.Application.Request.Commands
     }
 
 
-    public class BookDoctorCommandHandler : IRequestHandler<BookDoctorCommand, bool>
+    public class BookDoctorCommandHandler : IRequestHandler<BookDoctorCommand, BookStatusDTO>
     {
         private readonly AppointmentSchedulingContext _context;
 
@@ -30,7 +32,7 @@ namespace AppointmentScheduling.Application.Request.Commands
         {
             _context = context;
         }
-        public async Task<bool> Handle(BookDoctorCommand request, CancellationToken cancellationToken)
+        public async Task<BookStatusDTO> Handle(BookDoctorCommand request, CancellationToken cancellationToken)
         {
             
             var appointment = new Appointments
@@ -40,14 +42,16 @@ namespace AppointmentScheduling.Application.Request.Commands
                     AppointmentDate = DateOnly.Parse(request.AppointmentDate),
                     slot = request.slot,
                     Status = request.Status
-
-
-
                 };
 
                 _context.Appointments.Add(appointment);
                 await _context.SaveChangesAsync(cancellationToken);
-                return true;
+
+            BookStatusDTO bookStatusDTO = new BookStatusDTO();
+            var status = request.Status;
+
+            return new BookStatusDTO { Status = status };
+            
             
 
         }

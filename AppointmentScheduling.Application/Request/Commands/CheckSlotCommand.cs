@@ -30,7 +30,7 @@ namespace AppointmentScheduling.Application.Request.Commands
         {
 
             var appointmentDate=DateOnly.Parse(request.AppointmentDate);
-            var slot = await _context.Appointments.Where(x => x.AppointmentDate == appointmentDate && x.slot == request.slot && x.Status == true).AnyAsync(cancellationToken);
+            var slot = await _context.Appointments.Where(x => x.AppointmentDate == appointmentDate && x.slot == request.slot && x.Status == StatusEnum.live).AnyAsync(cancellationToken);
 
             if (slot == true)
             {
