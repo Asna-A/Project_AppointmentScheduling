@@ -48,6 +48,9 @@ export class AuthenticationServiceService {
   private doctorsDetails=new Subject<any[]>();
   public doctorsDetails$=this.doctorsDetails.asObservable();
 
+  private searchDoctor = new Subject<any>();
+  public searchDoctor$ = this.searchDoctor.asObservable();
+
 
   private UpdateDetails = new Subject<boolean>();
   public UpdateDetails$ = this.UpdateDetails.asObservable();
@@ -193,6 +196,20 @@ export class AuthenticationServiceService {
       .subscribe({
         next: (response: any) => {
           this.doctorsDetails.next(response);
+          console.log(response)
+
+        },
+        error: (error) => {
+          console.error("Error fetching doctors:", error);
+        }
+      });
+  }
+  getDoctors(specializationId:number):any{
+
+    this.http.get(`http://localhost:5218/api/GetDoctorBySpec/${specializationId}/specialization/`)
+      .subscribe({
+        next: (response: any) => {
+          this.searchDoctor.next(response);
           console.log(response)
 
         },

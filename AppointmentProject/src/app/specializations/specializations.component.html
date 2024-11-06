@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary backg ">
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary backg ">
   <div class="container-fluid navClass">
     <a class=navbar-brand (click)="goToProfile()">Home</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,11 @@
     <div class="card">
         <div class="card-body">
           <h2 class="card-title">{{specialization.specializationName}}</h2>
-          <p class="card-text" *ngIf="showDoctorCount && specialization.id==specializationId">{{DoctorCount}} doctors available</p>
+          <div class="input-group">
+            <input type="search" class="form-control rounded controlInput" #inputvalue placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary controlSearch" (click)="getDoctors(specialization.id)"  data-mdb-ripple-init>search</button>
+          </div>
+          <p class="card-text" *ngIf="showDoctorCount && specialization.id==specializationId">{{DoctorCount}} doctors available</p> 
           <div class="cardButtons">
             <div>
           <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(specialization.id)">
@@ -39,6 +43,8 @@
         </div>
       </div>
       <div>
+
+
         <div class="card ">
           <div class="card-body" *ngIf="specializationId==specialization.id && showDoctors">
             <p class="card-text" *ngIf="doctors.length > 0"></p>
@@ -55,6 +61,100 @@
       </div>
       </div>
     </div>
+
+    <div class="card ">
+      <div class="card-body" *ngFor="let doctor of doctorslist | doctorFilter : inputvalue.value">
+        <p class="card-text" *ngIf="doctor"></p>
+        <ul>
+          <li >
+           
+            <p>Name:{{ doctor.name }}</p>
+            <p>RegistrationId:{{ doctor.registrationId }}</p>
+            <p>Experience:{{ doctor.experience }}</p>
+            <button class="btn shadow "  (click)="bookAppointment(doctor.doctorId)">Book Now</button>
+          </li>
+        </ul>
+  </div>
+</div>
+      </div>
+  </div>
+</div>
+</div> -->
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary backg">
+  <div class="container-fluid navClass">
+    <a class="navbar-brand" (click)="goToProfile()">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="specializations">
+  <div class="specialization" *ngFor="let specialization of specializations">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{ specialization.specializationName }}</h2>
+        <div class="d-flex gap" >
+          <div>
+            <input type="search" class="form-control  controlInput " #inputvalue placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          </div>
+          <div>
+            <button type="button" class="btn btn-outline-primary shadow  controlButton" (click)="getDoctors(specialization.id)" data-mdb-ripple-init>Search</button>
+          </div>
+          
+        </div>
+        <p class="card-text" *ngIf="showDoctorCount && specialization.id == specializationId">{{ DoctorCount }} doctors available</p>
+        <div class="cardButtons">
+          <div>
+            <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="onSubmit(specialization.id)">
+              Click here to know the number of available doctors
+            </button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-light form-control shadow bg-body rounded signin" (click)="viewDoctors(specialization.id)">
+              Click here to Book
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="card-body" *ngIf="specializationId == specialization.id && showDoctors ">
+          <p class="card-text" *ngIf="doctors.length > 0"></p>
+          <h2 class="card-title doctorAvail">Available Doctors</h2>
+          <ul>
+            <li *ngFor="let doctor of doctors">
+              <p>Name: {{ doctor.name }}</p>
+              <p>Registration ID: {{ doctor.registrationId }}</p>
+              <p>Experience: {{ doctor.experience }}</p>
+              <button class="btn shadow" (click)="bookAppointment(doctor.doctorId)">Book Now</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body" *ngIf=" specializationId2 == specialization.id && setDoctors">
+          <div class="card-text" *ngFor="let doctor of doctorslist | doctorFilter: inputvalue.value ">
+          <ul>
+            <li >
+              <p>Name: {{ doctor.name }}</p>
+              <p>Registration ID: {{ doctor.registrationId }}</p>
+              <p>Experience: {{ doctor.experience }}</p>
+              <button class="btn shadow" (click)="bookAppointment(doctor.doctorId)">Book Now</button>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 

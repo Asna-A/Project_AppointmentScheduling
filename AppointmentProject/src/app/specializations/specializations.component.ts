@@ -3,6 +3,8 @@ import { AuthenticationServiceService } from '../authentication-service.service'
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Ispecialization } from '../Interfaces/ispecialization';
+import { FormsModule } from '@angular/forms';
+import { DoctorFilterPipe } from "../Pipes/doctor-filter.pipe";
 
 interface doctors {
   name: string;
@@ -13,7 +15,7 @@ interface doctors {
 @Component({
   selector: 'app-specializations',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, DoctorFilterPipe],
   templateUrl: './specializations.component.html',
   styleUrl: './specializations.component.scss'
 })
@@ -23,10 +25,13 @@ export class SpecializationsComponent {
   DoctorCount:number=0;
   showDoctorCount:boolean=false;
   specializationId:number|null=null;
+  specializationId2:number|null = null;
   DoctorId:string|null=null;
   doctors: doctors[]=[];
+  doctorslist : doctors[]=[];
   specializations:Ispecialization[]=[]
   showDoctors: boolean=false;
+  setDoctors : boolean=true;
   constructor(private AuthenticationServiceService:AuthenticationServiceService,private router:Router) {  
   }
 
@@ -58,8 +63,14 @@ export class SpecializationsComponent {
 
     this.AuthenticationServiceService.doctorsDetails$.subscribe((doctors:doctors[])=>{
       this.showDoctors=!this.showDoctors;
+      this.setDoctors = !this.setDoctors;
       this.doctors=doctors;
-    })
+    });
+
+    this.AuthenticationServiceService.searchDoctor$.subscribe((doctors:doctors[])=>{
+
+      this.doctorslist=doctors;
+    });
   }
   
   onSubmit(specializationId: number)
@@ -72,6 +83,12 @@ export class SpecializationsComponent {
   {
     this.specializationId = specializationId;
     this.AuthenticationServiceService.viewDoctors(specializationId);
+  }
+
+  getDoctors(specializationId: number)
+  {
+    this.specializationId2 = specializationId;
+    this.AuthenticationServiceService.getDoctors(this.specializationId2);
   }
 
   bookAppointment(DoctorId:string)
