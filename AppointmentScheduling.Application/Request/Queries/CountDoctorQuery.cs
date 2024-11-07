@@ -1,5 +1,4 @@
 ﻿using AppointmentScheduling.Application.DTO;
-using AppointmentScheduling.Domain.Entity;
 using AppointmentScheduling.Infrastructure.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;

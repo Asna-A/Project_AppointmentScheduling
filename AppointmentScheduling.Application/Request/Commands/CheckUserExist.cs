@@ -6,7 +6,7 @@ namespace AppointmentScheduling.Application.Request.Commands
 {
     public class CheckUserExist : IRequest<bool>
     {
-        public string userName { get; set; }
+        public string UserName { get; set; } = string.Empty;
 
     }
 
@@ -20,7 +20,7 @@ namespace AppointmentScheduling.Application.Request.Commands
         }
         public async Task<bool> Handle(CheckUserExist request, CancellationToken cancellationToken)
         {
-            var patient = await context.patients.Where(x => x.UserName == request.userName).AnyAsync();
+            var patient = await context.patients.Where(x => x.UserName == request.UserName).AnyAsync();
 
             if (patient == true)
             {

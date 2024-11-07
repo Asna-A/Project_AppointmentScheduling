@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace AppointmentScheduling.Domain.Entity
+﻿namespace AppointmentScheduling.Domain.Entity
 {
     public class Specialization
     {

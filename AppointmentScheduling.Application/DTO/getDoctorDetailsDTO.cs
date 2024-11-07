@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AppointmentScheduling.Application.DTO
+﻿namespace AppointmentScheduling.Application.DTO
 {
     public class getDoctorDetailsDTO
     {
@@ -15,10 +9,6 @@ namespace AppointmentScheduling.Application.DTO
         public string RegistrationId { get; set; }
 
         public string[] specializations { get; set; }
-
-
-
-
 
     }
 

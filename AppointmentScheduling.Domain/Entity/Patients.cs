@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace AppointmentScheduling.Domain.Entity
 {
@@ -24,6 +19,7 @@ namespace AppointmentScheduling.Domain.Entity
 
         public List<Appointments> Appointments { get; set; }
 
+        
 
     }
 }

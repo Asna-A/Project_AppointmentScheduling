@@ -129,7 +129,7 @@
     "Parameters": [
       {
         "Name": "checkDoctorExist",
-        "Type": "AppointmentScheduling.Application.Request.Commands.checkDoctorExist",
+        "Type": "AppointmentScheduling.Application.Request.Commands.CheckDoctorExist",
         "IsRequired": true
       }
     ],
@@ -280,8 +280,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "AppointmentScheduling.Application.DTO.AddpatientDTO",
+        "Name": "command",
+        "Type": "AppointmentScheduling.Application.Request.Commands.AddPatientCommand",
         "IsRequired": true
       }
     ],
